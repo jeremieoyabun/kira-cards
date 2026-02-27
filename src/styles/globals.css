@@ -5,10 +5,8 @@
   body{background:var(--bg);color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
   /* ===== NAV ===== */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,7,0.8);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:none;transition:background .4s,box-shadow .4s;}
-  nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(255,255,255,0.06);pointer-events:none;transition:opacity .4s;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;background:#050507;transition:background .4s,box-shadow .4s;}
   nav.scrolled{background:rgba(255,255,255,0.97);box-shadow:0 2px 24px rgba(0,0,0,.06);}
-  nav.scrolled::after{opacity:0;}
   .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
   .nav-logo svg{width:30px;height:30px;}
   .nav-wordmark{font-family:'Unbounded';font-size:15px;font-weight:700;letter-spacing:3px;color:#fff;transition:color .4s;}
@@ -157,13 +155,44 @@
 
   /* ===== ABOUT SECTION ===== */
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-  .about-visual{position:relative;height:400px;display:flex;align-items:center;justify-content:center;}
+  .about-visual{position:relative;height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
   .about-visual-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(90,60,255,.15),transparent 70%);filter:blur(60px);animation:aboutPulse 6s ease-in-out infinite;}
   @keyframes aboutPulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.2);opacity:1}}
-  .about-logos{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:28px;}
-  .about-logos img{height:40px;opacity:.7;transition:opacity .3s;}
-  .about-logos img:hover{opacity:1;}
-  .about-divider{width:40px;height:1px;background:rgba(255,255,255,.1);}
+
+  /* Card showcase */
+  .about-cards{position:relative;width:300px;height:280px;z-index:2;perspective:600px;}
+  .about-card{position:absolute;width:150px;height:210px;border-radius:12px;overflow:hidden;transition:transform .6s cubic-bezier(.23,1,.32,1),box-shadow .6s;cursor:default;}
+  .about-card:hover{z-index:10!important;}
+  .ac-inner{position:relative;width:100%;height:100%;border-radius:12px;overflow:hidden;}
+  .ac-art{position:absolute;inset:0;border-radius:12px;}
+
+  .ac-art-pkmn{background:linear-gradient(145deg,#1a1040 0%,#2a1060 30%,#1a0a3a 100%);border:1px solid rgba(200,80,255,.2);}
+  .ac-art-pkmn::before{content:'';position:absolute;top:16px;left:50%;transform:translateX(-50%);width:60px;height:60px;border-radius:50%;background:radial-gradient(circle,rgba(255,225,80,.3),rgba(200,80,255,.15) 60%,transparent 70%);}
+  .ac-art-pkmn::after{content:'';position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:80%;height:35%;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);}
+
+  .ac-art-op{background:linear-gradient(145deg,#0a1428 0%,#0f2040 30%,#081020 100%);border:1px solid rgba(77,159,255,.2);}
+  .ac-art-op::before{content:'';position:absolute;top:16px;left:50%;transform:translateX(-50%);width:55px;height:55px;background:radial-gradient(circle,rgba(255,107,138,.3),rgba(77,159,255,.15) 60%,transparent 70%);}
+  .ac-art-op::after{content:'';position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:80%;height:35%;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);}
+
+  .ac-art-pkmn2{background:linear-gradient(145deg,#102020 0%,#0a2a28 30%,#081a1a 100%);border:1px solid rgba(80,221,182,.2);}
+  .ac-art-pkmn2::before{content:'';position:absolute;top:16px;left:50%;transform:translateX(-50%);width:65px;height:65px;border-radius:50%;background:radial-gradient(circle,rgba(80,221,182,.35),rgba(77,159,255,.12) 60%,transparent 70%);}
+  .ac-art-pkmn2::after{content:'';position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:80%;height:35%;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);}
+
+  .ac-holo{position:absolute;inset:0;border-radius:12px;opacity:0;transition:opacity .5s;mix-blend-mode:color-dodge;background:conic-gradient(from 0deg at 50% 50%,rgba(255,0,0,.15),rgba(255,127,0,.15),rgba(255,255,0,.15),rgba(0,255,0,.15),rgba(0,0,255,.15),rgba(139,0,255,.15),rgba(255,0,0,.15));animation:acHoloSpin 6s linear infinite;}
+  .about-card:hover .ac-holo{opacity:1;}
+  @keyframes acHoloSpin{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
+
+  .ac-1{left:0;top:30px;transform:rotate(-12deg);z-index:1;box-shadow:-4px 10px 30px rgba(200,80,255,.15);}
+  .ac-1:hover{transform:rotate(-6deg) translateY(-10px) scale(1.05);box-shadow:-4px 16px 40px rgba(200,80,255,.25);}
+  .ac-2{left:75px;top:0;transform:rotate(0deg);z-index:3;box-shadow:0 12px 30px rgba(77,159,255,.15);}
+  .ac-2:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 18px 40px rgba(77,159,255,.25);}
+  .ac-3{right:0;top:25px;transform:rotate(10deg);z-index:2;box-shadow:4px 10px 30px rgba(80,221,182,.15);}
+  .ac-3:hover{transform:rotate(5deg) translateY(-10px) scale(1.05);box-shadow:4px 16px 40px rgba(80,221,182,.25);}
+
+  .about-logos-row{position:relative;z-index:2;display:flex;align-items:center;gap:16px;}
+  .about-logos-row img{height:28px;opacity:.5;transition:opacity .3s;filter:grayscale(.5);}
+  .about-logos-row img:hover{opacity:.9;filter:none;}
+  .about-logo-sep{font-family:'Unbounded';font-size:14px;color:rgba(255,255,255,.2);font-weight:300;}
   .about-text{max-width:500px;}
   .about-text .section-overline{margin-bottom:20px;}
   .about-text h2{font-family:'Unbounded';font-size:clamp(26px,3.5vw,38px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:24px;}
@@ -242,7 +271,9 @@
     .bento{grid-template-columns:1fr;gap:16px;}
     .bc-wide{grid-column:span 1;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
-    .about-visual{height:220px;}
+    .about-visual{height:340px;}
+    .about-cards{width:260px;height:240px;}
+    .about-card{width:130px;height:182px;}
     .contact-grid{grid-template-columns:1fr;gap:40px;}
     footer{padding:32px 24px 24px;}
   }
@@ -293,9 +324,14 @@
     .brands-bento img{height:22px;}
 
     .about-grid{gap:32px;}
-    .about-visual{height:180px;}
+    .about-visual{height:300px;}
     .about-visual-glow{width:200px;height:200px;}
-    .about-logos img{height:30px;}
+    .about-cards{width:230px;height:210px;}
+    .about-card{width:115px;height:160px;}
+    .ac-1{left:0;top:25px;}
+    .ac-2{left:58px;top:0;}
+    .ac-3{right:0;top:20px;}
+    .about-logos-row img{height:22px;}
     .about-text h2{font-size:clamp(22px,6vw,30px);}
     .about-text p{font-size:14px;}
     .about-badges{gap:8px;}

@@ -220,8 +220,8 @@ export default function Home() {
             {/* Row 2: single + single + single */}
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-light"><svg viewBox="0 0 24 24" fill="none" stroke="#c850ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-              <h3>English Edition</h3>
-              <p>Specializing in English-language TCG products for Thailand's growing community.</p>
+              <h3>English & Japanese</h3>
+              <p>Offering both English and Japanese TCG products for Thailand's growing collector community.</p>
             </div>
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-pink"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6b8a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/></svg></div>
@@ -243,16 +243,36 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-visual">
               <div className="about-visual-glow"></div>
-              <div className="about-logos">
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"36px"}} />
-                <div className="about-divider"></div>
-                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"36px"}} />
+              <div className="about-cards">
+                <div className="about-card ac-1">
+                  <div className="ac-inner">
+                    <div className="ac-art ac-art-pkmn"></div>
+                    <div className="ac-holo"></div>
+                  </div>
+                </div>
+                <div className="about-card ac-2">
+                  <div className="ac-inner">
+                    <div className="ac-art ac-art-op"></div>
+                    <div className="ac-holo"></div>
+                  </div>
+                </div>
+                <div className="about-card ac-3">
+                  <div className="ac-inner">
+                    <div className="ac-art ac-art-pkmn2"></div>
+                    <div className="ac-holo"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="about-logos-row">
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px"}} />
+                <span className="about-logo-sep">&</span>
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} />
               </div>
             </div>
             <div className="about-text">
               <span className="section-overline">About Us</span>
               <h2>Built for collectors,<br />by collectors</h2>
-              <p>Kira Cards is Thailand's newest authorized TCG retailer, dedicated to bringing official English-language Pokémon and One Piece trading card products to collectors and players across the country.</p>
+              <p>Kira Cards is Thailand's newest authorized TCG retailer, dedicated to bringing official English and Japanese Pokémon and One Piece trading card products to collectors and players across the country.</p>
               <p>We operate through official distribution channels, ensuring every product is genuine, properly priced, and sourced with full brand compliance.</p>
               <div className="about-badges">
                 <div className="about-badge">🇹🇭 Based in Phuket</div>
