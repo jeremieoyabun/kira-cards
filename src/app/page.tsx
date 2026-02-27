@@ -1,9 +1,35 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+const LAUNCH_DATE = new Date('2026-03-25T00:00:00').getTime()
+
+function getTimeLeft() {
+  const diff = Math.max(0, LAUNCH_DATE - Date.now())
+  return {
+    days: Math.floor(diff / 86400000),
+    hours: Math.floor((diff % 86400000) / 3600000),
+    minutes: Math.floor((diff % 3600000) / 60000),
+    seconds: Math.floor((diff % 60000) / 1000),
+  }
+}
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [time, setTime] = useState(getTimeLeft)
+  const [packState, setPackState] = useState<'idle'|'shaking'|'glowing'|'opening'|'revealed'>('idle')
+  const [revealedCard, setRevealedCard] = useState(0)
+  const [currentBooster, setCurrentBooster] = useState(0)
+  const packCardRef = useRef<HTMLDivElement>(null)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [titleReady, setTitleReady] = useState(false)
+  const [titleText, setTitleText] = useState('KIRA CARDS')
+
+  useEffect(() => {
+    const tick = setInterval(() => setTime(getTimeLeft), 1000)
+    return () => clearInterval(tick)
+  }, [])
 
   useEffect(() => {
     // Nav scroll
@@ -127,7 +153,7 @@ export default function Home() {
 
       // Scroll animations
       const fadeEls = document.querySelectorAll(
-        '.bento-card,.about-text,.about-visual,.contact-left,.contact-form,.notify-inner'
+        '.bento-card,.about-text,.about-visual,.contact-left,.contact-form,.notify-inner,.pack-stage'
       )
       fadeEls.forEach(el => {
         const e = el as HTMLElement
@@ -146,7 +172,14 @@ export default function Home() {
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
       fadeEls.forEach(el => fadeIO.observe(el))
       document.querySelectorAll('.bento-card').forEach((c, i) => {
-        ;(c as HTMLElement).style.transitionDelay = (i * 0.1) + 's'
+        const card = c as HTMLElement
+        card.style.transitionDelay = (i * 0.1) + 's'
+        card.addEventListener('mousemove', (e: Event) => {
+          const me = e as MouseEvent
+          const rc = card.getBoundingClientRect()
+          card.style.setProperty('--mx', ((me.clientX - rc.left) / rc.width * 100) + '%')
+          card.style.setProperty('--my', ((me.clientY - rc.top) / rc.height * 100) + '%')
+        })
       })
 
       return () => {
@@ -157,12 +190,118 @@ export default function Home() {
     }
   }, [])
 
+  const openPack = () => {
+    if (packState !== 'idle') return
+    setPackState('shaking')
+    setTimeout(() => {
+      setPackState('glowing')
+      setTimeout(() => {
+        setPackState('opening')
+        setRevealedCard(Math.floor(Math.random() * cards.length))
+        setTimeout(() => setPackState('revealed'), 1000)
+      }, 1400)
+    }, 1500)
+  }
+
+  const resetPack = () => {
+    setCurrentBooster(Math.floor(Math.random() * boosters.length))
+    setPackState('idle')
+  }
+
+  // Text scramble effect on hero title
+  useEffect(() => {
+    const target = 'KIRA CARDS'
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*0123456789'
+    let frame = 0
+    const maxFrames = 20
+    const delay = setTimeout(() => {
+      const interval = setInterval(() => {
+        frame++
+        setTitleText(target.split('').map((ch, i) => {
+          if (ch === ' ') return ' '
+          const revealAt = Math.floor((i / target.length) * maxFrames) + 3
+          if (frame >= revealAt) return ch
+          return chars[Math.floor(Math.random() * chars.length)]
+        }).join(''))
+        if (frame >= maxFrames + 3) {
+          clearInterval(interval)
+          setTitleText(target)
+          setTitleReady(true)
+        }
+      }, 50)
+    }, 500)
+    return () => clearTimeout(delay)
+  }, [])
+
+  // Scroll progress bar
+  useEffect(() => {
+    const onScroll = () => {
+      const docH = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(docH > 0 ? window.scrollY / docH : 0)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const card = packCardRef.current
+    if (!card || packState !== 'revealed') return
+    const onMove = (e: MouseEvent) => {
+      const rc = card.getBoundingClientRect()
+      const x = (e.clientX - rc.left) / rc.width
+      const y = (e.clientY - rc.top) / rc.height
+      const tX = (0.5 - y) * 25
+      const tY = (x - 0.5) * 25
+      const a = Math.atan2(y - 0.5, x - 0.5) * (180 / Math.PI)
+      card.style.transform = `rotateX(${tX}deg) rotateY(${tY}deg)`
+      card.style.setProperty('--hx', (x * 100) + '%')
+      card.style.setProperty('--hy', (y * 100) + '%')
+      card.style.setProperty('--ha', a + 'deg')
+    }
+    const onLeave = () => {
+      card.style.transition = 'transform .5s cubic-bezier(.23,1,.32,1)'
+      card.style.transform = ''
+      setTimeout(() => card.style.transition = 'none', 500)
+    }
+    card.addEventListener('mousemove', onMove)
+    card.addEventListener('mouseleave', onLeave)
+    return () => { card.removeEventListener('mousemove', onMove); card.removeEventListener('mouseleave', onLeave) }
+  }, [packState])
+
+  const boosters = [
+    '/Boosters/Booster_Pokemon-01.webp', '/Boosters/Booster_Pokemon-02.webp', '/Boosters/Booster_Pokemon-03.webp',
+    '/Boosters/Booster_Pokemon-04.webp', '/Boosters/Booster_Pokemon-05.webp', '/Boosters/Booster_Pokemon-06.webp',
+    '/Boosters/Booster_Pokemon-07.webp', '/Boosters/Booster_Pokemon-08.webp', '/Boosters/Booster_Pokemon-09.webp',
+    '/Boosters/Booster_Pokemon-10.webp', '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
+    '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
+  ]
+  const cards = [
+    '/Cards/Card_pokemon-01.webp', '/Cards/Card_pokemon-02.webp', '/Cards/Card_pokemon-03.webp',
+    '/Cards/Card_pokemon-04.webp', '/Cards/Card_pokemon-05.webp', '/Cards/Card_pokemon-11.webp',
+    '/Cards/Card_pokemon-12.webp', '/Cards/OP_card-01.webp', '/Cards/OP_card-02.webp',
+    '/Cards/OP_card-03.webp', '/Cards/OP_card-04.webp', '/Cards/OP_card-05.webp',
+    '/Cards/OP_card-06.webp', '/Cards/OP_card-07.webp', '/Cards/OP_card-08.webp',
+    '/Cards/OP_card-09.webp', '/Cards/OP_card-10.webp',
+  ]
+
   return (
     <>
+      <div className="scroll-progress-bar" style={{transform: `scaleX(${scrollProgress})`}} />
       <nav id="mainNav">
         <a className="nav-logo" href="#"><svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="nH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="25%" stopColor="#4d9fff"/><stop offset="50%" stopColor="#50ddb6"/><stop offset="75%" stopColor="#ffe150"/><stop offset="100%" stopColor="#ff6b8a"/></linearGradient></defs><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#nH)" strokeWidth="1.2" fill="none" transform="rotate(-10 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#nH)" strokeWidth="1.2" fill="none" transform="rotate(5 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" fill="url(#nH)" opacity="0.1"/><path d="M16 10.5L17 13.2L20 13.4L17.8 15.3L18.4 18.2L16 16.8L13.6 18.2L14.2 15.3L12 13.4L15 13.2Z" fill="url(#nH)" opacity="0.7"/></svg><span className="nav-wordmark">KIRA CARDS</span></a>
         <div className="nav-links"><a href="#features">Features</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#notify" className="nav-cta">Get Notified</a></div>
+        <button className={`nav-burger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+          <span /><span /><span />
+        </button>
       </nav>
+      <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
+        <div className="mobile-menu-inner">
+          <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="#notify" className="mobile-menu-cta" onClick={() => setMenuOpen(false)}>Get Notified</a>
+        </div>
+      </div>
       
       {/* ===== HERO ===== */}
       <section className="hero" id="heroSection">
@@ -171,9 +310,18 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-left">
             <div className="hero-badge"><span className="pulse-dot"></span>Launching Soon</div>
-            <h1 className="hero-title"><span className="white">KIRA</span><br /><span className="holo">CARDS</span></h1>
+            <h1 className={`hero-title${titleReady ? ' decoded' : ' decoding'}`}><span className="white">{titleText.slice(0, 4)}</span><br /><span className="holo">{titleText.slice(5)}</span></h1>
             <div className="hero-sub">Official TCG Retailer</div>
             <p className="hero-desc">Your authorized destination for Pokemon & One Piece Trading Card Games. Authentic products, official distribution, premium experience.</p>
+            <div className="countdown" suppressHydrationWarning>
+              <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.days).padStart(2,'0')}</span><span className="countdown-label">Days</span></div>
+              <span className="countdown-sep">:</span>
+              <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.hours).padStart(2,'0')}</span><span className="countdown-label">Hours</span></div>
+              <span className="countdown-sep">:</span>
+              <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.minutes).padStart(2,'0')}</span><span className="countdown-label">Min</span></div>
+              <span className="countdown-sep">:</span>
+              <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.seconds).padStart(2,'0')}</span><span className="countdown-label">Sec</span></div>
+            </div>
             <div className="hero-actions">
               <a href="#notify" className="btn-slide">
                 <div className="btn-slide-track"></div>
@@ -214,6 +362,7 @@ export default function Home() {
         <div className="scroll-indicator"><span>Scroll</span><div className="scroll-line"></div></div>
       </section>
       
+      <div className="prismatic-divider"></div>
       {/* ===== WHY KIRA CARDS — BENTO ===== */}
       <section className="section-white" id="features">
         <div className="section-inner">
@@ -259,6 +408,97 @@ export default function Home() {
         </div>
       </section>
       
+      <div className="prismatic-divider"></div>
+      {/* ===== PACK OPENING ===== */}
+      <section className="section-dark pack-section">
+        <div className="section-inner" style={{textAlign:'center'}}>
+          <span className="section-overline" style={{textAlign:'center',marginBottom:'20px',color:'#fff'}}>Interactive Experience</span>
+          <h2 style={{fontFamily:'Unbounded',fontSize:'clamp(28px,4vw,42px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>Open a Pack</h2>
+          <p style={{fontSize:'16px',color:'rgba(255,255,255,.4)',lineHeight:1.7,marginBottom:'50px',maxWidth:'480px',marginLeft:'auto',marginRight:'auto'}}>Feel the thrill. Click the booster to reveal your card.</p>
+
+          <div className={`pack-stage ${packState}`}>
+            {/* Screen flash */}
+            <div className={`pack-flash ${packState === 'opening' ? 'active' : ''}`} />
+
+            {/* Screen vignette burn during glowing */}
+            <div className={`pack-vignette ${packState === 'glowing' || packState === 'opening' ? 'active' : ''}`} />
+
+            {/* Screen color tint during glow */}
+            <div className={`pack-tint ${packState === 'glowing' ? 'active' : ''}`} />
+
+            {/* Shockwave ring on burst */}
+            <div className={`pack-shockwave ${packState === 'opening' ? 'active' : ''}`} />
+            <div className={`pack-shockwave sw-2 ${packState === 'opening' ? 'active' : ''}`} />
+
+            {/* God rays radiating from center on burst */}
+            <div className={`pack-godrays ${packState === 'opening' || packState === 'revealed' ? 'active' : ''}`}>
+              {[...Array(16)].map((_, i) => <div key={`ray-${i}`} className="godray" style={{'--ri':i,'--angle':`${i * 22.5}deg`} as React.CSSProperties} />)}
+            </div>
+
+            {/* Concentric neon rings during glow phase only */}
+            <div className={`pack-neon-rings ${packState === 'glowing' ? 'active' : ''}`}>
+              <div className="neon-ring nr-1" />
+              <div className="neon-ring nr-2" />
+              <div className="neon-ring nr-3" />
+              <div className="neon-ring nr-4" />
+              <div className="neon-ring nr-5" />
+            </div>
+
+            {/* Orbiting energy particles during glow */}
+            <div className={`pack-orbits ${packState === 'glowing' || packState === 'opening' ? 'active' : ''}`}>
+              {[...Array(8)].map((_, i) => <div key={`orb-${i}`} className="orbit-particle" style={{'--oi':i} as React.CSSProperties} />)}
+            </div>
+
+            {/* Dust cloud during glow */}
+            <div className={`pack-dust ${packState === 'glowing' || packState === 'opening' ? 'active' : ''}`}>
+              {[...Array(30)].map((_, i) => <div key={`dust-${i}`} className="dust-mote" style={{'--di':i} as React.CSSProperties} />)}
+            </div>
+
+            {/* Booster pack */}
+            <div className={`pack-booster ${packState}`} onClick={openPack}>
+              <div className="pack-wrapper">
+                <img src={boosters[currentBooster]} alt="Booster Pack" />
+                <div className="pack-shine"></div>
+                <div className="pack-glow-edge"></div>
+              </div>
+              {packState === 'idle' && <div className="pack-hint">Tap to open</div>}
+            </div>
+
+            {/* Revealed card */}
+            <div className={`pack-card-container ${packState === 'revealed' ? 'show' : ''}`}>
+              <div className="pack-card-aura" />
+              <div className="pack-card" ref={packCardRef}>
+                <div className="pack-card-inner">
+                  <img src={cards[revealedCard]} alt="Revealed Card" className="pack-card-img" />
+                  <div className="pack-card-holo"></div>
+                  <div className="pack-card-light"></div>
+                </div>
+              </div>
+              {packState === 'revealed' && <button className="pack-reset" onClick={resetPack}>Open Another</button>}
+            </div>
+
+            {/* Burst particles — 3 rings for massive explosion */}
+            <div className={`pack-burst ${packState === 'opening' || packState === 'revealed' ? 'active' : ''}`}>
+              {[...Array(24)].map((_, i) => <div key={i} className={`burst-particle bp-ring1`} style={{'--bi':i} as React.CSSProperties} />)}
+              {[...Array(16)].map((_, i) => <div key={`r2-${i}`} className={`burst-particle bp-ring2`} style={{'--bi':i} as React.CSSProperties} />)}
+              {[...Array(12)].map((_, i) => <div key={`r3-${i}`} className={`burst-particle bp-ring3`} style={{'--bi':i} as React.CSSProperties} />)}
+            </div>
+
+            {/* Sparkle trails */}
+            <div className={`pack-sparkles ${packState === 'opening' || packState === 'revealed' ? 'active' : ''}`}>
+              {[...Array(20)].map((_, i) => <div key={`sp-${i}`} className="pack-sparkle" style={{'--si':i} as React.CSSProperties} />)}
+            </div>
+
+            {/* Ambient reveal particles — dense floating sparkles around revealed card */}
+            <div className={`pack-ambient ${packState === 'revealed' ? 'active' : ''}`}>
+              {[...Array(40)].map((_, i) => <div key={`amb-${i}`} className="ambient-dot" style={{'--ai':i} as React.CSSProperties} />)}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div className="prismatic-divider"></div>
       {/* ===== ABOUT ===== */}
       <section className="section-dark" id="about">
         <div className="section-inner">
@@ -306,6 +546,7 @@ export default function Home() {
         </div>
       </section>
       
+      <div className="prismatic-divider"></div>
       {/* ===== NOTIFY CTA ===== */}
       <section className="notify-section" id="notify">
         <div className="notify-aurora notify-au1"></div>
@@ -352,12 +593,46 @@ export default function Home() {
       
       {/* ===== FOOTER ===== */}
       <footer>
-        <div className="footer-inner">
-          <div className="footer-copy">© 2026 Kira Cards. All rights reserved.</div>
-          <div className="footer-links">
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+        <div className="footer-top">
+          <div className="footer-brand">
+            <a className="footer-logo" href="#">
+              <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="25%" stopColor="#4d9fff"/><stop offset="50%" stopColor="#50ddb6"/><stop offset="75%" stopColor="#ffe150"/><stop offset="100%" stopColor="#ff6b8a"/></linearGradient></defs><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(-10 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(5 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" fill="url(#fH)" opacity="0.1"/><path d="M16 10.5L17 13.2L20 13.4L17.8 15.3L18.4 18.2L16 16.8L13.6 18.2L14.2 15.3L12 13.4L15 13.2Z" fill="url(#fH)" opacity="0.7"/></svg>
+              <span>KIRA CARDS</span>
+            </a>
+            <p className="footer-tagline">Thailand's authorized TCG retailer for Pokemon & One Piece trading cards.</p>
+            <div className="footer-socials">
+              <a href="#" aria-label="LINE" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+              <a href="#" aria-label="Instagram" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+              <a href="#" aria-label="Facebook" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            </div>
+          </div>
+          <div className="footer-cols">
+            <div className="footer-col">
+              <h4>Navigate</h4>
+              <a href="#features">Features</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <a href="#notify">Get Notified</a>
+            </div>
+            <div className="footer-col">
+              <h4>Products</h4>
+              <a href="#">Pokemon TCG</a>
+              <a href="#">One Piece TCG</a>
+              <a href="#">Booster Boxes</a>
+              <a href="#">Premium Collections</a>
+            </div>
+            <div className="footer-col">
+              <h4>Contact</h4>
+              <a href="mailto:hello@kiracards.com">hello@kiracards.com</a>
+              <a href="#">Phuket, Thailand</a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <div className="footer-copy">&copy; 2026 Kira Cards. All rights reserved.</div>
+          <div className="footer-brands-footer">
+            <img src="/images/logo-pokemon.png" alt="Pokemon TCG" />
+            <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
           </div>
         </div>
       </footer>    </>
