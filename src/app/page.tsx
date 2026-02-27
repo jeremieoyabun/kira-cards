@@ -97,13 +97,16 @@ export default function Home() {
       let animId: number
       const draw = () => {
         ctx.clearRect(0, 0, cv.width, cv.height)
+        const edge = 40
         for (const p of pts) {
           p.x += p.vx; p.y += p.vy; p.p += p.ps
-          if (p.x < 0) p.x = cv.width
-          if (p.x > cv.width) p.x = 0
-          if (p.y < 0) p.y = cv.height
-          if (p.y > cv.height) p.y = 0
-          const alpha = p.o * (0.5 + 0.5 * Math.sin(p.p))
+          if (p.x < -edge) p.x = cv.width + edge
+          if (p.x > cv.width + edge) p.x = -edge
+          if (p.y < -edge) p.y = cv.height + edge
+          if (p.y > cv.height + edge) p.y = -edge
+          const fade = Math.min(p.x / edge, (cv.width - p.x) / edge, p.y / edge, (cv.height - p.y) / edge, 1)
+          if (fade <= 0) continue
+          const alpha = p.o * (0.5 + 0.5 * Math.sin(p.p)) * Math.max(0, fade)
           if (p.glow) {
             ctx.beginPath()
             ctx.arc(p.x, p.y, p.s * 3, 0, Math.PI * 2)
