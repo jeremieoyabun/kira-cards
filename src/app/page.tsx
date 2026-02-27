@@ -172,10 +172,10 @@ export default function Home() {
           <div className="hero-right">
             <div className="boosters-fan" id="boostersFan">
               <div className="floor-glow"></div>
-              <div className="booster booster-1" data-base-rotate="-20"><img src="/images/booster-pokemon-jp.webp" alt="Pokemon Booster"><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-2" data-base-rotate="22"><img src="/images/booster-pokemon-sm.webp" alt="Pokemon Booster"><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-3" data-base-rotate="0"><img src="/images/booster-pokemon-en.webp" alt="Pokemon Booster"><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-4" data-base-rotate="10"><img src="/images/booster-onepiece.webp" alt="One Piece Booster"><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-1" data-base-rotate="-20"><img src="/images/booster-pokemon-jp.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-2" data-base-rotate="22"><img src="/images/booster-pokemon-sm.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-3" data-base-rotate="0"><img src="/images/booster-pokemon-en.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-4" data-base-rotate="10"><img src="/images/booster-onepiece.webp" alt="One Piece Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="sparkles">
                 <div className="sparkle" style={{"width":"3px","height":"3px","top":"5%","left":"12%","background":"var(--h1)","--dur":"3s","--delay":"0s"} as React.CSSProperties}></div>
                 <div className="sparkle" style={{"width":"4px","height":"4px","top":"12%","right":"10%","background":"var(--h2)","--dur":"4s","--delay":".5s"} as React.CSSProperties}></div>
@@ -207,8 +207,8 @@ export default function Home() {
               <h3 style={{"color":"#fff"}}>100% Authentic & Authorized</h3>
               <p>Every product sourced directly through official distribution channels. Guaranteed genuine, sealed, and sourced with full brand compliance. No grey market, no fakes — ever.</p>
               <div className="brands-bento" style={{"marginTop":"28px"}}>
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}}>
-                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px","opacity":".4"}}>
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px","opacity":".4"}} />
               </div>
             </div>
             <div className="bento-card bc-accent">
@@ -244,9 +244,9 @@ export default function Home() {
             <div className="about-visual">
               <div className="about-visual-glow"></div>
               <div className="about-logos">
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"36px"}}>
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"36px"}} />
                 <div className="about-divider"></div>
-                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"36px"}}>
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"36px"}} />
               </div>
             </div>
             <div className="about-text">
