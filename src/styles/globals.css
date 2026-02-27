@@ -52,6 +52,11 @@
   .hero-sub{font-size:clamp(12px,1.4vw,15px);letter-spacing:14px;text-transform:uppercase;color:#444;font-weight:500;margin-bottom:28px;animation:fadeUp .8s ease-out .25s both;}
   .hero-desc{font-size:16px;line-height:1.8;color:rgba(255,255,255,.4);max-width:440px;margin-bottom:40px;animation:fadeUp .8s ease-out .35s both;}
   .hero-actions{display:flex;gap:16px;align-items:center;animation:fadeUp .8s ease-out .45s both;}
+  .hero-brands{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:36px;animation:fadeUp .8s ease-out .6s both;}
+  .hero-brands-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.2);font-weight:500;}
+  .hero-brands-logos{display:flex;align-items:center;gap:28px;}
+  .hero-brands-logos img{height:24px;opacity:.3;filter:brightness(1.2) grayscale(100%);transition:opacity .3s,filter .3s;}
+  .hero-brands-logos img:hover{opacity:.7;filter:brightness(1.2) grayscale(0%);}
 
   /* ===== SLIDE BUTTON ===== */
   .btn-slide{display:flex;align-items:center;width:290px;height:68px;padding:6px;border-radius:100px;text-decoration:none;cursor:pointer;position:relative;background:rgba(255,255,255,.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1.5px solid rgba(255,255,255,.1);box-shadow:0 1px 0 0 rgba(255,255,255,.06) inset,0 -1px 0 0 rgba(0,0,0,.3) inset,0 6px 24px rgba(0,0,0,.3);overflow:visible;transition:box-shadow .5s,border-color .5s;}
@@ -259,6 +264,7 @@
     .hero-left{flex:none;display:flex;flex-direction:column;align-items:center;}
     .hero-desc{margin-left:auto;margin-right:auto;}
     .hero-actions{justify-content:center;}
+    .hero-brands{align-items:center;}
     .hero-right{min-height:auto;}
 
     .boosters-fan{width:420px;height:400px;}
@@ -291,6 +297,9 @@
     .hero-title{font-size:clamp(40px,12vw,56px);letter-spacing:1px;margin-bottom:4px;}
     .hero-sub{font-size:11px;letter-spacing:8px;margin-bottom:20px;}
     .hero-desc{font-size:14px;line-height:1.7;margin-bottom:28px;max-width:340px;}
+    .hero-brands{margin-top:28px;}
+    .hero-brands-logos img{height:20px;}
+    .hero-brands-label{font-size:9px;}
     .hero-right{min-height:auto;}
 
     .boosters-fan{width:300px;height:320px;}

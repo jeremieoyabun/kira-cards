@@ -78,17 +78,21 @@ export default function Home() {
       window.addEventListener('resize', resize)
 
       const cols = ['#c850ff', '#4d9fff', '#50ddb6', '#ffe150', '#ff6b8a']
-      const pts = Array.from({ length: 35 }, () => ({
-        x: Math.random() * cv.width,
-        y: Math.random() * cv.height,
-        s: Math.random() * 2 + 0.5,
-        vx: (Math.random() - 0.5) * 0.2,
-        vy: (Math.random() - 0.5) * 0.2,
-        c: cols[~~(Math.random() * cols.length)],
-        o: Math.random() * 0.25 + 0.05,
-        p: Math.random() * Math.PI * 2,
-        ps: Math.random() * 0.012 + 0.004,
-      }))
+      const pts = Array.from({ length: 65 }, (_, i) => {
+        const isLarge = i < 8
+        return {
+          x: Math.random() * cv.width,
+          y: Math.random() * cv.height,
+          s: isLarge ? Math.random() * 3 + 2.5 : Math.random() * 2 + 0.8,
+          vx: (Math.random() - 0.5) * (isLarge ? 0.12 : 0.25),
+          vy: (Math.random() - 0.5) * (isLarge ? 0.12 : 0.25),
+          c: cols[~~(Math.random() * cols.length)],
+          o: isLarge ? Math.random() * 0.3 + 0.2 : Math.random() * 0.35 + 0.1,
+          p: Math.random() * Math.PI * 2,
+          ps: Math.random() * 0.015 + 0.005,
+          glow: isLarge,
+        }
+      })
 
       let animId: number
       const draw = () => {
@@ -99,10 +103,18 @@ export default function Home() {
           if (p.x > cv.width) p.x = 0
           if (p.y < 0) p.y = cv.height
           if (p.y > cv.height) p.y = 0
+          const alpha = p.o * (0.5 + 0.5 * Math.sin(p.p))
+          if (p.glow) {
+            ctx.beginPath()
+            ctx.arc(p.x, p.y, p.s * 3, 0, Math.PI * 2)
+            ctx.fillStyle = p.c
+            ctx.globalAlpha = alpha * 0.15
+            ctx.fill()
+          }
           ctx.beginPath()
           ctx.arc(p.x, p.y, p.s, 0, Math.PI * 2)
           ctx.fillStyle = p.c
-          ctx.globalAlpha = p.o * (0.5 + 0.5 * Math.sin(p.p))
+          ctx.globalAlpha = alpha
           ctx.fill()
         }
         ctx.globalAlpha = 1
@@ -167,6 +179,13 @@ export default function Home() {
                 <div className="btn-slide-underglow"></div>
               </a>
               <a href="#features" className="btn-ghost">Learn More</a>
+            </div>
+            <div className="hero-brands">
+              <span className="hero-brands-label">Authorized retailer for</span>
+              <div className="hero-brands-logos">
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" />
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
+              </div>
             </div>
           </div>
           <div className="hero-right">
