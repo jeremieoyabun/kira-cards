@@ -270,18 +270,20 @@ export default function Home() {
 
   const boosters = [
     '/Boosters/Booster_Pokemon-01.webp', '/Boosters/Booster_Pokemon-02.webp', '/Boosters/Booster_Pokemon-03.webp',
-    '/Boosters/Booster_Pokemon-04.webp', '/Boosters/Booster_Pokemon-05.webp', '/Boosters/Booster_Pokemon-06.webp',
-    '/Boosters/Booster_Pokemon-07.webp', '/Boosters/Booster_Pokemon-08.webp', '/Boosters/Booster_Pokemon-09.webp',
-    '/Boosters/Booster_Pokemon-10.webp', '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
+    '/Boosters/Booster_Pokemon-04.webp', '/Boosters/Booster_Pokemon-05.webp',
+    '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
     '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
   ]
   const cards = [
     '/Cards/Card_pokemon-01.webp', '/Cards/Card_pokemon-02.webp', '/Cards/Card_pokemon-03.webp',
-    '/Cards/Card_pokemon-04.webp', '/Cards/Card_pokemon-05.webp', '/Cards/Card_pokemon-11.webp',
-    '/Cards/Card_pokemon-12.webp', '/Cards/OP_card-01.webp', '/Cards/OP_card-02.webp',
-    '/Cards/OP_card-03.webp', '/Cards/OP_card-04.webp', '/Cards/OP_card-05.webp',
-    '/Cards/OP_card-06.webp', '/Cards/OP_card-07.webp', '/Cards/OP_card-08.webp',
-    '/Cards/OP_card-09.webp', '/Cards/OP_card-10.webp',
+    '/Cards/Card_pokemon-04.webp', '/Cards/Card_pokemon-05.webp',
+    '/Cards/Card_Pokemon-06.webp', '/Cards/Card_Pokemon-07.webp', '/Cards/Card_Pokemon-08.webp',
+    '/Cards/Card_Pokemon-09.webp', '/Cards/Card_Pokemon-10.webp',
+    '/Cards/Card_pokemon-11.webp', '/Cards/Card_pokemon-12.webp',
+    '/Cards/OP_card-01.webp', '/Cards/OP_card-02.webp', '/Cards/OP_card-03.webp',
+    '/Cards/OP_card-04.webp', '/Cards/OP_card-05.webp', '/Cards/OP_card-06.webp',
+    '/Cards/OP_card-07.webp', '/Cards/OP_card-08.webp', '/Cards/OP_card-09.webp',
+    '/Cards/OP_card-10.webp',
   ]
 
   return (
@@ -466,7 +468,6 @@ export default function Home() {
 
             {/* Revealed card */}
             <div className={`pack-card-container ${packState === 'revealed' ? 'show' : ''}`}>
-              <div className="pack-card-aura" />
               <div className="pack-card" ref={packCardRef}>
                 <div className="pack-card-inner">
                   <img src={cards[revealedCard]} alt="Revealed Card" className="pack-card-img" />
