@@ -805,7 +805,11 @@ export default function Home() {
                 <h3>Get Early Access</h3>
                 <p>Be the first to know when Kira Cards launches. Enter your email below.</p>
                 <div className="notify-counter">
-                  <div className="notify-counter-dots"><span/><span/><span/></div>
+                  <div className="notify-counter-faces">
+                    <img src="/01.webp" alt="" />
+                    <img src="/02.webp" alt="" />
+                    <img src="/03.webp" alt="" />
+                  </div>
                   Join 1,200+ collectors already signed up
                 </div>
                 <div className="notify-popup-form">
