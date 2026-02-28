@@ -473,7 +473,7 @@ export default function Home() {
             <div className="bento-card bc-wide">
               <div className="bc-icon bc-icon-dark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <h3 style={{"color":"#fff"}}>Authenticity-First</h3>
-              <p>We are finalizing official distribution to ensure sealed, compliant products with transparent sourcing, controlled storage, and protective packaging. No grey-market positioning.</p>
+              <p>We are finalizing an official distribution partnership to ensure sealed, compliant products with transparent sourcing, controlled storage, and protective packaging. No grey-market positioning.</p>
               <div className="brands-bento" style={{"marginTop":"28px"}}>
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px","opacity":".4"}} />
@@ -595,7 +595,7 @@ export default function Home() {
               <span className="section-overline">About Us</span>
               <h2>Built for collectors,<br />by collectors</h2>
               <p>Kira Cards is an upcoming TCG retailer based in Phuket, serving collectors across Thailand through an online store and a physical retail point.</p>
-              <p>We are building a compliance-first retail setup and are finalizing official distribution to ensure sealed, properly sourced products.</p>
+              <p>We are building a compliance-first retail setup and are finalizing an official distribution partnership to ensure sealed, properly sourced products.</p>
               <p style={{fontSize:'14px',color:'rgba(255,255,255,.35)',fontStyle:'italic'}}>Launching with an on-site vending setup, with the option to expand into a staffed micro-store as demand grows.</p>
               <div className="about-badges">
                 <div className="about-badge">🇹🇭 Based in Phuket</div>
