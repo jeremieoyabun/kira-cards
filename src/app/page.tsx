@@ -626,9 +626,10 @@ export default function Home() {
             <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.seconds).padStart(2,'0')}</span><span className="countdown-label">Sec</span></div>
           </div>
           <div className="notify-form">
-            <input className="notify-input" type="email" placeholder="Enter your email" />
-            <button className="notify-btn">Notify Me</button>
+            <input className="notify-input" type="email" placeholder="Enter your email" value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
+            <button className="notify-btn" onClick={handleSubscribe} disabled={notifyLoading}>{notifyLoading ? 'Sending...' : 'Notify Me'}</button>
           </div>
+          {notifySuccess && <p style={{color:'#50ddb6',marginTop:'16px',fontSize:'14px'}}>You&apos;re in! We&apos;ll notify you at launch.</p>}
         </div>
       </section>
 
