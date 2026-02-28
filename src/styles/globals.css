@@ -39,8 +39,15 @@
   .nav-links a:hover{color:#fff;}
   nav.scrolled .nav-links a{color:rgba(0,0,0,0.4);}
   nav.scrolled .nav-links a:hover{color:#111;}
-  .nav-cta{padding:10px 26px!important;border-radius:100px;background:rgba(255,255,255,0.08)!important;border:1px solid rgba(255,255,255,0.12);color:#fff!important;font-weight:600!important;transition:all .3s!important;cursor:pointer;font-size:inherit;font-family:inherit;}
+  .nav-cta{padding:10px 26px!important;border-radius:100px;background:rgba(255,255,255,0.08)!important;border:1px solid rgba(255,255,255,0.12);color:#fff!important;font-weight:600!important;transition:all .4s cubic-bezier(.23,1,.32,1)!important;cursor:pointer;font-size:inherit;font-family:inherit;position:relative;overflow:hidden;}
+  .nav-cta::before{content:'';position:absolute;inset:0;border-radius:100px;background:linear-gradient(135deg,#c850ff,#4d9fff,#50ddb6,#ffe150,#ff6b8a);opacity:0;transition:opacity .4s;z-index:-1;}
+  .nav-cta::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(255,255,255,.3),transparent 30%);opacity:0;transition:opacity .4s;animation:nav-cta-spin 3s linear infinite;z-index:-1;}
+  .nav-cta:hover{transform:translateY(-2px) scale(1.05);border-color:transparent;box-shadow:0 4px 24px rgba(200,80,255,.35),0 0 48px rgba(77,159,255,.2);}
+  .nav-cta:hover::before{opacity:1;}
+  .nav-cta:hover::after{opacity:1;}
+  @keyframes nav-cta-spin{to{transform:rotate(360deg);}}
   nav.scrolled .nav-cta{background:#111!important;color:#fff!important;border-color:#111;}
+  nav.scrolled .nav-cta:hover{border-color:transparent;background:linear-gradient(135deg,#7c5cff,#5535ff)!important;box-shadow:0 4px 24px rgba(90,60,255,.35);}
 
   /* Burger */
   .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:110;position:absolute;right:16px;}
