@@ -29,7 +29,7 @@ const welcomeHtml = `
           <table cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
             <tr>
               <td style="padding:6px 12px 6px 0;color:#c850ff;font-size:18px;">🎴</td>
-              <td style="padding:6px 0;font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;"><strong style="color:#fff;">Sealed & Verified Products</strong> — Pokémon & One Piece TCG with transparent sourcing</td>
+              <td style="padding:6px 0;font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;"><strong style="color:#fff;">Sealed & Verified Products</strong> — Pokemon & One Piece TCG with transparent sourcing</td>
             </tr>
             <tr>
               <td style="padding:6px 12px 6px 0;color:#4d9fff;font-size:18px;">⚡</td>

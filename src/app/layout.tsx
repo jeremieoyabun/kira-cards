@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
-  description: 'Pokémon & One Piece Trading Card Games in Phuket, Thailand. Sealed products, collector-grade experience, compliance-first approach.',
+  description: 'Pokemon & One Piece Trading Card Games in Phuket, Thailand. Sealed products, collector-grade experience, compliance-first approach.',
   keywords: 'Pokemon TCG, One Piece Card Game, trading cards, Thailand, Phuket, booster box, TCG retailer, English, Japanese, booster pack, sealed products',
   icons: {
     icon: '/favicon.svg',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://kira-cards.vercel.app'),
   openGraph: {
     title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
-    description: 'Pokémon & One Piece TCG. Sealed products, collector-grade experience. Based in Phuket, Thailand.',
+    description: 'Pokemon & One Piece TCG. Sealed products, collector-grade experience. Based in Phuket, Thailand.',
     type: 'website',
     url: 'https://kira-cards.vercel.app',
     siteName: 'Kira Cards',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
-    description: 'Pokémon & One Piece TCG. Sealed products, compliance-first approach.',
+    description: 'Pokemon & One Piece TCG. Sealed products, compliance-first approach.',
     images: ['/Boosters/Booster_Pokemon-01.webp'],
   },
   robots: {

@@ -386,8 +386,8 @@ export default function Home() {
           <div className="hero-left">
             <div className="hero-badge"><span className="pulse-dot"></span>Launching Soon</div>
             <h1 className={`hero-title${titleReady ? ' decoded' : ' decoding'}`}><span className="white">{titleText.slice(0, 4)}</span><br /><span className="holo">{titleText.slice(5)}</span></h1>
-            <div className="hero-sub">TCG Retail Point in Phuket (Launching Soon)</div>
-            <p className="hero-desc">Pokémon & One Piece TCG. Sealed products, collector-grade experience, compliance-first approach.</p>
+            <div className="hero-sub">TCG Retail Point in Phuket</div>
+            <p className="hero-desc">Pokemon & One Piece TCG. Sealed products, collector-grade experience, compliance-first approach.</p>
             <div className="hero-actions">
               <button className="btn-slide" onClick={() => setShowNotify(true)}>
                 <div className="btn-slide-track"></div>
@@ -467,29 +467,40 @@ export default function Home() {
             </div>
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="#50ddb6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-              <h3>On-site (Phuket) & Online</h3>
-              <p>Pick up or buy on-site at our Phuket retail point, or order online for nationwide delivery across Thailand.</p>
+              <h3>Retail + E-Commerce</h3>
+              <p>On-site retail in Phuket paired with a modern e-commerce platform — fast checkout, secure payments, and nationwide delivery across Thailand.</p>
             </div>
           </div>
         </div>
       </section>
       
       <div className="prismatic-divider"></div>
-      {/* ===== RETAIL LOCATION ===== */}
+      {/* ===== RETAIL LOCATION & BUSINESS ===== */}
       <section className="section-dark" id="location">
         <div className="section-inner">
+          <div className="section-header" style={{marginBottom:'48px'}}>
+            <span className="section-overline" style={{color:'#fff'}}>Location & Business</span>
+            <h2 style={{color:'#fff'}}>Retail point + e-commerce</h2>
+            <p style={{color:'rgba(255,255,255,.4)'}}>Physical retail in Patong, Phuket — paired with a modern online store built for collectors. On-site vending, fast shipping, and a seamless digital experience.</p>
+          </div>
+
           <div className="location-grid">
             <div className="location-image">
               <img src="/shop.jpeg" alt="Kira Cards retail point in Phuket" loading="lazy" />
             </div>
             <div className="location-info">
-              <span className="section-overline" style={{color:'#fff'}}>Retail Location</span>
-              <h2 style={{fontFamily:'Unbounded',fontSize:'clamp(26px,3.5vw,38px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>Phuket retail point (live location)</h2>
-              <p style={{fontSize:'16px',color:'rgba(255,255,255,.45)',lineHeight:1.8,marginBottom:'16px'}}>Physical retail point in Patong, Phuket, next to Took Took Prime – Thai Kitchen. On-site vending access + online ordering.</p>
-              <div className="location-address">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--h2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{width:'20px',height:'20px',flexShrink:0}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span style={{fontSize:'14px',color:'rgba(255,255,255,.5)',lineHeight:1.6}}>179 ภก.4055 Pa Tong, Kathu District, Phuket 83150, Thailand</span>
+              <h3 style={{fontFamily:'Unbounded',fontSize:'clamp(20px,2.5vw,28px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>Patong, Phuket</h3>
+              <p style={{fontSize:'15px',color:'rgba(255,255,255,.45)',lineHeight:1.8,marginBottom:'20px'}}>Next to Took Took Prime – Thai Kitchen. On-site vending access + online ordering nationwide.</p>
+
+              <div className="biz-list" style={{padding:'20px 24px',marginBottom:'20px'}}>
+                <ul>
+                  <li><strong>Address:</strong> 179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</li>
+                  <li><strong>Coords:</strong> <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" style={{color:'var(--h2)',textDecoration:'underline',textUnderlineOffset:'3px'}}>7.8934, 98.3015</a></li>
+                  <li><strong>Platform:</strong> On-site retail + online store</li>
+                  <li><strong>Contact:</strong> hello@kiracards.com &middot; LINE (on request)</li>
+                </ul>
               </div>
+
               <div className="location-actions">
                 <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" className="location-btn-primary">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -499,35 +510,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <div className="prismatic-divider"></div>
-      {/* ===== BUSINESS INFORMATION ===== */}
-      <section className="section-dark" id="business">
-        <div className="section-inner">
-          <div className="section-header" style={{marginBottom:'48px'}}>
-            <span className="section-overline" style={{color:'#fff'}}>Business Details</span>
-            <h2 style={{color:'#fff'}}>Business Information</h2>
-          </div>
-          <div className="biz-list">
-            <ul>
-              <li><strong>Location:</strong> Patong, Phuket, Thailand</li>
-              <li><strong>Address:</strong> 179 ภก.4055 Pa Tong, Kathu District, Phuket 83150, Thailand</li>
-              <li><strong>Google Maps:</strong> <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" style={{color:'var(--h2)',textDecoration:'underline',textUnderlineOffset:'3px'}}>7.8934, 98.3015</a></li>
-              <li><strong>Selling platform:</strong> On-site retail point + online store</li>
-              <li><strong>Contact:</strong> hello@kiracards.com &middot; LINE (on request)</li>
-              <li>Business registration documents available upon request.</li>
-            </ul>
-          </div>
 
           {/* Embedded Map */}
-          <div className="biz-map">
+          <div className="biz-map" style={{marginTop:'48px'}}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1984.5!2d98.3014693!3d7.8933887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTMnMzYuMiJOIDk4wrAxOCcwNS4zIkU!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth"
               width="100%"
               height="320"
-              style={{border:0,borderRadius:'16px',filter:'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(1.1)',marginTop:'32px'}}
+              style={{border:0,borderRadius:'16px',filter:'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(1.1)'}}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -723,7 +713,7 @@ export default function Home() {
               <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="25%" stopColor="#4d9fff"/><stop offset="50%" stopColor="#50ddb6"/><stop offset="75%" stopColor="#ffe150"/><stop offset="100%" stopColor="#ff6b8a"/></linearGradient></defs><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(-10 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(5 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" fill="url(#fH)" opacity="0.1"/><path d="M16 10.5L17 13.2L20 13.4L17.8 15.3L18.4 18.2L16 16.8L13.6 18.2L14.2 15.3L12 13.4L15 13.2Z" fill="url(#fH)" opacity="0.7"/></svg>
               <span>KIRA CARDS</span>
             </a>
-            <p className="footer-tagline">Thailand&apos;s Pokémon & One Piece TCG retail project — based in Phuket.</p>
+            <p className="footer-tagline">Thailand&apos;s Pokemon & One Piece TCG retail project — based in Phuket.</p>
             <div className="footer-socials">
               <a href="#" aria-label="LINE" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
               <a href="#" aria-label="Instagram" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -761,7 +751,7 @@ export default function Home() {
             <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
           </div>
         </div>
-        <div className="footer-disclaimer">Pokémon and One Piece are trademarks of their respective owners. Kira Cards is an independent retailer.</div>
+        <div className="footer-disclaimer">Pokemon and One Piece are trademarks of their respective owners. Kira Cards is an independent retailer.</div>
       </footer>
 
       {/* Notify popup */}
