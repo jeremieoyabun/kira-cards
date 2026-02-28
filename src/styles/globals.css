@@ -10,6 +10,28 @@
   .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
   .nav-logo svg{width:30px;height:30px;}
   .nav-logo-img{width:28px;height:auto;}
+
+  /* Logo hover motion */
+  .nav-logo-icon{width:30px;height:auto;perspective:600px;display:flex;}
+  .nav-logo-icon svg{width:100%;height:auto;transition:transform .5s cubic-bezier(.23,1,.32,1),filter .5s;}
+  .nav-logo-icon .logo-shine{transition:opacity .4s;}
+  .nav-logo:hover .nav-logo-icon svg{transform:rotateY(-12deg) rotateX(6deg) scale(1.12);filter:drop-shadow(0 0 12px rgba(77,159,255,.5)) drop-shadow(0 0 24px rgba(200,80,255,.3));}
+  .nav-logo:hover .logo-shine{opacity:0.7;animation:logo-sweep .7s ease-out forwards;}
+  .nav-logo:hover .logo-card-stroke{animation:logo-stroke-shift 2s linear infinite;}
+  .nav-logo:hover .logo-k{animation:logo-k-pulse 1.5s ease-in-out infinite alternate;}
+
+  @keyframes logo-sweep{
+    0%{transform:translateX(-120%);}
+    100%{transform:translateX(120%);}
+  }
+  @keyframes logo-stroke-shift{
+    0%{stroke-dashoffset:0;}
+    100%{stroke-dashoffset:100;}
+  }
+  @keyframes logo-k-pulse{
+    0%{opacity:0.9;}
+    100%{opacity:1;filter:drop-shadow(0 0 8px rgba(80,221,182,.4));}
+  }
   .nav-wordmark{font-family:'Unbounded';font-size:15px;font-weight:700;letter-spacing:3px;color:#fff;transition:color .4s;}
   nav.scrolled .nav-wordmark{color:#111;}
   .nav-links{display:flex;gap:32px;align-items:center;}

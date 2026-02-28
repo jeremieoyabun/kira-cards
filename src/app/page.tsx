@@ -367,7 +367,33 @@ export default function Home() {
     <>
       <div className="scroll-progress-bar" style={{transform: `scaleX(${scrollProgress})`}} />
       <nav id="mainNav">
-        <a className="nav-logo" href="#"><img src="/KIRA_sigle.svg" alt="Kira Cards" className="nav-logo-img" /><span className="nav-wordmark">KIRA CARDS</span></a>
+        <a className="nav-logo" href="#">
+          <div className="nav-logo-icon">
+            <svg viewBox="0 0 264 408" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="nHolo" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#c850ff"/>
+                  <stop offset="25%" stopColor="#4d9fff"/>
+                  <stop offset="50%" stopColor="#50ddb6"/>
+                  <stop offset="75%" stopColor="#ffe150"/>
+                  <stop offset="100%" stopColor="#ff6b8a"/>
+                </linearGradient>
+                <linearGradient id="nShine" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="rgba(255,255,255,0)" />
+                  <stop offset="40%" stopColor="rgba(255,255,255,0)" />
+                  <stop offset="50%" stopColor="rgba(255,255,255,0.6)" />
+                  <stop offset="60%" stopColor="rgba(255,255,255,0)" />
+                  <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                </linearGradient>
+              </defs>
+              <rect className="logo-card-bg" x="4" y="4" width="256" height="400" rx="18" fill="url(#nHolo)" opacity="0.25"/>
+              <rect className="logo-card-stroke" x="4" y="4" width="256" height="400" rx="18" fill="none" stroke="url(#nHolo)" strokeWidth="8"/>
+              <polygon className="logo-k" points="167.58 190.45 226 287.42 167.57 287.84 134.76 231.03 89.19 287.76 42.05 287.7 42 120.34 93.71 120.17 94.17 217.8 169.7 120.16 223.26 120.82 167.58 190.45" fill="url(#nHolo)" opacity="0.9"/>
+              <rect className="logo-shine" x="4" y="4" width="256" height="400" rx="18" fill="url(#nShine)" opacity="0"/>
+            </svg>
+          </div>
+          <span className="nav-wordmark">KIRA CARDS</span>
+        </a>
         <div className="nav-links"><a href="#features">Features</a><a href="#location">Location</a><a href="#about">About</a><a href="#contact">Contact</a><button className="nav-cta" onClick={() => setShowNotify(true)}>Get Notified</button></div>
         <button className={`nav-burger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
