@@ -23,6 +23,7 @@ export default function Home() {
   const [currentBooster, setCurrentBooster] = useState(0)
   const packCardRef = useRef<HTMLDivElement>(null)
   const packVideoRef = useRef<HTMLVideoElement>(null)
+  const packVideo2Ref = useRef<HTMLVideoElement>(null)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [titleReady, setTitleReady] = useState(false)
   const [titleText, setTitleText] = useState('KIRA CARDS')
@@ -265,6 +266,10 @@ export default function Home() {
           packVideoRef.current.currentTime = 0
           packVideoRef.current.play()
         }
+        if (packVideo2Ref.current) {
+          packVideo2Ref.current.currentTime = 0
+          packVideo2Ref.current.play()
+        }
         setTimeout(() => setPackState('revealed'), 1000)
       }, 1400)
     }, 1500)
@@ -468,7 +473,7 @@ export default function Home() {
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="#50ddb6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
               <h3>Retail + E-Commerce</h3>
-              <p>On-site retail in Phuket paired with a modern e-commerce platform — fast checkout, secure payments, and nationwide delivery across Thailand.</p>
+              <p>On-site retail in Phuket paired with a modern e-commerce platform. Fast checkout, secure payments, and nationwide delivery across Thailand.</p>
             </div>
           </div>
         </div>
@@ -481,16 +486,30 @@ export default function Home() {
           <div className="section-header" style={{marginBottom:'48px'}}>
             <span className="section-overline" style={{color:'#fff'}}>Location & Business</span>
             <h2 style={{color:'#fff'}}>Retail point + e-commerce</h2>
-            <p style={{color:'rgba(255,255,255,.4)'}}>Physical retail in Patong, Phuket — paired with a modern online store built for collectors. On-site vending, fast shipping, and a seamless digital experience.</p>
+            <p style={{color:'rgba(255,255,255,.4)'}}>Physical retail in Patong, Phuket, paired with a modern online store built for collectors. On-site vending, fast shipping, and a seamless digital experience.</p>
           </div>
 
           <div className="location-grid">
-            <div className="location-image">
-              <img src="/shop.jpeg" alt="Kira Cards retail point in Phuket" loading="lazy" />
+            <div className="location-left">
+              <div className="location-image">
+                <img src="/shop.jpeg" alt="Kira Cards retail point in Phuket" loading="lazy" />
+              </div>
+              <div className="biz-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1984.5!2d98.3014693!3d7.8933887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTMnMzYuMiJOIDk4wrAxOCcwNS4zIkU!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth"
+                  width="100%"
+                  height="180"
+                  style={{border:0,borderRadius:'16px',filter:'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(1.1)'}}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Kira Cards location on Google Maps"
+                ></iframe>
+              </div>
             </div>
             <div className="location-info">
               <h3 style={{fontFamily:'Unbounded',fontSize:'clamp(20px,2.5vw,28px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>Patong, Phuket</h3>
-              <p style={{fontSize:'15px',color:'rgba(255,255,255,.45)',lineHeight:1.8,marginBottom:'20px'}}>Next to Took Took Prime – Thai Kitchen. On-site vending access + online ordering nationwide.</p>
+              <p style={{fontSize:'15px',color:'rgba(255,255,255,.45)',lineHeight:1.8,marginBottom:'20px'}}>Next to Took Took Prime, Thai Kitchen. On-site vending access + online ordering nationwide.</p>
 
               <div className="biz-list" style={{padding:'20px 24px',marginBottom:'20px'}}>
                 <ul>
@@ -509,20 +528,6 @@ export default function Home() {
                 <a href="#contact" className="location-btn-secondary">Contact Us</a>
               </div>
             </div>
-          </div>
-
-          {/* Embedded Map */}
-          <div className="biz-map" style={{marginTop:'48px'}}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1984.5!2d98.3014693!3d7.8933887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTMnMzYuMiJOIDk4wrAxOCcwNS4zIkU!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth"
-              width="100%"
-              height="320"
-              style={{border:0,borderRadius:'16px',filter:'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(1.1)'}}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Kira Cards location on Google Maps"
-            ></iframe>
           </div>
         </div>
       </section>
@@ -605,6 +610,7 @@ export default function Home() {
       {/* ===== PACK OPENING — Brand Experience ===== */}
       <section className="section-dark pack-section" id="pack">
         <video className={`pack-video-bg ${packState === 'opening' || packState === 'revealed' ? 'visible' : ''}`} ref={packVideoRef} src="/Effect.webm" muted playsInline preload="auto" />
+        <video className={`pack-video-bg pack-video-overlay ${packState === 'opening' || packState === 'revealed' ? 'visible' : ''}`} ref={packVideo2Ref} src="/Effect2.webm" muted playsInline preload="auto" />
         <div className="pack-aurora pack-au-1" />
         <div className="pack-aurora pack-au-2" />
         <div className="section-inner" style={{textAlign:'center'}}>
@@ -713,7 +719,7 @@ export default function Home() {
               <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="25%" stopColor="#4d9fff"/><stop offset="50%" stopColor="#50ddb6"/><stop offset="75%" stopColor="#ffe150"/><stop offset="100%" stopColor="#ff6b8a"/></linearGradient></defs><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(-10 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(5 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" fill="url(#fH)" opacity="0.1"/><path d="M16 10.5L17 13.2L20 13.4L17.8 15.3L18.4 18.2L16 16.8L13.6 18.2L14.2 15.3L12 13.4L15 13.2Z" fill="url(#fH)" opacity="0.7"/></svg>
               <span>KIRA CARDS</span>
             </a>
-            <p className="footer-tagline">Thailand&apos;s Pokemon & One Piece TCG retail project — based in Phuket.</p>
+            <p className="footer-tagline">Thailand&apos;s Pokemon & One Piece TCG retail project, based in Phuket.</p>
             <div className="footer-socials">
               <a href="#" aria-label="LINE" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
               <a href="#" aria-label="Instagram" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
