@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Pokemon & One Piece Trading Card Games in Phuket, Thailand. Sealed products, collector-grade experience, compliance-first approach.',
   keywords: 'Pokemon TCG, One Piece Card Game, trading cards, Thailand, Phuket, booster box, TCG retailer, English, Japanese, booster pack, sealed products',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/KIRA_sigle.svg',
   },
   metadataBase: new URL('https://kira-cards.vercel.app'),
   openGraph: {

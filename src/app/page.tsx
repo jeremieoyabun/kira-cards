@@ -367,7 +367,7 @@ export default function Home() {
     <>
       <div className="scroll-progress-bar" style={{transform: `scaleX(${scrollProgress})`}} />
       <nav id="mainNav">
-        <a className="nav-logo" href="#"><svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="nH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="25%" stopColor="#4d9fff"/><stop offset="50%" stopColor="#50ddb6"/><stop offset="75%" stopColor="#ffe150"/><stop offset="100%" stopColor="#ff6b8a"/></linearGradient></defs><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#nH)" strokeWidth="1.2" fill="none" transform="rotate(-10 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#nH)" strokeWidth="1.2" fill="none" transform="rotate(5 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" fill="url(#nH)" opacity="0.1"/><path d="M16 10.5L17 13.2L20 13.4L17.8 15.3L18.4 18.2L16 16.8L13.6 18.2L14.2 15.3L12 13.4L15 13.2Z" fill="url(#nH)" opacity="0.7"/></svg><span className="nav-wordmark">KIRA CARDS</span></a>
+        <a className="nav-logo" href="#"><img src="/KIRA_sigle.svg" alt="Kira Cards" className="nav-logo-img" /><span className="nav-wordmark">KIRA CARDS</span></a>
         <div className="nav-links"><a href="#features">Features</a><a href="#location">Location</a><a href="#about">About</a><a href="#contact">Contact</a><button className="nav-cta" onClick={() => setShowNotify(true)}>Get Notified</button></div>
         <button className={`nav-burger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
@@ -716,7 +716,7 @@ export default function Home() {
         <div className="footer-top">
           <div className="footer-brand">
             <a className="footer-logo" href="#">
-              <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="fH" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="25%" stopColor="#4d9fff"/><stop offset="50%" stopColor="#50ddb6"/><stop offset="75%" stopColor="#ffe150"/><stop offset="100%" stopColor="#ff6b8a"/></linearGradient></defs><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(-10 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" stroke="url(#fH)" strokeWidth="1.2" fill="none" transform="rotate(5 16 16)"/><rect x="7" y="2.5" width="18" height="25" rx="2.5" fill="url(#fH)" opacity="0.1"/><path d="M16 10.5L17 13.2L20 13.4L17.8 15.3L18.4 18.2L16 16.8L13.6 18.2L14.2 15.3L12 13.4L15 13.2Z" fill="url(#fH)" opacity="0.7"/></svg>
+              <img src="/KIRA_sigle.svg" alt="Kira Cards" style={{width:'28px',height:'auto'}} />
               <span>KIRA CARDS</span>
             </a>
             <p className="footer-tagline">Thailand&apos;s Pokemon & One Piece TCG retail project, based in Phuket.</p>

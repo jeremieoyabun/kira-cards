@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 264 408">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom);
+        opacity: .25;
+      }
+
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: url(#Dégradé_sans_nom_2);
+        stroke-width: 8px;
+      }
+
+      .cls-2 {
+        opacity: .9;
+      }
+
+      .cls-4 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom" data-name="Dégradé sans nom" x1="9.86" y1="397.01" x2="252.86" y2="13.01" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c850ff"/>
+      <stop offset=".25" stop-color="#4d9fff"/>
+      <stop offset=".5" stop-color="#50ddb6"/>
+      <stop offset=".75" stop-color="#ffe150"/>
+      <stop offset="1" stop-color="#ff6b8a"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_2" data-name="Dégradé sans nom 2" x1="-124" y1="460" x2="-123" y2="459" gradientTransform="translate(31748 184004) scale(256 -400)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c850ff"/>
+      <stop offset=".25" stop-color="#4d9fff"/>
+      <stop offset=".5" stop-color="#50ddb6"/>
+      <stop offset=".75" stop-color="#ffe150"/>
+      <stop offset="1" stop-color="#ff6b8a"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" x1="48.33" y1="296.91" x2="234.33" y2="94.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c850ff"/>
+      <stop offset=".25" stop-color="#4d9fff"/>
+      <stop offset=".5" stop-color="#50ddb6"/>
+      <stop offset=".75" stop-color="#ffe150"/>
+      <stop offset="1" stop-color="#ff6b8a"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" x="4" y="4" width="256" height="400" rx="18" ry="18"/>
+  <rect class="cls-3" x="4" y="4" width="256" height="400" rx="18" ry="18"/>
+  <g class="cls-2">
+    <polygon class="cls-4" points="167.58 190.45 226 287.42 167.57 287.84 134.76 231.03 89.19 287.76 42.05 287.7 42 120.34 93.71 120.17 94.17 217.8 169.7 120.16 223.26 120.82 167.58 190.45"/>
+  </g>
+</svg>
