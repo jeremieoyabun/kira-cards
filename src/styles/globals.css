@@ -133,7 +133,7 @@
   .btn-slide:hover .btn-slide-arrow{opacity:1;transform:translateX(0);}
   .btn-slide-texts{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;pointer-events:none;overflow:hidden;}
   .btn-slide-text{font-weight:600;font-size:17px;letter-spacing:.5px;white-space:nowrap;transition:all .45s cubic-bezier(.23,1,.32,1);position:absolute;}
-  .btn-text-default{color:rgba(255,255,255,.75);transform:translateX(26px) translateY(0);opacity:1;}
+  .btn-text-default{color:rgba(255,255,255,.75);transform:translateX(24px) translateY(0);opacity:1;}
   .btn-text-hover{color:#111;font-weight:800;opacity:0;transform:translateX(-26px) translateY(18px);}
   .btn-slide:hover .btn-text-default{opacity:0;transform:translateX(26px) translateY(-18px);}
   .btn-slide:hover .btn-text-hover{opacity:1;transform:translateX(-26px) translateY(0);}
