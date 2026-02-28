@@ -811,7 +811,7 @@ export default function Home() {
                     <img src="/02.webp" alt="" />
                     <img src="/03.webp" alt="" />
                   </div>
-                  Join 1,200+ collectors already signed up
+                  Join 549 collectors already signed up
                 </div>
                 <div className="notify-popup-form">
                   <input className="notify-input" type="email" placeholder="Enter your email" value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
