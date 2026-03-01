@@ -107,7 +107,7 @@ export async function POST(req: Request) {
         'api-key': process.env.BREVO_API_KEY || '',
       },
       body: JSON.stringify({
-        sender: { name: 'Kira Cards', email: process.env.BREVO_SENDER_EMAIL || 'noreply@kiracards.com' },
+        sender: { name: 'Kira Cards', email: 'contact@kira-cards.com' },
         to: [{ email }],
         subject: 'Welcome to Kira Cards! ✨ You\'re on the list',
         htmlContent: welcomeHtml,
