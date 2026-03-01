@@ -525,7 +525,7 @@ export default function Home() {
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1984.5!2d98.3014693!3d7.8933887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTMnMzYuMiJOIDk4wrAxOCcwNS4zIkU!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth"
                   width="100%"
-                  height="180"
+                  height="300"
                   style={{border:0,borderRadius:'16px',filter:'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(1.1)'}}
                   allowFullScreen
                   loading="lazy"
