@@ -678,7 +678,7 @@
   /* ===== RETAIL LOCATION ===== */
   .location-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start;}
   .location-left{display:flex;flex-direction:column;gap:12px;}
-  .location-image{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08);}
+  .location-image{display:none;}
   .location-image img{width:100%;height:auto;display:block;}
   .location-address{display:flex;align-items:flex-start;gap:12px;padding:16px 20px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);margin-bottom:24px;}
   .location-actions{display:flex;gap:12px;flex-wrap:wrap;}

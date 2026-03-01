@@ -431,7 +431,7 @@ export default function Home() {
             <div className="hero-brands">
               <span className="hero-brands-label">Coming soon</span>
               <div className="hero-brands-logos">
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{height:'40px'}} />
+                <img src="/Pokemon-30.png" alt="Pokemon 30th Anniversary" style={{height:'44px'}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
               </div>
             </div>
@@ -475,7 +475,7 @@ export default function Home() {
               <h3 style={{"color":"#fff"}}>Authenticity-First</h3>
               <p>We are finalizing an official distribution partnership to ensure sealed, compliant products with transparent sourcing, controlled storage, and protective packaging. No grey-market positioning.</p>
               <div className="brands-bento" style={{"marginTop":"28px"}}>
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
+                <img src="/Pokemon-30.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px","opacity":".4"}} />
               </div>
             </div>
@@ -586,7 +586,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="about-logos-row">
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px"}} />
+                <img src="/Pokemon-30.png" alt="Pokemon TCG" style={{"height":"28px"}} />
                 <span className="about-logo-sep">&</span>
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} />
               </div>
@@ -780,7 +780,7 @@ export default function Home() {
         <div className="footer-bottom">
           <div className="footer-copy">&copy; 2026 Kira Cards. All rights reserved.</div>
           <div className="footer-brands-footer">
-            <img src="/images/logo-pokemon.png" alt="Pokemon TCG" />
+            <img src="/Pokemon-30.png" alt="Pokemon TCG" />
             <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
           </div>
         </div>
