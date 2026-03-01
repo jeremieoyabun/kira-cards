@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   icons: {
     icon: '/KIRA_sigle.svg',
   },
-  metadataBase: new URL('https://kira-cards.vercel.app'),
+  metadataBase: new URL('https://www.kira-cards.com'),
   openGraph: {
     title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
     description: 'Pokemon & One Piece TCG. Sealed products, collector-grade experience. Based in Phuket, Thailand.',
     type: 'website',
-    url: 'https://kira-cards.vercel.app',
+    url: 'https://www.kira-cards.com',
     siteName: 'Kira Cards',
     images: [{
       url: '/Boosters/Booster_Pokemon-01.webp',

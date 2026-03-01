@@ -48,7 +48,7 @@ const welcomeHtml = `
           <!-- CTA -->
           <table cellpadding="0" cellspacing="0" style="margin:32px 0 8px;">
             <tr><td style="border-radius:100px;background:linear-gradient(135deg,#7c5cff,#5535ff);padding:14px 36px;">
-              <a href="https://kira-cards.vercel.app" style="color:#fff;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:0.5px;">Visit Kira Cards</a>
+              <a href="https://www.kira-cards.com" style="color:#fff;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:0.5px;">Visit Kira Cards</a>
             </td></tr>
           </table>
 
