@@ -855,6 +855,8 @@
     .btn-slide{width:100%;height:60px;}
     .btn-slide-orb{width:46px;height:46px;}
     .btn-slide:hover .btn-slide-orb{left:calc(100% - 54px);}
+    .btn-text-default{transform:translateX(19px) translateY(0);}
+    .btn-slide:hover .btn-text-default{transform:translateX(19px) translateY(-18px);}
     .btn-ghost{width:100%;padding:16px 28px;justify-content:center;}
 
     .scroll-indicator{display:none;}
@@ -865,9 +867,13 @@
     .section-header p{font-size:14px;}
     .section-overline{font-size:10px;letter-spacing:3px;}
 
-    .biz-list{padding:24px 20px;}
+    .location-image{display:none;}
+    .location-info{text-align:center;}
+    .location-info h3{text-align:center;}
+    .location-info p{text-align:center;}
+    .biz-list{padding:24px 20px;text-align:left;}
     .biz-list li{font-size:13px;}
-    .location-actions{flex-direction:column;}
+    .location-actions{flex-direction:column;align-items:center;}
     .location-btn-primary,.location-btn-secondary{width:100%;justify-content:center;}
     .bento{gap:14px;margin-top:40px;}
     .bento-card{padding:28px 24px;border-radius:16px;}
@@ -887,9 +893,10 @@
     .ac-2{left:58px;top:0;}
     .ac-3{right:0;top:20px;}
     .about-logos-row img{height:22px;}
+    .about-text{text-align:center;}
     .about-text h2{font-size:clamp(22px,6vw,30px);}
     .about-text p{font-size:14px;}
-    .about-badges{gap:8px;}
+    .about-badges{gap:8px;justify-content:center;}
     .about-badge{font-size:11px;padding:6px 14px;}
 
     .notify-inner h2{font-size:clamp(24px,6vw,32px);}
