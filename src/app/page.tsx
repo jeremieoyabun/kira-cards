@@ -437,7 +437,6 @@ export default function Home() {
             <div className="hero-brands">
               <div className="hero-brands-logos">
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{height:'40px'}} />
-                <img src="/Pokemon-30.png" alt="Pokemon 30th Anniversary" style={{height:'44px'}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
                 <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{height:'38px'}} />
               </div>
@@ -460,6 +459,9 @@ export default function Home() {
                 <div className="sparkle" style={{"width":"3px","height":"3px","bottom":"38%","left":"4%","background":"var(--h5)","--dur":"4.5s","--delay":"1.2s"} as React.CSSProperties}></div>
                 <div className="sparkle" style={{"width":"3px","height":"3px","top":"32%","right":"5%","background":"var(--h1)","--dur":"3.2s","--delay":".3s"} as React.CSSProperties}></div>
               </div>
+            </div>
+            <div className="hero-anniversary">
+              <img src="/Pokemon-30.png" alt="Pokemon 30th Anniversary" />
             </div>
           </div>
         </div>
