@@ -816,7 +816,7 @@
     .bento{grid-template-columns:1fr;gap:16px;}
     .bc-wide{grid-column:span 1;}
     .location-grid-3{grid-template-columns:1fr;gap:20px;}
-    .location-image{height:auto;max-height:300px;}
+    .location-image{height:auto;max-height:400px;}
     .biz-map{min-height:220px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
     .about-visual{height:340px;}
@@ -875,7 +875,7 @@
     .section-header p{font-size:14px;}
     .section-overline{font-size:10px;letter-spacing:3px;}
 
-    .location-image{border-radius:12px;max-height:250px;}
+    .location-image{border-radius:12px;max-height:360px;}
     .location-info{text-align:center;}
     .location-info h3{text-align:center;}
     .location-info p{text-align:center;}
