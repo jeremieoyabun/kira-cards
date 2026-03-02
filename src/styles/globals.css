@@ -675,11 +675,13 @@
   .about-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:100px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.5px;}
 
   /* ===== RETAIL LOCATION ===== */
-  .location-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start;}
-  .location-left{display:flex;flex-direction:column;gap:12px;}
-  .location-image{position:relative;border-radius:16px;overflow:hidden;}
-  .location-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,7,.6) 0%,transparent 50%,rgba(5,5,7,.15) 100%);pointer-events:none;}
-  .location-image img{width:100%;height:auto;display:block;opacity:.85;}
+  .location-grid-3{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:24px;align-items:stretch;}
+  .location-col{display:flex;flex-direction:column;}
+  .location-image{position:relative;border-radius:16px;overflow:hidden;height:100%;}
+  .location-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,7,.5) 0%,transparent 40%,rgba(5,5,7,.1) 100%);pointer-events:none;border-radius:16px;}
+  .location-image img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9;border-radius:16px;}
+  .biz-map{height:100%;min-height:280px;}
+  .biz-map iframe{border-radius:16px;}
   .location-address{display:flex;align-items:flex-start;gap:12px;padding:16px 20px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);margin-bottom:24px;}
   .location-actions{display:flex;gap:12px;flex-wrap:wrap;}
   .location-btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;background:linear-gradient(135deg,#7c5cff,#5535ff);color:#fff;text-decoration:none;font-weight:700;font-size:14px;transition:all .3s;box-shadow:0 4px 20px rgba(90,60,255,.3);}
@@ -813,7 +815,9 @@
     .section-white,.section-dark,.notify-section{padding:80px 24px;}
     .bento{grid-template-columns:1fr;gap:16px;}
     .bc-wide{grid-column:span 1;}
-    .location-grid{grid-template-columns:1fr;gap:40px;}
+    .location-grid-3{grid-template-columns:1fr;gap:20px;}
+    .location-image{height:auto;max-height:300px;}
+    .biz-map{min-height:220px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
     .about-visual{height:340px;}
     .about-cards{width:260px;height:240px;}
@@ -871,7 +875,7 @@
     .section-header p{font-size:14px;}
     .section-overline{font-size:10px;letter-spacing:3px;}
 
-    .location-image{border-radius:12px;}
+    .location-image{border-radius:12px;max-height:250px;}
     .location-info{text-align:center;}
     .location-info h3{text-align:center;}
     .location-info p{text-align:center;}

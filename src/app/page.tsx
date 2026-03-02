@@ -350,7 +350,7 @@ export default function Home() {
     '/Boosters/Booster_Pokemon-04.webp', '/Boosters/Booster_Pokemon-05.webp',
     '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
     '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
-    '/Boosters/Booster-naruto.png', '/Boosters/Booster-naruto-02.webp',
+    '/Boosters/Booster-naruto.webp', '/Boosters/Booster-naruto-02.webp',
     '/Boosters/Booster-naruto-03.webp', '/Boosters/Booster-naruto-04.webp',
   ]
   const cards = [
@@ -445,7 +445,7 @@ export default function Home() {
           <div className="hero-right">
             <div className="boosters-fan" id="boostersFan">
               <div className="floor-glow"></div>
-              <div className="booster booster-1" data-base-rotate="-20"><img src="/Boosters/Booster-naruto.png" alt="Naruto Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-1" data-base-rotate="-20"><img src="/Boosters/Booster-naruto.webp" alt="Naruto Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-2" data-base-rotate="22"><img src="/images/booster-pokemon-sm.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-3" data-base-rotate="0"><img src="/images/booster-pokemon-en.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-4" data-base-rotate="10"><img src="/images/booster-onepiece.webp" alt="One Piece Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
@@ -486,6 +486,7 @@ export default function Home() {
               <div className="brands-bento" style={{"marginTop":"28px"}}>
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px","opacity":".4"}} />
+                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{"height":"26px","opacity":".4"}} />
               </div>
             </div>
             <div className="bento-card bc-accent">
@@ -524,16 +525,18 @@ export default function Home() {
             <p style={{color:'rgba(255,255,255,.4)'}}>Physical retail in Patong, Phuket, paired with a modern online store built for collectors. On-site vending, fast shipping, and a seamless digital experience.</p>
           </div>
 
-          <div className="location-grid">
-            <div className="location-left">
+          <div className="location-grid-3">
+            <div className="location-col">
               <div className="location-image">
                 <img src="/Kira-shop.webp" alt="Kira Cards retail point in Phuket" loading="lazy" />
               </div>
+            </div>
+            <div className="location-col">
               <div className="biz-map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1984.5!2d98.3014693!3d7.8933887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTMnMzYuMiJOIDk4wrAxOCcwNS4zIkU!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth"
                   width="100%"
-                  height="300"
+                  height="100%"
                   style={{border:0,borderRadius:'16px',filter:'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(1.1)'}}
                   allowFullScreen
                   loading="lazy"
@@ -542,23 +545,23 @@ export default function Home() {
                 ></iframe>
               </div>
             </div>
-            <div className="location-info">
-              <h3 style={{fontFamily:'Unbounded',fontSize:'clamp(20px,2.5vw,28px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>Patong, Phuket</h3>
-              <p style={{fontSize:'15px',color:'rgba(255,255,255,.45)',lineHeight:1.8,marginBottom:'20px'}}>Next to Took Took Prime, Thai Kitchen. On-site vending access + online ordering nationwide.</p>
+            <div className="location-col location-info">
+              <h3 style={{fontFamily:'Unbounded',fontSize:'clamp(18px,2vw,24px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'14px'}}>Patong, Phuket</h3>
+              <p style={{fontSize:'14px',color:'rgba(255,255,255,.45)',lineHeight:1.7,marginBottom:'16px'}}>Next to Took Took Prime, Thai Kitchen. On-site vending + online ordering nationwide.</p>
 
-              <div className="biz-list" style={{padding:'20px 24px',marginBottom:'20px'}}>
+              <div className="biz-list" style={{padding:'16px 20px',marginBottom:'16px'}}>
                 <ul>
                   <li><strong>Address:</strong> 179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</li>
                   <li><strong>Coords:</strong> <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" style={{color:'var(--h2)',textDecoration:'underline',textUnderlineOffset:'3px'}}>7.8934, 98.3015</a></li>
                   <li><strong>Platform:</strong> On-site retail + online store</li>
-                  <li><strong>Contact:</strong> contact@kira-cards.com &middot; LINE (on request)</li>
+                  <li><strong>Contact:</strong> contact@kira-cards.com</li>
                 </ul>
               </div>
 
               <div className="location-actions">
                 <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" className="location-btn-primary">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Open in Google Maps
+                  Google Maps
                 </a>
                 <a href="#contact" className="location-btn-secondary">Contact Us</a>
               </div>
