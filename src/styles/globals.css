@@ -892,16 +892,16 @@
     .brands-bento{flex-direction:row;gap:24px;margin-top:20px;}
     .brands-bento img{height:22px;}
 
-    .about-grid{gap:32px;}
+    .about-grid{gap:32px;overflow:hidden;}
     .about-visual{height:300px;}
     .about-visual-glow{width:200px;height:200px;}
     .about-cards{width:230px;height:210px;}
     .about-card{width:115px;}
     .ac-1{left:0;top:25px;}
     .ac-2{left:58px;top:0;}
-    .ac-3{right:0;top:20px;}
+    .ac-3{right:0;top:20px;width:80px;}
     .about-logos-row img{height:22px;}
-    .about-text{text-align:center;}
+    .about-text{text-align:center;max-width:100%;width:100%;overflow-wrap:break-word;word-wrap:break-word;}
     .about-text h2{font-size:clamp(22px,6vw,30px);}
     .about-text p{font-size:14px;}
     .about-badges{gap:8px;justify-content:center;}
