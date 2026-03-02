@@ -578,19 +578,16 @@ export default function Home() {
                 <div className="about-card ac-1">
                   <div className="ac-inner">
                     <img src="/Boosters/Booster_OP-01.webp" alt="One Piece Booster" className="ac-img" loading="lazy" />
-                    <div className="ac-holo"></div>
                   </div>
                 </div>
                 <div className="about-card ac-2">
                   <div className="ac-inner">
                     <img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" className="ac-img" loading="lazy" />
-                    <div className="ac-holo"></div>
                   </div>
                 </div>
                 <div className="about-card ac-3">
                   <div className="ac-inner">
                     <img src="/Boosters/Booster-naruto-02.webp" alt="Naruto Booster" className="ac-img" loading="lazy" />
-                    <div className="ac-holo"></div>
                   </div>
                 </div>
               </div>

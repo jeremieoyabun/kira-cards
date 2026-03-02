@@ -167,7 +167,7 @@
   .booster-1{width:195px;height:330px;bottom:140px;left:50px;z-index:1;transform:rotate(-20deg);animation:bf1 6s ease-in-out infinite;box-shadow:-6px 12px 30px rgba(0,0,0,.4);}
   .booster-2{width:185px;height:315px;bottom:150px;right:-10px;z-index:2;transform:rotate(22deg);animation:bf2 7s ease-in-out infinite;box-shadow:6px 12px 30px rgba(0,0,0,.4);}
   .booster-3{width:240px;height:410px;bottom:80px;left:50%;margin-left:-120px;z-index:4;transform:rotate(0deg);animation:bf3 8s ease-in-out infinite;box-shadow:0 20px 50px rgba(0,0,0,.5);}
-  .booster-4{width:200px;height:340px;bottom:120px;right:20px;z-index:3;transform:rotate(10deg);animation:bf4 9s ease-in-out infinite;box-shadow:4px 15px 35px rgba(0,0,0,.45);}
+  .booster-4{width:200px;height:340px;bottom:120px;right:-15px;z-index:3;transform:rotate(10deg);animation:bf4 9s ease-in-out infinite;box-shadow:4px 15px 35px rgba(0,0,0,.45);}
   @keyframes bf1{0%,100%{transform:rotate(-20deg) translateY(0)}50%{transform:rotate(-18deg) translateY(-18px)}}
   @keyframes bf2{0%,100%{transform:rotate(22deg) translateY(0)}50%{transform:rotate(20deg) translateY(-14px)}}
   @keyframes bf3{0%,100%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(1deg) translateY(-22px)}}
@@ -177,8 +177,8 @@
   @keyframes spk{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
   .floor-glow{position:absolute;bottom:30px;left:50%;width:70%;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(77,159,255,.12) 0%,rgba(200,80,255,.06) 40%,transparent 70%);filter:blur(20px);z-index:0;animation:floorP 4s ease-in-out infinite;}
   @keyframes floorP{0%,100%{opacity:.6}50%{opacity:1}}
-  .hero-anniversary{position:absolute;bottom:20px;left:60px;z-index:6;animation:fadeUp .8s ease-out 1s both;}
-  .hero-anniversary img{height:75px;width:auto;filter:grayscale(100%) brightness(0.7) drop-shadow(0 4px 16px rgba(0,0,0,.3));transition:transform .3s,filter .3s;}
+  .hero-anniversary{position:absolute;bottom:15px;left:50%;transform:translateX(-30%);z-index:6;animation:fadeUp .8s ease-out 1s both;}
+  .hero-anniversary img{height:85px;width:auto;filter:grayscale(100%) brightness(0.7) drop-shadow(0 4px 16px rgba(0,0,0,.3));transition:transform .3s,filter .3s;}
   .hero-anniversary img:hover{transform:scale(1.08);filter:grayscale(0%) brightness(1) drop-shadow(0 4px 30px rgba(255,225,80,.3));}
   .scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp 1s ease-out 1.5s both;}
   .scroll-indicator span{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.25);}
@@ -652,12 +652,8 @@
   .about-cards{position:relative;width:300px;height:280px;z-index:2;perspective:600px;}
   .about-card{position:absolute;width:150px;border-radius:12px;overflow:visible;transition:transform .6s cubic-bezier(.23,1,.32,1),box-shadow .6s;cursor:default;background:transparent;}
   .about-card:hover{z-index:10!important;}
-  .ac-inner{position:relative;width:100%;height:220px;border-radius:12px;overflow:hidden;background:var(--bg);}
-  .ac-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:12px;}
-
-  .ac-holo{position:absolute;inset:0;border-radius:12px;opacity:0;transition:opacity .5s;mix-blend-mode:color-dodge;background:conic-gradient(from 0deg at 50% 50%,rgba(255,0,0,.15),rgba(255,127,0,.15),rgba(255,255,0,.15),rgba(0,255,0,.15),rgba(0,0,255,.15),rgba(139,0,255,.15),rgba(255,0,0,.15));animation:acHoloSpin 6s linear infinite;}
-  .about-card:hover .ac-holo{opacity:1;}
-  @keyframes acHoloSpin{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
+  .ac-inner{position:relative;width:100%;border-radius:12px;overflow:hidden;background:transparent;}
+  .ac-img{width:100%;height:auto;display:block;border-radius:12px;}
 
   .ac-1{left:0;top:30px;transform:rotate(-12deg);z-index:1;box-shadow:-4px 10px 30px rgba(200,80,255,.15);}
   .ac-1:hover{transform:rotate(-6deg) translateY(-10px) scale(1.05);box-shadow:-4px 16px 40px rgba(200,80,255,.25);}
@@ -681,9 +677,9 @@
   /* ===== RETAIL LOCATION ===== */
   .location-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start;}
   .location-left{display:flex;flex-direction:column;gap:12px;}
-  .location-image{position:relative;border-radius:16px;overflow:hidden;max-height:280px;}
+  .location-image{position:relative;border-radius:16px;overflow:hidden;}
   .location-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,7,.6) 0%,transparent 50%,rgba(5,5,7,.15) 100%);pointer-events:none;}
-  .location-image img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;}
+  .location-image img{width:100%;height:auto;display:block;opacity:.85;}
   .location-address{display:flex;align-items:flex-start;gap:12px;padding:16px 20px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);margin-bottom:24px;}
   .location-actions{display:flex;gap:12px;flex-wrap:wrap;}
   .location-btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;background:linear-gradient(135deg,#7c5cff,#5535ff);color:#fff;text-decoration:none;font-weight:700;font-size:14px;transition:all .3s;box-shadow:0 4px 20px rgba(90,60,255,.3);}
@@ -810,9 +806,9 @@
     .booster-1{width:120px;height:205px;left:30px;bottom:110px;}
     .booster-2{width:115px;height:200px;right:10px;bottom:120px;}
     .booster-3{width:160px;height:270px;margin-left:-80px;bottom:70px;}
-    .booster-4{width:130px;height:225px;right:15px;bottom:100px;}
-    .hero-anniversary{left:15px;bottom:10px;}
-    .hero-anniversary img{height:50px;}
+    .booster-4{width:130px;height:225px;right:-5px;bottom:100px;}
+    .hero-anniversary{left:50%;transform:translateX(-25%);bottom:8px;}
+    .hero-anniversary img{height:55px;}
 
     .section-white,.section-dark,.notify-section{padding:80px 24px;}
     .bento{grid-template-columns:1fr;gap:16px;}
@@ -822,7 +818,6 @@
     .about-visual{height:340px;}
     .about-cards{width:260px;height:240px;}
     .about-card{width:130px;}
-    .ac-inner{height:190px;}
     .contact-grid{grid-template-columns:1fr;gap:40px;}
     footer{padding:40px 24px 24px;}
     .footer-top{grid-template-columns:1fr;gap:40px;}
@@ -855,7 +850,7 @@
     .booster-1{width:95px;height:162px;left:5px;bottom:90px;}
     .booster-2{width:90px;height:155px;right:5px;bottom:100px;}
     .booster-3{width:130px;height:220px;margin-left:-65px;bottom:55px;}
-    .booster-4{width:105px;height:180px;right:8px;bottom:80px;}
+    .booster-4{width:105px;height:180px;right:-5px;bottom:80px;}
     .floor-glow{bottom:20px;}
     .hero-anniversary{left:50%;transform:translateX(-50%);bottom:5px;}
     .hero-anniversary img{height:36px;}
@@ -876,7 +871,7 @@
     .section-header p{font-size:14px;}
     .section-overline{font-size:10px;letter-spacing:3px;}
 
-    .location-image{max-height:220px;}
+    .location-image{border-radius:12px;}
     .location-info{text-align:center;}
     .location-info h3{text-align:center;}
     .location-info p{text-align:center;}
@@ -898,7 +893,6 @@
     .about-visual-glow{width:200px;height:200px;}
     .about-cards{width:230px;height:210px;}
     .about-card{width:115px;}
-    .ac-inner{height:168px;}
     .ac-1{left:0;top:25px;}
     .ac-2{left:58px;top:0;}
     .ac-3{right:0;top:20px;}
