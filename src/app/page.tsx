@@ -262,7 +262,8 @@ export default function Home() {
       setPackState('glowing')
       setTimeout(() => {
         setPackState('opening')
-        setRevealedCard(Math.floor(Math.random() * cards.length))
+        const matchingCards = getCardsForBooster(currentBooster)
+        setRevealedCard(Math.floor(Math.random() * matchingCards.length))
         if (packVideoRef.current) {
           packVideoRef.current.currentTime = 0
           packVideoRef.current.play()
@@ -346,29 +347,45 @@ export default function Home() {
     return () => { card.removeEventListener('mousemove', onMove); card.removeEventListener('mouseleave', onLeave) }
   }, [packState])
 
-  const boosters = [
+  const pokemonBoosters = [
     '/Boosters/Booster_Pokemon-01.webp', '/Boosters/Booster_Pokemon-02.webp', '/Boosters/Booster_Pokemon-03.webp',
     '/Boosters/Booster_Pokemon-04.webp', '/Boosters/Booster_Pokemon-05.webp',
+  ]
+  const opBoosters = [
     '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
     '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
+  ]
+  const narutoBoosters = [
     '/Boosters/Booster-naruto.webp', '/Boosters/Booster-naruto-02.webp',
     '/Boosters/Booster-naruto-03.webp', '/Boosters/Booster-naruto-04.webp',
   ]
-  const cards = [
+  const boosters = [...pokemonBoosters, ...opBoosters, ...narutoBoosters]
+
+  const pokemonCards = [
     '/Cards/Card_pokemon-01.webp', '/Cards/Card_pokemon-02.webp', '/Cards/Card_pokemon-03.webp',
     '/Cards/Card_pokemon-04.webp', '/Cards/Card_pokemon-05.webp',
     '/Cards/Card_Pokemon-06.webp', '/Cards/Card_Pokemon-07.webp', '/Cards/Card_Pokemon-08.webp',
     '/Cards/Card_Pokemon-09.webp', '/Cards/Card_Pokemon-10.webp',
     '/Cards/Card_pokemon-11.webp', '/Cards/Card_pokemon-12.webp',
+  ]
+  const opCards = [
     '/Cards/OP_card-01.webp', '/Cards/OP_card-02.webp', '/Cards/OP_card-03.webp',
     '/Cards/OP_card-04.webp', '/Cards/OP_card-05.webp', '/Cards/OP_card-06.webp',
     '/Cards/OP_card-07.webp', '/Cards/OP_card-08.webp', '/Cards/OP_card-09.webp',
     '/Cards/OP_card-10.webp',
+  ]
+  const narutoCards = [
     '/Cards/Card_naruto-01.webp', '/Cards/Card_naruto-02.webp', '/Cards/Card_naruto-03.webp',
     '/Cards/Card_naruto-04.webp', '/Cards/Card_naruto-05.webp', '/Cards/Card_naruto-06.webp',
     '/Cards/Card_naruto-07.webp', '/Cards/Card_naruto-08.webp', '/Cards/Card_naruto-09.webp',
     '/Cards/Card_naruto-10.webp',
   ]
+
+  const getCardsForBooster = (boosterIndex: number) => {
+    if (boosterIndex < pokemonBoosters.length) return pokemonCards
+    if (boosterIndex < pokemonBoosters.length + opBoosters.length) return opCards
+    return narutoCards
+  }
 
   return (
     <>
@@ -689,7 +706,7 @@ export default function Home() {
             <div className={`pack-card-container ${packState === 'revealed' ? 'show' : ''}`}>
               <div className="pack-card" ref={packCardRef}>
                 <div className="pack-card-inner">
-                  <img src={cards[revealedCard]} alt="Revealed Card" className="pack-card-img" />
+                  <img src={getCardsForBooster(currentBooster)[revealedCard]} alt="Revealed Card" className="pack-card-img" />
                   <div className="pack-card-holo"></div>
                   <div className="pack-card-light"></div>
                 </div>
