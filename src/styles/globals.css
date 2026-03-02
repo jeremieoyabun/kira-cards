@@ -652,14 +652,14 @@
   .about-cards{position:relative;width:300px;height:280px;z-index:2;perspective:600px;}
   .about-card{position:absolute;width:150px;border-radius:12px;overflow:visible;transition:transform .6s cubic-bezier(.23,1,.32,1),box-shadow .6s;cursor:default;background:transparent;}
   .about-card:hover{z-index:10!important;}
-  .ac-inner{position:relative;width:100%;max-height:220px;border-radius:12px;overflow:hidden;background:transparent;}
+  .ac-inner{position:relative;width:100%;border-radius:12px;overflow:hidden;background:transparent;}
   .ac-img{width:100%;height:auto;display:block;border-radius:12px;}
 
   .ac-1{left:0;top:30px;transform:rotate(-12deg);z-index:1;box-shadow:-4px 10px 30px rgba(200,80,255,.15);}
   .ac-1:hover{transform:rotate(-6deg) translateY(-10px) scale(1.05);box-shadow:-4px 16px 40px rgba(200,80,255,.25);}
   .ac-2{left:75px;top:0;transform:rotate(0deg);z-index:3;box-shadow:0 12px 30px rgba(77,159,255,.15);}
   .ac-2:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 18px 40px rgba(77,159,255,.25);}
-  .ac-3{right:0;top:25px;transform:rotate(10deg);z-index:2;box-shadow:4px 10px 30px rgba(80,221,182,.15);}
+  .ac-3{right:0;top:25px;transform:rotate(10deg);z-index:2;box-shadow:4px 10px 30px rgba(80,221,182,.15);width:120px;}
   .ac-3:hover{transform:rotate(5deg) translateY(-10px) scale(1.05);box-shadow:4px 16px 40px rgba(80,221,182,.25);}
 
   .about-logos-row{position:relative;z-index:2;display:flex;align-items:center;gap:16px;}

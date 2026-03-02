@@ -607,7 +607,6 @@ export default function Home() {
               <h2>Built for collectors,<br />by collectors</h2>
               <p>Kira Cards is an upcoming TCG retailer based in Phuket, serving collectors across Thailand through an online store and a physical retail point.</p>
               <p>We are building a compliance-first retail setup and are finalizing an official distribution partnership to ensure sealed, properly sourced products.</p>
-              <p style={{fontSize:'14px',color:'rgba(255,255,255,.35)',fontStyle:'italic'}}>Launching with an on-site vending setup, with the option to expand into a staffed micro-store as demand grows.</p>
               <div className="about-badges">
                 <div className="about-badge">🇹🇭 Based in Phuket</div>
                 <div className="about-badge">📦 Nationwide Shipping</div>
