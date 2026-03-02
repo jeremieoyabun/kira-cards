@@ -17,6 +17,7 @@ function getTimeLeft() {
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [menuOpen, setMenuOpen] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [time, setTime] = useState(getTimeLeft)
   const [packState, setPackState] = useState<'idle'|'shaking'|'glowing'|'opening'|'revealed'>('idle')
   const [revealedCard, setRevealedCard] = useState(0)
@@ -626,6 +627,7 @@ export default function Home() {
           <span className="section-overline" style={{"textAlign":"center","marginBottom":"20px"}}>Early Access</span>
           <h2>Be the first to know</h2>
           <p>Get notified when we launch and receive exclusive early access to our first product drops.</p>
+          {/* Countdown hidden until Maxsoft validation
           <div className="countdown countdown-inline" suppressHydrationWarning>
             <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.days).padStart(2,'0')}</span><span className="countdown-label">Days</span></div>
             <span className="countdown-sep">:</span>
@@ -635,6 +637,7 @@ export default function Home() {
             <span className="countdown-sep">:</span>
             <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.seconds).padStart(2,'0')}</span><span className="countdown-label">Sec</span></div>
           </div>
+          */}
           <div className="notify-form">
             <input className="notify-input" type="email" placeholder="Enter your email" value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
             <button className="notify-btn" onClick={handleSubscribe} disabled={notifyLoading}>{notifyLoading ? 'Sending...' : 'Notify Me'}</button>
