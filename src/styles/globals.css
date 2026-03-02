@@ -923,6 +923,10 @@
     .nr-3{width:200px;height:200px;}
     .godray{max-height:350px;}
     .orbit-particle{width:6px;height:6px;}
+    .pack-vignette.active{opacity:.4;}
+    .pack-tint.active{opacity:.5;}
+    .pack-video-bg.visible{opacity:.4;}
+    .pack-video-overlay.visible{opacity:.25;}
 
     .footer-top{gap:32px;}
     .footer-cols{grid-template-columns:1fr 1fr;gap:24px;}

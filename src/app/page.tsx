@@ -589,7 +589,7 @@ export default function Home() {
                 </div>
                 <div className="about-card ac-3">
                   <div className="ac-inner">
-                    <img src="/Boosters/Booster_Pokemon-03.webp" alt="Pokemon Booster" className="ac-img" loading="lazy" />
+                    <img src="/Boosters/Booster-naruto-02.webp" alt="Naruto Booster" className="ac-img" loading="lazy" />
                     <div className="ac-holo"></div>
                   </div>
                 </div>
@@ -598,6 +598,8 @@ export default function Home() {
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px"}} />
                 <span className="about-logo-sep">&</span>
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} />
+                <span className="about-logo-sep">&</span>
+                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{"height":"26px"}} />
               </div>
             </div>
             <div className="about-text">
