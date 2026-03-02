@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="holo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c850ff"/>
+      <stop offset="25%" stop-color="#4d9fff"/>
+      <stop offset="50%" stop-color="#50ddb6"/>
+      <stop offset="75%" stop-color="#ffe150"/>
+      <stop offset="100%" stop-color="#ff6b8a"/>
+    </linearGradient>
+    <mask id="k-mask">
+      <rect x="128" y="56" width="256" height="400" rx="18" fill="white"/>
+      <!-- K letterform cut out -->
+      <!-- Vertical stem -->
+      <rect x="200" y="148" width="36" height="216" fill="black"/>
+      <!-- Upper diagonal arm -->
+      <polygon points="236,240 236,200 320,148 320,200" fill="black"/>
+      <!-- Lower diagonal arm -->
+      <polygon points="236,260 236,300 320,364 320,312" fill="black"/>
+    </mask>
+  </defs>
+  <!-- Card filled with gradient, K cut out as negative space -->
+  <rect x="128" y="56" width="256" height="400" rx="18" fill="url(#holo)" opacity="0.18" mask="url(#k-mask)"/>
+  <!-- Card outline -->
+  <rect x="128" y="56" width="256" height="400" rx="18" stroke="url(#holo)" stroke-width="8" fill="none"/>
+  <!-- K outline for clarity -->
+  <rect x="200" y="148" width="36" height="216" fill="url(#holo)" opacity="0.9"/>
+  <polygon points="236,240 236,200 320,148 320,200" fill="url(#holo)" opacity="0.9"/>
+  <polygon points="236,260 236,300 320,364 320,312" fill="url(#holo)" opacity="0.9"/>
+  <!-- Subtle sparkle glint top-right -->
+  <g transform="translate(360, 90)">
+    <line x1="0" y1="-14" x2="0" y2="14" stroke="url(#holo)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-14" y1="0" x2="14" y2="0" stroke="url(#holo)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-8" y1="-8" x2="8" y2="8" stroke="url(#holo)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="8" y1="-8" x2="-8" y2="8" stroke="url(#holo)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

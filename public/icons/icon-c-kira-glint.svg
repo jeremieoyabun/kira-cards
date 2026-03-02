@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="holo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c850ff"/>
+      <stop offset="25%" stop-color="#4d9fff"/>
+      <stop offset="50%" stop-color="#50ddb6"/>
+      <stop offset="75%" stop-color="#ffe150"/>
+      <stop offset="100%" stop-color="#ff6b8a"/>
+    </linearGradient>
+  </defs>
+  <!-- Card outline -->
+  <rect x="128" y="56" width="256" height="400" rx="18" stroke="url(#holo)" stroke-width="8" fill="none"/>
+  <!-- Japanese-style asymmetric sparkle / kira glint (center of card) -->
+  <g transform="translate(256, 248)">
+    <!-- Main vertical ray (longest) -->
+    <line x1="0" y1="-72" x2="0" y2="72" stroke="url(#holo)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Main horizontal ray (slightly shorter for asymmetry) -->
+    <line x1="-56" y1="0" x2="56" y2="0" stroke="url(#holo)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Diamond / lozenge center -->
+    <polygon points="0,-20 12,0 0,20 -12,0" fill="url(#holo)" opacity="0.9"/>
+    <!-- Shine stroke 1 (upper-left, short) -->
+    <line x1="-32" y1="-38" x2="-18" y2="-22" stroke="url(#holo)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Shine stroke 2 (lower-right, short) -->
+    <line x1="22" y1="28" x2="36" y2="42" stroke="url(#holo)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

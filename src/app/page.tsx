@@ -437,9 +437,9 @@ export default function Home() {
             </div>
             <div className="hero-brands">
               <div className="hero-brands-logos">
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{height:'40px'}} />
-                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
-                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{height:'38px'}} />
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={40} style={{height:'40px'}} />
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={96} height={32} />
+                <img src="/naruto-tcg.webp" alt="Naruto TCG" width={114} height={38} style={{height:'38px'}} />
               </div>
             </div>
           </div>
@@ -461,7 +461,7 @@ export default function Home() {
                 <div className="sparkle" style={{"width":"3px","height":"3px","top":"32%","right":"5%","background":"var(--h1)","--dur":"3.2s","--delay":".3s"} as React.CSSProperties}></div>
               </div>
               <div className="hero-anniversary">
-                <img src="/Pokemon-30.png" alt="Pokemon 30th Anniversary" />
+                <img src="/Pokemon-30.webp" alt="Pokemon 30th Anniversary" width={400} height={400} />
               </div>
             </div>
           </div>
@@ -485,9 +485,9 @@ export default function Home() {
               <h3 style={{"color":"#fff"}}>Authenticity-First</h3>
               <p>We are finalizing an official distribution partnership to ensure sealed, compliant products with transparent sourcing, controlled storage, and protective packaging. No grey-market positioning.</p>
               <div className="brands-bento" style={{"marginTop":"28px"}}>
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
-                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px","opacity":".4"}} />
-                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{"height":"26px","opacity":".4"}} />
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" loading="lazy" width={84} height={28} style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" loading="lazy" width={84} height={28} style={{"height":"28px","opacity":".4"}} />
+                <img src="/naruto-tcg.webp" alt="Naruto TCG" loading="lazy" width={78} height={26} style={{"height":"26px","opacity":".4"}} />
               </div>
             </div>
             <div className="bento-card bc-accent">
@@ -529,7 +529,7 @@ export default function Home() {
           <div className="location-grid-3">
             <div className="location-col">
               <div className="location-image">
-                <img src="/Kira-shop.webp" alt="Kira Cards retail point in Phuket" loading="lazy" />
+                <img src="/Kira-shop.webp" alt="Kira Cards retail point in Phuket" width={600} height={400} loading="lazy" />
               </div>
             </div>
             <div className="location-col">
@@ -596,11 +596,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="about-logos-row">
-                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px"}} />
+                <img src="/images/logo-pokemon.png" alt="Pokemon TCG" style={{"height":"28px"}} width={120} height={28} loading="lazy" />
                 <span className="about-logo-sep">&</span>
-                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} />
+                <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} width={120} height={28} loading="lazy" />
                 <span className="about-logo-sep">&</span>
-                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{"height":"26px"}} />
+                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{"height":"26px"}} width={100} height={26} loading="lazy" />
               </div>
             </div>
             <div className="about-text">
@@ -649,8 +649,8 @@ export default function Home() {
       <div className="prismatic-divider"></div>
       {/* ===== PACK OPENING — Brand Experience ===== */}
       <section className="section-dark pack-section" id="pack">
-        <video className={`pack-video-bg ${packState === 'opening' || packState === 'revealed' ? 'visible' : ''}`} ref={packVideoRef} src="/Effect.webm" muted playsInline preload="auto" />
-        <video className={`pack-video-bg pack-video-overlay ${packState === 'opening' || packState === 'revealed' ? 'visible' : ''}`} ref={packVideo2Ref} src="/Effect2.webm" muted playsInline preload="auto" />
+        <video className={`pack-video-bg ${packState === 'opening' || packState === 'revealed' ? 'visible' : ''}`} ref={packVideoRef} src="/Effect.webm" muted playsInline preload="none" />
+        <video className={`pack-video-bg pack-video-overlay ${packState === 'opening' || packState === 'revealed' ? 'visible' : ''}`} ref={packVideo2Ref} src="/Effect2.webm" muted playsInline preload="none" />
         <div className="pack-aurora pack-au-1" />
         <div className="pack-aurora pack-au-2" />
         <div className="section-inner" style={{textAlign:'center'}}>
@@ -794,9 +794,9 @@ export default function Home() {
         <div className="footer-bottom">
           <div className="footer-copy">&copy; 2026 Kira Cards. All rights reserved.</div>
           <div className="footer-brands-footer">
-            <img src="/images/logo-pokemon.png" alt="Pokemon TCG" />
-            <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" />
-            <img src="/naruto-tcg.webp" alt="Naruto TCG" />
+            <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={28} loading="lazy" />
+            <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={120} height={28} loading="lazy" />
+            <img src="/naruto-tcg.webp" alt="Naruto TCG" width={100} height={26} loading="lazy" />
           </div>
         </div>
         <div className="footer-disclaimer">Pokemon, One Piece, and Naruto are trademarks of their respective owners. Kira Cards is an independent retailer.</div>
@@ -822,9 +822,9 @@ export default function Home() {
                 <p>Be the first to know when Kira Cards launches. Enter your email below.</p>
                 <div className="notify-counter">
                   <div className="notify-counter-faces">
-                    <img src="/01.webp" alt="" />
-                    <img src="/02.webp" alt="" />
-                    <img src="/03.webp" alt="" />
+                    <img src="/01.webp" alt="" width={32} height={32} loading="lazy" />
+                    <img src="/02.webp" alt="" width={32} height={32} loading="lazy" />
+                    <img src="/03.webp" alt="" width={32} height={32} loading="lazy" />
                   </div>
                   Join 549 collectors already signed up
                 </div>
