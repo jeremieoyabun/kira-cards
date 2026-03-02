@@ -459,9 +459,9 @@ export default function Home() {
                 <div className="sparkle" style={{"width":"3px","height":"3px","bottom":"38%","left":"4%","background":"var(--h5)","--dur":"4.5s","--delay":"1.2s"} as React.CSSProperties}></div>
                 <div className="sparkle" style={{"width":"3px","height":"3px","top":"32%","right":"5%","background":"var(--h1)","--dur":"3.2s","--delay":".3s"} as React.CSSProperties}></div>
               </div>
-            </div>
-            <div className="hero-anniversary">
-              <img src="/Pokemon-30.png" alt="Pokemon 30th Anniversary" />
+              <div className="hero-anniversary">
+                <img src="/Pokemon-30.png" alt="Pokemon 30th Anniversary" />
+              </div>
             </div>
           </div>
         </div>
@@ -551,7 +551,7 @@ export default function Home() {
                   <li><strong>Address:</strong> 179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</li>
                   <li><strong>Coords:</strong> <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" style={{color:'var(--h2)',textDecoration:'underline',textUnderlineOffset:'3px'}}>7.8934, 98.3015</a></li>
                   <li><strong>Platform:</strong> On-site retail + online store</li>
-                  <li><strong>Contact:</strong> hello@kiracards.com &middot; LINE (on request)</li>
+                  <li><strong>Contact:</strong> contact@kira-cards.com &middot; LINE (on request)</li>
                 </ul>
               </div>
 
@@ -725,7 +725,7 @@ export default function Home() {
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                  <div className="contact-item-text"><strong>Email</strong>hello@kiracards.com</div>
+                  <div className="contact-item-text"><strong>Email</strong>contact@kira-cards.com</div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
@@ -776,12 +776,13 @@ export default function Home() {
               <h4>Products</h4>
               <a href="#">Pokemon TCG</a>
               <a href="#">One Piece TCG</a>
+              <a href="#">Naruto TCG</a>
               <a href="#">Booster Boxes</a>
               <a href="#">Premium Collections</a>
             </div>
             <div className="footer-col">
               <h4>Contact</h4>
-              <a href="mailto:hello@kiracards.com">hello@kiracards.com</a>
+              <a href="mailto:contact@kira-cards.com">contact@kira-cards.com</a>
               <a href="#">+66 (0) XX-XXX-XXXX</a>
               <a href="#">LINE: @kiracards</a>
               <a href="#">Phuket, Thailand</a>

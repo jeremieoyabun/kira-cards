@@ -177,8 +177,8 @@
   @keyframes spk{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
   .floor-glow{position:absolute;bottom:30px;left:50%;width:70%;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(77,159,255,.12) 0%,rgba(200,80,255,.06) 40%,transparent 70%);filter:blur(20px);z-index:0;animation:floorP 4s ease-in-out infinite;}
   @keyframes floorP{0%,100%{opacity:.6}50%{opacity:1}}
-  .hero-anniversary{display:flex;justify-content:center;margin-top:-30px;animation:fadeUp .8s ease-out 1s both;position:relative;z-index:6;}
-  .hero-anniversary img{height:60px;width:auto;filter:drop-shadow(0 4px 20px rgba(255,225,80,.15));transition:transform .3s,filter .3s;}
+  .hero-anniversary{position:absolute;bottom:20px;left:50%;transform:translateX(-70%);z-index:6;animation:fadeUp .8s ease-out 1s both;}
+  .hero-anniversary img{height:55px;width:auto;filter:drop-shadow(0 4px 20px rgba(255,225,80,.15));transition:transform .3s,filter .3s;}
   .hero-anniversary img:hover{transform:scale(1.08);filter:drop-shadow(0 4px 30px rgba(255,225,80,.3));}
   .scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp 1s ease-out 1.5s both;}
   .scroll-indicator span{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.25);}
@@ -810,7 +810,8 @@
     .booster-2{width:115px;height:200px;right:10px;bottom:120px;}
     .booster-3{width:160px;height:270px;margin-left:-80px;bottom:70px;}
     .booster-4{width:130px;height:225px;right:35px;bottom:100px;}
-    .hero-anniversary img{height:48px;}
+    .hero-anniversary{bottom:15px;transform:translateX(-65%);}
+    .hero-anniversary img{height:42px;}
 
     .section-white,.section-dark,.notify-section{padding:80px 24px;}
     .bento{grid-template-columns:1fr;gap:16px;}
@@ -854,8 +855,8 @@
     .booster-3{width:130px;height:220px;margin-left:-65px;bottom:55px;}
     .booster-4{width:105px;height:180px;right:20px;bottom:80px;}
     .floor-glow{bottom:20px;}
-    .hero-anniversary{margin-top:-20px;}
-    .hero-anniversary img{height:40px;}
+    .hero-anniversary{bottom:8px;left:50%;transform:translateX(-50%);}
+    .hero-anniversary img{height:36px;}
 
     .hero-actions{flex-direction:column;width:100%;max-width:300px;}
     .btn-slide{width:100%;height:60px;}
@@ -948,7 +949,7 @@
     .booster-2{width:78px;height:135px;right:2px;bottom:88px;}
     .booster-3{width:110px;height:190px;margin-left:-55px;bottom:48px;}
     .booster-4{width:90px;height:155px;right:12px;bottom:68px;}
-    .hero-anniversary{margin-top:-15px;}
-    .hero-anniversary img{height:34px;}
+    .hero-anniversary{bottom:5px;left:50%;transform:translateX(-50%);}
+    .hero-anniversary img{height:30px;}
     .section-white,.section-dark,.notify-section{padding:48px 16px;}
   }
