@@ -115,7 +115,7 @@
   .hero-brands{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:36px;animation:fadeUp .8s ease-out .6s both;}
   .hero-brands-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.2);font-weight:500;}
   .hero-brands-logos{display:flex;align-items:center;gap:28px;}
-  .hero-brands-logos img{height:32px;opacity:.35;filter:brightness(1.2) grayscale(100%);transition:opacity .3s,filter .3s;}
+  .hero-brands-logos img{height:32px;width:auto;opacity:.35;filter:brightness(1.2) grayscale(100%);transition:opacity .3s,filter .3s;}
   .hero-brands-logos img:hover{opacity:.7;filter:brightness(1.2) grayscale(0%);}
 
   /* ===== SLIDE BUTTON ===== */
@@ -235,7 +235,7 @@
 
   /* Brands row in bento */
   .brands-bento{display:flex;align-items:center;gap:40px;margin-top:24px;}
-  .brands-bento img{height:32px;opacity:.5;transition:opacity .3s;filter:grayscale(100%);}
+  .brands-bento img{height:32px;width:auto;opacity:.5;transition:opacity .3s;filter:grayscale(100%);}
   .brands-bento img:hover{opacity:.8;filter:none;}
 
   /* ===== SCROLL PROGRESS BAR ===== */
@@ -663,7 +663,7 @@
   .ac-3:hover{transform:rotate(5deg) translateY(-10px) scale(1.05);box-shadow:4px 16px 40px rgba(80,221,182,.25);}
 
   .about-logos-row{position:relative;z-index:2;display:flex;align-items:center;gap:16px;}
-  .about-logos-row img{height:28px;opacity:.5;transition:opacity .3s;filter:grayscale(.5);}
+  .about-logos-row img{height:28px;width:auto;opacity:.5;transition:opacity .3s;filter:grayscale(.5);}
   .about-logos-row img:hover{opacity:.9;filter:none;}
   .about-logo-sep{font-family:'Unbounded';font-size:14px;color:rgba(255,255,255,.2);font-weight:300;}
   .about-text{max-width:500px;}
@@ -779,7 +779,7 @@
   .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:24px;}
   .footer-copy{font-size:11px;color:rgba(255,255,255,.15);}
   .footer-brands-footer{display:flex;align-items:center;gap:20px;}
-  .footer-brands-footer img{height:16px;opacity:.15;filter:grayscale(100%) brightness(1.5);transition:opacity .3s;}
+  .footer-brands-footer img{height:16px;width:auto;opacity:.15;filter:grayscale(100%) brightness(1.5);transition:opacity .3s;}
   .footer-brands-footer img:hover{opacity:.4;}
 
   /* ===== SHARED ===== */
