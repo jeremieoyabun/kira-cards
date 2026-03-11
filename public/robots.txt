@@ -1,0 +1,5 @@
+# Kira Cards — TCG & Sports Cards Retailer in Phuket, Thailand
+User-agent: *
+Allow: /
+
+Sitemap: https://www.kira-cards.com/sitemap.xml

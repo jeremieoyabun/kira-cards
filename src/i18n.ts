@@ -11,8 +11,8 @@ export const translations = {
 
     // Hero
     heroLaunching: 'Launching Soon',
-    heroSub: 'TCG Retail Point in Phuket',
-    heroDesc: 'Official Pokémon & One Piece TCG alongside Topps sports cards.',
+    heroSub: 'Your TCG & Sports Cards Shop in Phuket, Thailand',
+    heroDesc: 'Pokémon TCG, One Piece Card Game & Topps sports cards. Retail store in Patong, Phuket — opening May 2026.',
     heroBtn: 'Get Notified',
     heroBtnHover: "Let's Go!",
     heroContact: 'Contact Us',
@@ -22,7 +22,7 @@ export const translations = {
     featOverline: 'Why Kira Cards',
     featTitle1: 'The TCG & Sports Cards Experience',
     featTitle2: 'Thailand Deserves',
-    featDesc: 'Sealed products, fair pricing, and a collector-grade experience built around community and compliance.',
+    featDesc: 'Sealed products, fair pricing, and a collector-grade experience in Phuket. Built around community and compliance.',
     featAuth: 'Authenticity-First',
     featAuthDesc: 'We are finalizing an official distribution partnership to ensure sealed, compliant products with transparent sourcing, controlled storage, and protective packaging. No grey-market positioning.',
     featDelivery: 'Fast Delivery',
@@ -104,7 +104,7 @@ export const translations = {
     contactSent: 'Message Sent!',
 
     // Footer
-    footerTagline: 'Upcoming TCG and sports cards retailer based in Phuket, Thailand.',
+    footerTagline: 'TCG and sports cards retailer in Patong, Phuket, Thailand. Opening May 2026.',
     footerNavigate: 'Navigate',
     footerProducts: 'Products',
     footerBoosterBoxes: 'Booster Boxes',
@@ -137,8 +137,8 @@ export const translations = {
 
     // Hero
     heroLaunching: 'เปิดตัวเร็วๆ นี้',
-    heroSub: 'ร้านการ์ดเกมสะสมในภูเก็ต',
-    heroDesc: 'จำหน่าย Pokémon, One Piece TCG และการ์ดกีฬา Topps อย่างเป็นทางการ',
+    heroSub: 'ร้านการ์ดเกมสะสมและการ์ดกีฬาในภูเก็ต',
+    heroDesc: 'Pokémon TCG, One Piece Card Game และการ์ดกีฬา Topps หน้าร้านป่าตอง ภูเก็ต — เปิดพฤษภาคม 2026',
     heroBtn: 'แจ้งเตือนฉัน',
     heroBtnHover: 'ไปเลย!',
     heroContact: 'ติดต่อเรา',
@@ -230,7 +230,7 @@ export const translations = {
     contactSent: 'ส่งแล้ว!',
 
     // Footer
-    footerTagline: 'ร้านค้า TCG และการ์ดกีฬาที่กำลังจะเปิดตัวในภูเก็ต ประเทศไทย',
+    footerTagline: 'ร้านค้า TCG และการ์ดกีฬาในป่าตอง ภูเก็ต ประเทศไทย เปิดพฤษภาคม 2026',
     footerNavigate: 'เมนู',
     footerProducts: 'สินค้า',
     footerBoosterBoxes: 'บูสเตอร์บอกซ์',
