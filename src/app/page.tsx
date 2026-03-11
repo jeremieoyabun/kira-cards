@@ -355,11 +355,10 @@ export default function Home() {
     '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
     '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
   ]
-  const narutoBoosters = [
-    '/Boosters/Booster-naruto.webp', '/Boosters/Booster-naruto-02.webp',
-    '/Boosters/Booster-naruto-03.webp', '/Boosters/Booster-naruto-04.webp',
+  const toppsBoosters = [
+    '/Boosters/Booster_Topps_NBA_01.webp', '/Boosters/Booster_Topps_Soccer_01.webp',
   ]
-  const boosters = [...pokemonBoosters, ...opBoosters, ...narutoBoosters]
+  const boosters = [...pokemonBoosters, ...opBoosters, ...toppsBoosters]
 
   const pokemonCards = [
     '/Cards/Card_pokemon-01.webp', '/Cards/Card_pokemon-02.webp', '/Cards/Card_pokemon-03.webp',
@@ -374,7 +373,7 @@ export default function Home() {
     '/Cards/OP_card-07.webp', '/Cards/OP_card-08.webp', '/Cards/OP_card-09.webp',
     '/Cards/OP_card-10.webp',
   ]
-  const narutoCards = [
+  const toppsCards = [
     '/Cards/Card_naruto-01.webp', '/Cards/Card_naruto-02.webp', '/Cards/Card_naruto-03.webp',
     '/Cards/Card_naruto-04.webp', '/Cards/Card_naruto-05.webp', '/Cards/Card_naruto-06.webp',
     '/Cards/Card_naruto-07.webp', '/Cards/Card_naruto-08.webp', '/Cards/Card_naruto-09.webp',
@@ -384,7 +383,7 @@ export default function Home() {
   const getCardsForBooster = (boosterIndex: number) => {
     if (boosterIndex < pokemonBoosters.length) return pokemonCards
     if (boosterIndex < pokemonBoosters.length + opBoosters.length) return opCards
-    return narutoCards
+    return toppsCards
   }
 
   return (
@@ -442,7 +441,7 @@ export default function Home() {
             <div className="hero-badge"><span className="pulse-dot"></span>Launching Soon</div>
             <h1 className={`hero-title${titleReady ? ' decoded' : ' decoding'}`}><span className="white">{titleText.slice(0, 4)}</span><br /><span className="holo">{titleText.slice(5)}</span></h1>
             <div className="hero-sub">TCG Retail Point in Phuket</div>
-            <p className="hero-desc">Pokemon, One Piece & Naruto TCG. Sealed products, collector-grade experience, compliance-first approach.</p>
+            <p className="hero-desc">Pokemon, One Piece & Topps TCG. Sealed products, collector-grade experience, compliance-first approach.</p>
             <div className="hero-actions">
               <button className="btn-slide" onClick={() => setShowNotify(true)}>
                 <div className="btn-slide-track"></div>
@@ -456,17 +455,18 @@ export default function Home() {
               <div className="hero-brands-logos">
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={40} style={{height:'40px'}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={96} height={32} />
-                <img src="/naruto-tcg.webp" alt="Naruto TCG" width={114} height={38} style={{height:'38px'}} />
+                <img src="/topps-logo.webp" alt="Topps" width={114} height={38} style={{height:'38px'}} />
               </div>
             </div>
           </div>
           <div className="hero-right">
             <div className="boosters-fan" id="boostersFan">
               <div className="floor-glow"></div>
-              <div className="booster booster-1" data-base-rotate="-20"><img src="/Boosters/Booster-naruto.webp" alt="Naruto Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-2" data-base-rotate="22"><img src="/images/booster-pokemon-sm.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-1" data-base-rotate="-22"><img src="/Boosters/Booster_Topps_NBA_01.webp" alt="Topps NBA Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-2" data-base-rotate="-10"><img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-3" data-base-rotate="0"><img src="/images/booster-pokemon-en.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-4" data-base-rotate="10"><img src="/images/booster-onepiece.webp" alt="One Piece Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-5" data-base-rotate="22"><img src="/Boosters/Booster_Topps_Soccer_01.webp" alt="Topps Soccer Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="sparkles">
                 <div className="sparkle" style={{"width":"3px","height":"3px","top":"5%","left":"12%","background":"var(--h1)","--dur":"3s","--delay":"0s"} as React.CSSProperties}></div>
                 <div className="sparkle" style={{"width":"4px","height":"4px","top":"12%","right":"10%","background":"var(--h2)","--dur":"4s","--delay":".5s"} as React.CSSProperties}></div>
@@ -504,7 +504,7 @@ export default function Home() {
               <div className="brands-bento" style={{"marginTop":"28px"}}>
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" loading="lazy" width={84} height={28} style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" loading="lazy" width={84} height={28} style={{"height":"28px","opacity":".4"}} />
-                <img src="/naruto-tcg.webp" alt="Naruto TCG" loading="lazy" width={78} height={26} style={{"height":"26px","opacity":".4"}} />
+                <img src="/topps-logo.webp" alt="Topps" loading="lazy" width={78} height={26} style={{"height":"26px","opacity":".4"}} />
               </div>
             </div>
             <div className="bento-card bc-accent">
@@ -608,7 +608,7 @@ export default function Home() {
                 </div>
                 <div className="about-card ac-3">
                   <div className="ac-inner">
-                    <img src="/Boosters/Booster-naruto-02.webp" alt="Naruto Booster" className="ac-img" loading="lazy" />
+                    <img src="/Boosters/Booster_Topps_NBA_01.webp" alt="Topps NBA Booster" className="ac-img" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -617,7 +617,7 @@ export default function Home() {
                 <span className="about-logo-sep">&</span>
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} width={120} height={28} loading="lazy" />
                 <span className="about-logo-sep">&</span>
-                <img src="/naruto-tcg.webp" alt="Naruto TCG" style={{"height":"26px"}} width={100} height={26} loading="lazy" />
+                <img src="/topps-logo.webp" alt="Topps" style={{"height":"26px"}} width={100} height={26} loading="lazy" />
               </div>
             </div>
             <div className="about-text">
@@ -776,7 +776,7 @@ export default function Home() {
               <img src="/KIRA_sigle.svg" alt="Kira Cards" style={{width:'28px',height:'auto'}} />
               <span>KIRA CARDS</span>
             </a>
-            <p className="footer-tagline">Thailand&apos;s Pokemon, One Piece & Naruto TCG retail project, based in Phuket.</p>
+            <p className="footer-tagline">Thailand&apos;s Pokemon, One Piece & Topps TCG retail project, based in Phuket.</p>
             <div className="footer-socials">
               <a href="#" aria-label="LINE" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
               <a href="#" aria-label="Instagram" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -795,7 +795,7 @@ export default function Home() {
               <h4>Products</h4>
               <a href="#">Pokemon TCG</a>
               <a href="#">One Piece TCG</a>
-              <a href="#">Naruto TCG</a>
+              <a href="#">Topps TCG</a>
               <a href="#">Booster Boxes</a>
               <a href="#">Premium Collections</a>
             </div>
@@ -813,10 +813,10 @@ export default function Home() {
           <div className="footer-brands-footer">
             <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={28} loading="lazy" />
             <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={120} height={28} loading="lazy" />
-            <img src="/naruto-tcg.webp" alt="Naruto TCG" width={100} height={26} loading="lazy" />
+            <img src="/topps-logo.webp" alt="Topps" width={100} height={26} loading="lazy" />
           </div>
         </div>
-        <div className="footer-disclaimer">Pokemon, One Piece, and Naruto are trademarks of their respective owners. Kira Cards is an independent retailer.</div>
+        <div className="footer-disclaimer">Pokemon, One Piece, and Topps are trademarks of their respective owners. Kira Cards is an independent retailer.</div>
       </footer>
 
       {/* Notify popup */}

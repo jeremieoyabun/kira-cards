@@ -3,15 +3,15 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
-  description: 'Pokemon, One Piece & Naruto Trading Card Games in Phuket, Thailand. Sealed products, collector-grade experience, compliance-first approach.',
-  keywords: 'Pokemon TCG, One Piece Card Game, Naruto TCG, trading cards, Thailand, Phuket, booster box, TCG retailer, English, Japanese, booster pack, sealed products',
+  description: 'Pokemon, One Piece & Topps Trading Card Games in Phuket, Thailand. Sealed products, collector-grade experience, compliance-first approach.',
+  keywords: 'Pokemon TCG, One Piece Card Game, Topps TCG, trading cards, Thailand, Phuket, booster box, TCG retailer, English, Japanese, booster pack, sealed products',
   icons: {
     icon: '/KIRA_sigle.svg',
   },
   metadataBase: new URL('https://www.kira-cards.com'),
   openGraph: {
     title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
-    description: 'Pokemon, One Piece & Naruto TCG. Sealed products, collector-grade experience. Based in Phuket, Thailand.',
+    description: 'Pokemon, One Piece & Topps TCG. Sealed products, collector-grade experience. Based in Phuket, Thailand.',
     type: 'website',
     url: 'https://www.kira-cards.com',
     siteName: 'Kira Cards',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kira Cards — TCG Retail Point in Phuket, Thailand',
-    description: 'Pokemon, One Piece & Naruto TCG. Sealed products, compliance-first approach.',
+    description: 'Pokemon, One Piece & Topps TCG. Sealed products, compliance-first approach.',
     images: ['/Boosters/Booster_Pokemon-01.webp'],
   },
   robots: {
