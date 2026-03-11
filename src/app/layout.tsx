@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Kira Cards — Pokemon TCG, One Piece & Topps Cards Shop in Phuket, Thailand',
-  description: 'Buy Pokemon TCG, One Piece cards & Topps sports cards in Phuket, Thailand. Sealed booster boxes, graded cards (PSA, BGS, CGC). Retail store in Patong + nationwide shipping. Opening soon!',
-  keywords: 'Pokemon TCG Phuket, One Piece Card Game Thailand, Topps sports cards Phuket, trading cards Phuket, booster box Thailand, TCG shop Phuket, card shop near me Phuket, buy Pokemon cards Thailand, graded cards PSA Thailand, buy sell graded cards Phuket, TCG retailer Patong, Pokemon booster box Phuket, sealed products Thailand, card store Phuket, trading card game Thailand, English Japanese TCG, booster pack Thailand, collector cards Phuket',
+  title: 'Kira Cards — Buy Pokemon TCG, One Piece & Topps Cards Online | Thailand',
+  description: 'Shop Pokemon TCG, One Piece & Topps cards online with fast nationwide delivery across Thailand. Sealed booster boxes, graded cards (PSA, BGS, CGC), secure checkout. Online store + flagship retail in Phuket. Opening May 2026!',
+  keywords: 'buy Pokemon cards online Thailand, TCG online store Thailand, Pokemon TCG Phuket, One Piece Card Game Thailand, Topps sports cards online, trading cards online Thailand, booster box online Thailand, TCG shop online, buy Pokemon cards Thailand, graded cards PSA Thailand, buy sell graded cards online, Pokemon booster box online, sealed products Thailand, e-commerce TCG Thailand, English Japanese TCG, collector cards Thailand',
   icons: {
     icon: '/KIRA_sigle.svg',
   },
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.kira-cards.com',
   },
   openGraph: {
-    title: 'Kira Cards — Pokemon TCG & Trading Cards Shop in Phuket, Thailand',
-    description: 'Your local TCG & sports cards shop in Patong, Phuket. Pokemon, One Piece, Topps. Sealed products, graded cards, nationwide shipping across Thailand.',
+    title: 'Kira Cards — Buy Pokemon TCG & Trading Cards Online | Thailand',
+    description: 'Shop TCG & sports cards online with nationwide delivery across Thailand. Pokemon, One Piece, Topps. Sealed products, graded cards, secure checkout.',
     type: 'website',
     url: 'https://www.kira-cards.com',
     siteName: 'Kira Cards Co., Ltd.',
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kira Cards — Pokemon TCG & Trading Cards Shop in Phuket',
-    description: 'Buy Pokemon TCG, One Piece & Topps cards in Phuket, Thailand. Sealed products, graded cards, fast shipping.',
+    title: 'Kira Cards — Buy Pokemon TCG & Trading Cards Online | Thailand',
+    description: 'Shop Pokemon TCG, One Piece & Topps online. Sealed products, graded cards, fast nationwide shipping across Thailand.',
     images: ['/Boosters/Booster_Pokemon-01.webp'],
   },
   robots: {
@@ -50,7 +50,7 @@ const jsonLd = {
   '@type': 'Store',
   name: 'Kira Cards Co., Ltd.',
   alternateName: 'Kira Cards',
-  description: 'Trading card game and sports cards retailer in Phuket, Thailand. Pokemon TCG, One Piece Card Game, Topps sports cards. Sealed products, graded cards (PSA, BGS, CGC). Retail store in Patong with nationwide shipping.',
+  description: 'Online TCG and sports cards store with nationwide delivery across Thailand. Pokemon TCG, One Piece Card Game, Topps sports cards. Sealed products, graded cards (PSA, BGS, CGC). E-commerce platform + flagship retail in Patong, Phuket.',
   url: 'https://www.kira-cards.com',
   telephone: '+66620960153',
   email: 'contact@kira-cards.com',
