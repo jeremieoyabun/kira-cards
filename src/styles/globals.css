@@ -191,7 +191,7 @@
   @keyframes spk{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
   .floor-glow{position:absolute;bottom:30px;left:50%;width:70%;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(77,159,255,.12) 0%,rgba(200,80,255,.06) 40%,transparent 70%);filter:blur(20px);z-index:0;animation:floorP 4s ease-in-out infinite;}
   @keyframes floorP{0%,100%{opacity:.6}50%{opacity:1}}
-  .hero-anniversary{position:absolute;bottom:10px;left:50%;transform:translateX(calc(-50% - 8px));z-index:6;animation:fadeUp .8s ease-out 1s both;}
+  .hero-anniversary{position:absolute;bottom:10px;left:50%;transform:translateX(calc(-50% - 30px));z-index:6;animation:fadeUp .8s ease-out 1s both;}
   .hero-anniversary img{height:90px;width:auto;filter:grayscale(100%) brightness(0.7) drop-shadow(0 4px 16px rgba(0,0,0,.3));transition:transform .3s,filter .3s;}
   .hero-anniversary img:hover{transform:scale(1.08);filter:grayscale(0%) brightness(1) drop-shadow(0 4px 30px rgba(255,225,80,.3));}
   .scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp 1s ease-out 1.5s both;}
@@ -253,7 +253,7 @@
   .brands-bento img:hover{opacity:.8;filter:none;}
 
   /* ===== SCROLL PROGRESS BAR ===== */
-  .scroll-progress-bar{position:fixed;top:0;left:0;right:0;height:5px;z-index:999;transform-origin:left;will-change:transform;background:linear-gradient(90deg,var(--h1),var(--h2),var(--h3),var(--h4),var(--h5),var(--h1));background-size:200% 100%;animation:progressShimmer 3s linear infinite;box-shadow:0 0 20px rgba(200,80,255,.8),0 0 50px rgba(77,159,255,.5),0 0 80px rgba(80,221,182,.3),0 2px 6px rgba(255,255,255,.4);}
+  .scroll-progress-bar{position:fixed;top:0;left:0;right:0;height:5px;z-index:999;transform-origin:left;will-change:transform;background:linear-gradient(90deg,var(--h1),var(--h2),var(--h3),var(--h4),var(--h5),var(--h1));background-size:200% 100%;animation:progressShimmer 3s linear infinite;box-shadow:0 0 30px rgba(200,80,255,1),0 0 60px rgba(77,159,255,.7),0 0 100px rgba(80,221,182,.5),0 0 140px rgba(255,225,80,.3),0 2px 8px rgba(255,255,255,.6);}
   @keyframes progressShimmer{0%{background-position:200% 0}100%{background-position:0% 0}}
 
   /* ===== TEXT SCRAMBLE ===== */
