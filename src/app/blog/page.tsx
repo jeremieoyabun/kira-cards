@@ -12,13 +12,13 @@ const articles = [
     slug: 'where-to-buy-pokemon-cards-phuket',
     title: 'Where to Buy Pokemon Cards in Phuket, Thailand (2026 Guide)',
     excerpt: 'Looking for Pokemon TCG booster boxes and packs in Phuket? Here are the best places to find sealed Pokemon cards, from Patong to Phuket Town.',
-    date: '2026-03-11',
+    date: '2026-03-04',
   },
   {
     slug: 'trading-card-shops-phuket-thailand',
     title: 'Trading Card Shops in Phuket, Thailand — Complete Local Guide',
     excerpt: 'A comprehensive guide to every trading card shop in Phuket. Pokemon, One Piece, Topps and more. Updated for 2026.',
-    date: '2026-03-11',
+    date: '2026-03-07',
   },
   {
     slug: 'buy-sell-graded-cards-thailand',

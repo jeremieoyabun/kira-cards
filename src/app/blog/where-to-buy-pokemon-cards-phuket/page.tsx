@@ -22,8 +22,8 @@ const jsonLd = {
   description: 'Complete guide to buying Pokemon TCG products in Phuket, Thailand.',
   author: { '@type': 'Organization', name: 'Kira Cards Co., Ltd.' },
   publisher: { '@type': 'Organization', name: 'Kira Cards Co., Ltd.', url: 'https://www.kira-cards.com' },
-  datePublished: '2026-03-11',
-  dateModified: '2026-03-11',
+  datePublished: '2026-03-04',
+  dateModified: '2026-03-04',
   mainEntityOfPage: 'https://www.kira-cards.com/blog/where-to-buy-pokemon-cards-phuket',
 }
 
@@ -32,7 +32,7 @@ export default function Article() {
     <div className="privacy-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Link href="/blog" className="privacy-back">&larr; All Articles</Link>
-      <time style={{ color: 'rgba(255,255,255,.3)', fontSize: 13 }}>March 11, 2026</time>
+      <time style={{ color: 'rgba(255,255,255,.3)', fontSize: 13 }}>March 4, 2026</time>
 
       <h1>Where to Buy Pokemon Cards in Phuket, Thailand</h1>
 

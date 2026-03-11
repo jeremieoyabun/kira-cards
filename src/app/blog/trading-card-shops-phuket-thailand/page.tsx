@@ -22,8 +22,8 @@ const jsonLd = {
   description: 'Find the best trading card shops in Phuket, Thailand for Pokemon, One Piece, and Topps cards.',
   author: { '@type': 'Organization', name: 'Kira Cards Co., Ltd.' },
   publisher: { '@type': 'Organization', name: 'Kira Cards Co., Ltd.', url: 'https://www.kira-cards.com' },
-  datePublished: '2026-03-11',
-  dateModified: '2026-03-11',
+  datePublished: '2026-03-07',
+  dateModified: '2026-03-07',
   mainEntityOfPage: 'https://www.kira-cards.com/blog/trading-card-shops-phuket-thailand',
 }
 
@@ -32,7 +32,7 @@ export default function Article() {
     <div className="privacy-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Link href="/blog" className="privacy-back">&larr; All Articles</Link>
-      <time style={{ color: 'rgba(255,255,255,.3)', fontSize: 13 }}>March 11, 2026</time>
+      <time style={{ color: 'rgba(255,255,255,.3)', fontSize: 13 }}>March 7, 2026</time>
 
       <h1>Trading Card Shops in Phuket, Thailand</h1>
 
