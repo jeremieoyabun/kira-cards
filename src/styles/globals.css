@@ -1063,9 +1063,9 @@
 
   /* Mobile */
   @media(max-width:768px){
-    .graded-grid{grid-template-columns:1fr;gap:24px;}
+    .graded-grid{grid-template-columns:1fr;gap:0;}
     .graded-right{order:-1;margin-left:0;}
-    .graded-card-showcase{width:300px;height:380px;}
+    .graded-card-showcase{width:300px;height:auto;}
     .graded-card-slab{width:300px;}
     .graded-price-tag{bottom:70px;right:100px;font-size:11px;padding:8px 14px;}
   }
