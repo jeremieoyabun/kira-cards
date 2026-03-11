@@ -190,7 +190,7 @@
   @keyframes spk{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
   .floor-glow{position:absolute;bottom:30px;left:50%;width:70%;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(77,159,255,.12) 0%,rgba(200,80,255,.06) 40%,transparent 70%);filter:blur(20px);z-index:0;animation:floorP 4s ease-in-out infinite;}
   @keyframes floorP{0%,100%{opacity:.6}50%{opacity:1}}
-  .hero-anniversary{position:absolute;bottom:10px;left:50%;transform:translateX(calc(-110% - 55px));z-index:6;animation:fadeUp .8s ease-out 1s both;}
+  .hero-anniversary{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:6;animation:fadeUp .8s ease-out 1s both;}
   .hero-anniversary img{height:90px;width:auto;filter:grayscale(100%) brightness(0.7) drop-shadow(0 4px 16px rgba(0,0,0,.3));transition:transform .3s,filter .3s;}
   .hero-anniversary img:hover{transform:scale(1.08);filter:grayscale(0%) brightness(1) drop-shadow(0 4px 30px rgba(255,225,80,.3));}
   .scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp 1s ease-out 1.5s both;}
@@ -823,7 +823,7 @@
     .booster-3{width:145px;height:248px;margin-left:-72px;bottom:70px;}
     .booster-4{width:124px;height:213px;right:70px;bottom:95px;}
     .booster-5{width:115px;height:198px;right:5px;bottom:110px;}
-    .hero-anniversary{left:50%;transform:translateX(-100%);bottom:6px;}
+    .hero-anniversary{left:50%;transform:translateX(-50%);bottom:6px;}
     .hero-anniversary img{height:55px;}
 
     .section-white,.section-dark,.notify-section{padding:80px 24px;}
