@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog — Kira Cards | TCG & Trading Cards Guide in Phuket, Thailand',
+  title: 'Blog  - Kira Cards | TCG & Trading Cards Guide in Phuket, Thailand',
   description: 'Guides, tips and news about Pokemon TCG, One Piece Card Game, Topps sports cards and graded cards in Phuket, Thailand. Your local TCG resource.',
   alternates: { canonical: 'https://www.kira-cards.com/blog' },
 }
@@ -16,7 +16,7 @@ const articles = [
   },
   {
     slug: 'trading-card-shops-phuket-thailand',
-    title: 'Trading Card Shops in Phuket, Thailand — Complete Local Guide',
+    title: 'Trading Card Shops in Phuket, Thailand  - Complete Local Guide',
     excerpt: 'A comprehensive guide to every trading card shop in Phuket. Pokemon, One Piece, Topps and more. Updated for 2026.',
     date: '2026-03-07',
   },

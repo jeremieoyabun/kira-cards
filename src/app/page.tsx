@@ -449,7 +449,7 @@ export default function Home() {
           <div className="hero-left">
             <div className="hero-badge"><span className="pulse-dot"></span>{t('heroLaunching')}</div>
             <h1 className={`hero-title${titleReady ? ' decoded' : ' decoding'}`}><span className="white">{titleText.slice(0, 4)}</span><br /><span className="holo">{titleText.slice(5)}</span></h1>
-            <div className="hero-sub">{t('heroSub')}</div>
+            <div className="hero-sub">{t('heroSub1')}<br />{t('heroSub2')}</div>
             <p className="hero-desc">{t('heroDesc')}</p>
             <div className="hero-actions">
               <button className="btn-slide" onClick={() => setShowNotify(true)}>

@@ -37,7 +37,7 @@ export default function Article() {
       <h1>Where to Buy Pokemon Cards in Phuket, Thailand</h1>
 
       <p>
-        If you&apos;re a Pokemon TCG collector living in Phuket or visiting the island, finding sealed Pokemon products can be a challenge. Unlike Bangkok, Phuket has very few dedicated trading card shops — but that&apos;s changing.
+        If you&apos;re a Pokemon TCG collector living in Phuket or visiting the island, finding sealed Pokemon products can be a challenge. Unlike Bangkok, Phuket has very few dedicated trading card shops  - but that&apos;s changing.
       </p>
       <p>
         This guide covers the best options for buying Pokemon TCG booster boxes, booster packs, elite trainer boxes, and premium collections in Phuket and surrounding areas.
@@ -46,7 +46,7 @@ export default function Article() {
       <section>
         <h2>The Pokemon TCG Scene in Phuket</h2>
         <p>
-          Phuket&apos;s trading card community has been growing steadily, driven by both Thai collectors and the island&apos;s large expat population. Pokemon Scarlet &amp; Violet, Prismatic Evolutions, and classic sets are all in demand — but local supply has been limited.
+          Phuket&apos;s trading card community has been growing steadily, driven by both Thai collectors and the island&apos;s large expat population. Pokemon Scarlet &amp; Violet, Prismatic Evolutions, and classic sets are all in demand  - but local supply has been limited.
         </p>
         <p>
           Most collectors in Phuket currently rely on Bangkok-based online stores or marketplace apps, which often mean higher shipping costs and longer wait times. Having a local retail option in Patong means same-day access to sealed products.
@@ -66,7 +66,7 @@ export default function Article() {
           <li>PSA, BGS, and CGC graded Pokemon cards</li>
         </ul>
         <p>
-          Beyond Patong, you can sometimes find Pokemon cards at department stores in Phuket Town (Central Phuket, Jungceylon) — typically at the toy sections — but selection is limited and prices are often higher than specialty retailers.
+          Beyond Patong, you can sometimes find Pokemon cards at department stores in Phuket Town (Central Phuket, Jungceylon)  - typically at the toy sections  - but selection is limited and prices are often higher than specialty retailers.
         </p>
       </section>
 
@@ -76,7 +76,7 @@ export default function Article() {
           If you prefer ordering online, several options serve Phuket collectors:
         </p>
         <ul>
-          <li><strong>Kira Cards online store</strong> (launching May 2026) — nationwide shipping with tracked delivery and protective packaging</li>
+          <li><strong>Kira Cards online store</strong> (launching May 2026)  - nationwide shipping with tracked delivery and protective packaging</li>
           <li>Facebook groups dedicated to Thai Pokemon TCG trading</li>
           <li>LINE shopping communities for Thai collectors</li>
           <li>Shopee and Lazada marketplace sellers (check reviews carefully for authenticity)</li>
@@ -99,10 +99,10 @@ export default function Article() {
       <section>
         <h2>Tips for Buying Pokemon Cards in Phuket</h2>
         <ul>
-          <li><strong>Buy sealed</strong> — Always purchase sealed products from trusted retailers to guarantee authenticity</li>
-          <li><strong>Check market prices</strong> — Compare prices on TCGPlayer or similar platforms before buying locally</li>
-          <li><strong>Join local communities</strong> — Facebook groups and LINE chats connect Phuket collectors for trades and meetups</li>
-          <li><strong>Pre-order new sets</strong> — Popular sets sell out fast. Pre-ordering ensures you get the latest releases on launch day</li>
+          <li><strong>Buy sealed</strong>  - Always purchase sealed products from trusted retailers to guarantee authenticity</li>
+          <li><strong>Check market prices</strong>  - Compare prices on TCGPlayer or similar platforms before buying locally</li>
+          <li><strong>Join local communities</strong>  - Facebook groups and LINE chats connect Phuket collectors for trades and meetups</li>
+          <li><strong>Pre-order new sets</strong>  - Popular sets sell out fast. Pre-ordering ensures you get the latest releases on launch day</li>
         </ul>
       </section>
 

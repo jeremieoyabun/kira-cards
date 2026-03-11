@@ -37,7 +37,7 @@ export default function Article() {
       <h1>How to Buy &amp; Sell PSA Graded Cards in Thailand</h1>
 
       <p>
-        Graded cards — professionally authenticated and scored by companies like PSA, BGS (Beckett), and CGC — have become one of the fastest-growing segments of the collectibles market in Thailand. Whether you&apos;re looking to buy a gem mint PSA 10 for your collection or sell graded slabs for cash, this guide covers everything you need to know.
+        Graded cards  - professionally authenticated and scored by companies like PSA, BGS (Beckett), and CGC  - have become one of the fastest-growing segments of the collectibles market in Thailand. Whether you&apos;re looking to buy a gem mint PSA 10 for your collection or sell graded slabs for cash, this guide covers everything you need to know.
       </p>
 
       <section>
@@ -47,9 +47,9 @@ export default function Article() {
         </p>
         <p>The most recognized grading companies are:</p>
         <ul>
-          <li><strong>PSA (Professional Sports Authenticator)</strong> — The most widely recognized grading service worldwide. A PSA 10 &quot;Gem Mint&quot; is the gold standard for collectors.</li>
-          <li><strong>BGS (Beckett Grading Services)</strong> — Known for sub-grades (centering, corners, edges, surface). A BGS 10 &quot;Pristine&quot; or &quot;Black Label&quot; is extremely rare and valuable.</li>
-          <li><strong>CGC (Certified Guaranty Company)</strong> — Originally focused on comics, now offers competitive card grading with growing market acceptance.</li>
+          <li><strong>PSA (Professional Sports Authenticator)</strong>  - The most widely recognized grading service worldwide. A PSA 10 &quot;Gem Mint&quot; is the gold standard for collectors.</li>
+          <li><strong>BGS (Beckett Grading Services)</strong>  - Known for sub-grades (centering, corners, edges, surface). A BGS 10 &quot;Pristine&quot; or &quot;Black Label&quot; is extremely rare and valuable.</li>
+          <li><strong>CGC (Certified Guaranty Company)</strong>  - Originally focused on comics, now offers competitive card grading with growing market acceptance.</li>
         </ul>
       </section>
 
@@ -59,26 +59,26 @@ export default function Article() {
           Thailand&apos;s collector community has embraced graded cards for several reasons:
         </p>
         <ul>
-          <li><strong>Authentication</strong> — Grading verifies the card is genuine, which is crucial in a market where counterfeits exist</li>
-          <li><strong>Price transparency</strong> — Graded cards have standardized market values based on grade, making fair pricing easier</li>
-          <li><strong>Investment potential</strong> — High-grade vintage Pokemon and sports cards have seen significant value appreciation</li>
-          <li><strong>Protection</strong> — The sealed slab protects the card from damage, humidity (important in Thailand&apos;s climate), and handling</li>
+          <li><strong>Authentication</strong>  - Grading verifies the card is genuine, which is crucial in a market where counterfeits exist</li>
+          <li><strong>Price transparency</strong>  - Graded cards have standardized market values based on grade, making fair pricing easier</li>
+          <li><strong>Investment potential</strong>  - High-grade vintage Pokemon and sports cards have seen significant value appreciation</li>
+          <li><strong>Protection</strong>  - The sealed slab protects the card from damage, humidity (important in Thailand&apos;s climate), and handling</li>
         </ul>
       </section>
 
       <section>
         <h2>Where to Buy Graded Cards in Thailand</h2>
 
-        <h3>Kira Cards — Phuket &amp; Online</h3>
+        <h3>Kira Cards  - Phuket &amp; Online</h3>
         <p>
           <strong>Kira Cards</strong> (opening May 2026 in Patong, Phuket) buys and sells graded cards across all major grading companies. You can browse inventory online or visit the Phuket store to see graded cards in person before purchasing.
         </p>
 
         <h3>Online Marketplaces</h3>
         <ul>
-          <li><strong>eBay</strong> — The largest marketplace for graded cards globally. Filter by grading company and grade to find exactly what you want. Watch out for import duties on high-value purchases.</li>
-          <li><strong>Facebook Groups</strong> — Several Thai-language groups specialize in graded card trading. Always use secure payment methods and verify seller reputation.</li>
-          <li><strong>LINE Groups</strong> — Thai collector communities where graded cards are regularly offered for sale or trade.</li>
+          <li><strong>eBay</strong>  - The largest marketplace for graded cards globally. Filter by grading company and grade to find exactly what you want. Watch out for import duties on high-value purchases.</li>
+          <li><strong>Facebook Groups</strong>  - Several Thai-language groups specialize in graded card trading. Always use secure payment methods and verify seller reputation.</li>
+          <li><strong>LINE Groups</strong>  - Thai collector communities where graded cards are regularly offered for sale or trade.</li>
         </ul>
 
         <h3>Card Shows &amp; Events</h3>
@@ -93,9 +93,9 @@ export default function Article() {
           If you have graded cards you want to sell, here&apos;s how the process works with a dealer like Kira Cards:
         </p>
         <ol>
-          <li><strong>Submit photos</strong> — Send clear photos of your graded cards (front, back, and label) via LINE (@kiracards) or email (contact@kira-cards.com)</li>
-          <li><strong>Receive an offer</strong> — The team evaluates your cards based on current market value, grade, and demand. You get a fair price proposal within 24-48 hours.</li>
-          <li><strong>Ship or drop off</strong> — Ship your cards to Phuket (tracked and insured) or bring them to the Patong store in person. Payment is issued once cards are verified and authenticated.</li>
+          <li><strong>Submit photos</strong>  - Send clear photos of your graded cards (front, back, and label) via LINE (@kiracards) or email (contact@kira-cards.com)</li>
+          <li><strong>Receive an offer</strong>  - The team evaluates your cards based on current market value, grade, and demand. You get a fair price proposal within 24-48 hours.</li>
+          <li><strong>Ship or drop off</strong>  - Ship your cards to Phuket (tracked and insured) or bring them to the Patong store in person. Payment is issued once cards are verified and authenticated.</li>
         </ol>
         <p>
           This is often faster and more convenient than listing individually on marketplaces, especially for collections with multiple cards.
@@ -108,10 +108,10 @@ export default function Article() {
           Before buying a graded card, always verify its authenticity:
         </p>
         <ul>
-          <li><strong>Check the cert number</strong> — Every PSA, BGS, and CGC card has a unique certification number. Look it up on the grading company&apos;s website to verify the card details match.</li>
-          <li><strong>Inspect the slab</strong> — Look for signs of tampering: misaligned labels, scratches on the case seams, or unusual weight.</li>
-          <li><strong>Buy from trusted sources</strong> — Purchase from established dealers with verified track records rather than anonymous marketplace sellers.</li>
-          <li><strong>Use PSA&apos;s scan tool</strong> — PSA&apos;s app allows you to scan the barcode on any PSA slab for instant verification.</li>
+          <li><strong>Check the cert number</strong>  - Every PSA, BGS, and CGC card has a unique certification number. Look it up on the grading company&apos;s website to verify the card details match.</li>
+          <li><strong>Inspect the slab</strong>  - Look for signs of tampering: misaligned labels, scratches on the case seams, or unusual weight.</li>
+          <li><strong>Buy from trusted sources</strong>  - Purchase from established dealers with verified track records rather than anonymous marketplace sellers.</li>
+          <li><strong>Use PSA&apos;s scan tool</strong>  - PSA&apos;s app allows you to scan the barcode on any PSA slab for instant verification.</li>
         </ul>
       </section>
 
@@ -121,17 +121,17 @@ export default function Article() {
           The most in-demand graded cards among Thai collectors include:
         </p>
         <ul>
-          <li><strong>Base Set Charizard (PSA 9-10)</strong> — The iconic card that started it all. PSA 10 copies command premium prices.</li>
-          <li><strong>Pokemon Japanese promos</strong> — Exclusive Japanese tournament and event cards are highly valued in the Thai market.</li>
-          <li><strong>One Piece Card Game alt-arts</strong> — Manga-art alternate cards in high grades are gaining traction.</li>
-          <li><strong>Topps Chrome football rookies</strong> — Popular among the European and American expat collector community in Phuket and Bangkok.</li>
+          <li><strong>Base Set Charizard (PSA 9-10)</strong>  - The iconic card that started it all. PSA 10 copies command premium prices.</li>
+          <li><strong>Pokemon Japanese promos</strong>  - Exclusive Japanese tournament and event cards are highly valued in the Thai market.</li>
+          <li><strong>One Piece Card Game alt-arts</strong>  - Manga-art alternate cards in high grades are gaining traction.</li>
+          <li><strong>Topps Chrome football rookies</strong>  - Popular among the European and American expat collector community in Phuket and Bangkok.</li>
         </ul>
       </section>
 
       <section>
         <h2>Start Buying or Selling Today</h2>
         <p>
-          Whether you&apos;re building a graded card collection or looking to sell your slabs for a fair price, Kira Cards makes the process simple. Contact us to get started — we serve collectors across Thailand from our base in Phuket.
+          Whether you&apos;re building a graded card collection or looking to sell your slabs for a fair price, Kira Cards makes the process simple. Contact us to get started  - we serve collectors across Thailand from our base in Phuket.
         </p>
         <p style={{ marginTop: 24 }}>
           <NotifyPopup trigger={

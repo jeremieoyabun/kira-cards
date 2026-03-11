@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Kira Cards — Buy Pokemon TCG, One Piece & Topps Cards Online | Thailand',
+  title: 'Kira Cards | Buy Pokemon TCG, One Piece & Topps Cards Online | Thailand',
   description: 'Shop Pokemon TCG, One Piece & Topps cards online with fast nationwide delivery across Thailand. Sealed booster boxes, graded cards (PSA, BGS, CGC), secure checkout. Online store + flagship retail in Phuket. Opening May 2026!',
   keywords: 'buy Pokemon cards online Thailand, TCG online store Thailand, Pokemon TCG Phuket, One Piece Card Game Thailand, Topps sports cards online, trading cards online Thailand, booster box online Thailand, TCG shop online, buy Pokemon cards Thailand, graded cards PSA Thailand, buy sell graded cards online, Pokemon booster box online, sealed products Thailand, e-commerce TCG Thailand, English Japanese TCG, collector cards Thailand',
   icons: {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.kira-cards.com',
   },
   openGraph: {
-    title: 'Kira Cards — Buy Pokemon TCG & Trading Cards Online | Thailand',
+    title: 'Kira Cards | Buy Pokemon TCG & Trading Cards Online | Thailand',
     description: 'Shop TCG & sports cards online with nationwide delivery across Thailand. Pokemon, One Piece, Topps. Sealed products, graded cards, secure checkout.',
     type: 'website',
     url: 'https://www.kira-cards.com',
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
       url: '/Boosters/Booster_Pokemon-01.webp',
       width: 600,
       height: 900,
-      alt: 'Pokemon TCG Booster Pack — Kira Cards Phuket Thailand',
+      alt: 'Pokemon TCG Booster Pack - Kira Cards Phuket Thailand',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kira Cards — Buy Pokemon TCG & Trading Cards Online | Thailand',
+    title: 'Kira Cards | Buy Pokemon TCG & Trading Cards Online | Thailand',
     description: 'Shop Pokemon TCG, One Piece & Topps online. Sealed products, graded cards, fast nationwide shipping across Thailand.',
     images: ['/Boosters/Booster_Pokemon-01.webp'],
   },
