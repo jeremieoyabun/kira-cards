@@ -356,7 +356,8 @@ export default function Home() {
     '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
   ]
   const toppsBoosters = [
-    '/Boosters/Booster_Topps_NBA_01.webp', '/Boosters/Booster_Topps_Soccer_01.webp',
+    '/Boosters/Booster_Topps_NBA_01.webp', '/Boosters/Booster_Topps_NBA_02.webp',
+    '/Boosters/Booster_Topps_Soccer_01.webp', '/Boosters/Booster_Topps_Soccer_02.webp',
   ]
   const boosters = [...pokemonBoosters, ...opBoosters, ...toppsBoosters]
 
@@ -441,7 +442,7 @@ export default function Home() {
             <div className="hero-badge"><span className="pulse-dot"></span>Launching Soon</div>
             <h1 className={`hero-title${titleReady ? ' decoded' : ' decoding'}`}><span className="white">{titleText.slice(0, 4)}</span><br /><span className="holo">{titleText.slice(5)}</span></h1>
             <div className="hero-sub">TCG Retail Point in Phuket</div>
-            <p className="hero-desc">Pokemon, One Piece & Topps TCG. Sealed products, collector-grade experience, compliance-first approach.</p>
+            <p className="hero-desc">Official Pokémon & One Piece TCG alongside Topps sports cards.</p>
             <div className="hero-actions">
               <button className="btn-slide" onClick={() => setShowNotify(true)}>
                 <div className="btn-slide-track"></div>
