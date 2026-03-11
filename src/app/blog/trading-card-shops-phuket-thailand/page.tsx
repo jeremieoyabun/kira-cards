@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import NotifyPopup from '@/components/NotifyPopup'
 
 export const metadata: Metadata = {
   title: 'Trading Card Shops in Phuket, Thailand — Complete 2026 Guide | Kira Cards',
@@ -126,9 +127,8 @@ export default function Article() {
           The TCG retail landscape in Phuket is evolving. Sign up for updates from Kira Cards to know when new products drop and when the Patong store opens.
         </p>
         <p style={{ marginTop: 24 }}>
-          <Link
-            href="/#contact"
-            style={{
+          <NotifyPopup trigger={
+            <span style={{
               display: 'inline-block',
               padding: '14px 36px',
               borderRadius: 100,
@@ -136,12 +136,11 @@ export default function Article() {
               color: '#fff',
               fontWeight: 700,
               fontSize: 14,
-              textDecoration: 'none',
               letterSpacing: '.5px',
-            }}
-          >
-            Get Notified &rarr;
-          </Link>
+            }}>
+              Get Notified &rarr;
+            </span>
+          } />
         </p>
       </section>
     </div>

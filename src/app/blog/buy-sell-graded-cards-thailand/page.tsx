@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import NotifyPopup from '@/components/NotifyPopup'
 
 export const metadata: Metadata = {
   title: 'How to Buy & Sell PSA Graded Cards in Thailand (2026) | Kira Cards',
@@ -133,9 +134,8 @@ export default function Article() {
           Whether you&apos;re building a graded card collection or looking to sell your slabs for a fair price, Kira Cards makes the process simple. Contact us to get started — we serve collectors across Thailand from our base in Phuket.
         </p>
         <p style={{ marginTop: 24 }}>
-          <Link
-            href="/#contact"
-            style={{
+          <NotifyPopup trigger={
+            <span style={{
               display: 'inline-block',
               padding: '14px 36px',
               borderRadius: 100,
@@ -143,12 +143,11 @@ export default function Article() {
               color: '#111',
               fontWeight: 700,
               fontSize: 14,
-              textDecoration: 'none',
               letterSpacing: '.5px',
-            }}
-          >
-            Contact Us &rarr;
-          </Link>
+            }}>
+              Contact Us &rarr;
+            </span>
+          } />
         </p>
       </section>
     </div>
