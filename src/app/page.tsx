@@ -784,7 +784,7 @@ export default function Home() {
                 <div className="graded-card-slab">
                   <video src="/Cards/rare-card.webm" autoPlay loop muted playsInline />
                   <div className="graded-price-tag">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    <span style={{fontSize:18,fontWeight:800,lineHeight:1}}>฿</span>
                     <span>{lang === 'en' ? 'We Buy & Sell' : 'รับซื้อ & ขาย'}</span>
                   </div>
                 </div>
