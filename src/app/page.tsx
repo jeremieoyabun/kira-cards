@@ -462,11 +462,11 @@ export default function Home() {
           <div className="hero-right">
             <div className="boosters-fan" id="boostersFan">
               <div className="floor-glow"></div>
-              <div className="booster booster-1" data-base-rotate="-22"><img src="/Boosters/Booster_Topps_NBA_01.webp" alt="Topps NBA Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-2" data-base-rotate="-10"><img src="/images/booster-pokemon-scarlet.webp" alt="Pokemon Scarlet & Violet Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-3" data-base-rotate="0"><img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-4" data-base-rotate="10"><img src="/images/booster-onepiece.webp" alt="One Piece Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-5" data-base-rotate="22"><img src="/Boosters/Booster_Topps_Soccer_01.webp" alt="Topps Soccer Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-1" data-base-rotate="-22" style={{WebkitMaskImage:'url(/Boosters/Booster_Topps_NBA_01.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/Boosters/Booster_Topps_NBA_01.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}><img src="/Boosters/Booster_Topps_NBA_01.webp" alt="Topps NBA Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-2" data-base-rotate="-10" style={{WebkitMaskImage:'url(/images/booster-pokemon-scarlet.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/images/booster-pokemon-scarlet.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}><img src="/images/booster-pokemon-scarlet.webp" alt="Pokemon Scarlet & Violet Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-3" data-base-rotate="0" style={{WebkitMaskImage:'url(/Boosters/Booster_Pokemon-01.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/Boosters/Booster_Pokemon-01.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}><img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-4" data-base-rotate="10" style={{WebkitMaskImage:'url(/images/booster-onepiece.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/images/booster-onepiece.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}><img src="/images/booster-onepiece.webp" alt="One Piece Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-5" data-base-rotate="22" style={{WebkitMaskImage:'url(/Boosters/Booster_Topps_Soccer_01.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/Boosters/Booster_Topps_Soccer_01.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}><img src="/Boosters/Booster_Topps_Soccer_01.webp" alt="Topps Soccer Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="sparkles">
                 <div className="sparkle" style={{"width":"3px","height":"3px","top":"5%","left":"12%","background":"var(--h1)","--dur":"3s","--delay":"0s"} as React.CSSProperties}></div>
                 <div className="sparkle" style={{"width":"4px","height":"4px","top":"12%","right":"10%","background":"var(--h2)","--dur":"4s","--delay":".5s"} as React.CSSProperties}></div>
@@ -596,17 +596,17 @@ export default function Home() {
             <div className="about-visual">
               <div className="about-visual-glow"></div>
               <div className="about-cards">
-                <div className="about-card ac-1">
+                <div className="about-card ac-1" style={{WebkitMaskImage:'url(/Boosters/Booster_OP-01.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/Boosters/Booster_OP-01.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}>
                   <div className="ac-inner">
                     <img src="/Boosters/Booster_OP-01.webp" alt="One Piece Booster" className="ac-img" loading="lazy" />
                   </div>
                 </div>
-                <div className="about-card ac-2">
+                <div className="about-card ac-2" style={{WebkitMaskImage:'url(/Boosters/Booster_Pokemon-01.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/Boosters/Booster_Pokemon-01.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}>
                   <div className="ac-inner">
                     <img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" className="ac-img" loading="lazy" />
                   </div>
                 </div>
-                <div className="about-card ac-3">
+                <div className="about-card ac-3" style={{WebkitMaskImage:'url(/Boosters/Booster_Topps_NBA_01.webp)',WebkitMaskSize:'contain',WebkitMaskRepeat:'no-repeat',WebkitMaskPosition:'center',maskImage:'url(/Boosters/Booster_Topps_NBA_01.webp)',maskSize:'contain',maskRepeat:'no-repeat',maskPosition:'center'}}>
                   <div className="ac-inner">
                     <img src="/Boosters/Booster_Topps_NBA_01.webp" alt="Topps NBA Booster" className="ac-img" loading="lazy" />
                   </div>
