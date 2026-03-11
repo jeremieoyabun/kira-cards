@@ -743,7 +743,6 @@ export default function Home() {
         <div className="section-inner">
           <div className="graded-grid">
             <div className="graded-left">
-              <span className="section-overline graded-overline">{t('gradedOverline')}</span>
               <h2 className="graded-title"><span>{t('gradedTitle1')}</span> <span className="graded-title-accent">{t('gradedTitle2')}</span></h2>
               <p className="graded-desc">{t('gradedDesc')}</p>
 
