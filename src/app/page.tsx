@@ -493,7 +493,7 @@ export default function Home() {
         <div className="section-inner">
           <div className="section-header">
             <span className="section-overline">Why Kira Cards</span>
-            <h2>The TCG experience<br />Thailand deserves</h2>
+            <h2>The TCG & Sports Cards Experience<br />Thailand Deserves</h2>
             <p>Sealed products, fair pricing, and a collector-grade experience built around community and compliance.</p>
           </div>
           <div className="bento">
