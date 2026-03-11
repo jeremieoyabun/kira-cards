@@ -252,7 +252,7 @@
   .brands-bento img:hover{opacity:.8;filter:none;}
 
   /* ===== SCROLL PROGRESS BAR ===== */
-  .scroll-progress-bar{position:fixed;top:0;left:0;right:0;height:4px;z-index:999;transform-origin:left;will-change:transform;background:linear-gradient(90deg,var(--h1),var(--h2),var(--h3),var(--h4),var(--h5),var(--h1));background-size:200% 100%;animation:progressShimmer 3s linear infinite;box-shadow:0 0 16px rgba(200,80,255,.6),0 0 40px rgba(77,159,255,.35);}
+  .scroll-progress-bar{position:fixed;top:0;left:0;right:0;height:5px;z-index:999;transform-origin:left;will-change:transform;background:linear-gradient(90deg,var(--h1),var(--h2),var(--h3),var(--h4),var(--h5),var(--h1));background-size:200% 100%;animation:progressShimmer 3s linear infinite;box-shadow:0 0 20px rgba(200,80,255,.8),0 0 50px rgba(77,159,255,.5),0 0 80px rgba(80,221,182,.3),0 2px 6px rgba(255,255,255,.4);}
   @keyframes progressShimmer{0%{background-position:200% 0}100%{background-position:0% 0}}
 
   /* ===== TEXT SCRAMBLE ===== */
