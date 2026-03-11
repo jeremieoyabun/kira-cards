@@ -11,9 +11,9 @@ export const translations = {
 
     // Hero
     heroLaunching: 'Launching Soon',
-    heroSub1: 'TCG & Sports Cards',
-    heroSub2: 'Online Store + Retail in Phuket',
-    heroDesc: 'Shop Pokémon TCG, One Piece & Topps online with nationwide delivery across Thailand. Plus a flagship retail store in Patong, Phuket. Opening May 2026.',
+    heroSub1: 'Online Store & Flagship Retail',
+    heroSub2: 'Shop in Phuket',
+    heroDesc: 'Official Pokémon & One Piece TCG alongside Topps sports cards. Nationwide delivery across Thailand. Opening May 2026.',
     heroBtn: 'Get Notified',
     heroBtnHover: "Let's Go!",
     heroContact: 'Contact Us',
@@ -138,9 +138,9 @@ export const translations = {
 
     // Hero
     heroLaunching: 'เปิดตัวเร็วๆ นี้',
-    heroSub1: 'การ์ดเกมสะสมและการ์ดกีฬา',
-    heroSub2: 'ร้านออนไลน์ + หน้าร้านภูเก็ต',
-    heroDesc: 'ช้อป Pokémon TCG, One Piece และ Topps ออนไลน์ พร้อมจัดส่งทั่วไทย และหน้าร้านในป่าตอง ภูเก็ต เปิดพฤษภาคม 2026',
+    heroSub1: 'ร้านออนไลน์ & หน้าร้านหลัก',
+    heroSub2: 'ในภูเก็ต',
+    heroDesc: 'Pokémon & One Piece TCG อย่างเป็นทางการ พร้อม Topps sports cards จัดส่งทั่วประเทศไทย เปิดพฤษภาคม 2026',
     heroBtn: 'แจ้งเตือนฉัน',
     heroBtnHover: 'ไปเลย!',
     heroContact: 'ติดต่อเรา',
