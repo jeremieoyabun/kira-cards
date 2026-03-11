@@ -781,17 +781,12 @@ export default function Home() {
 
             <div className="graded-right">
               <div className="graded-card-showcase">
-                <div className="graded-card-rays">
-                  {[...Array(12)].map((_, i) => <div key={`gr-${i}`} className="graded-ray" style={{'--ri': i} as React.CSSProperties} />)}
-                </div>
                 <div className="graded-card-glow" />
                 <div className="graded-card-slab">
-                  <img src="/Cards/Kira-cards_graded-card.webp" alt="Graded Card" />
-                  <div className="graded-card-holo" />
-                  <div className="graded-card-shine" />
+                  <video src="/Cards/rare-card.webm" autoPlay loop muted playsInline />
                 </div>
                 <div className="graded-card-particles">
-                  {[...Array(20)].map((_, i) => <div key={`gp-${i}`} className="graded-particle" style={{'--gpi': i} as React.CSSProperties} />)}
+                  {[...Array(35)].map((_, i) => <div key={`gp-${i}`} className="graded-particle" style={{'--gpi': i} as React.CSSProperties} />)}
                 </div>
                 <div className="graded-price-tag">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
