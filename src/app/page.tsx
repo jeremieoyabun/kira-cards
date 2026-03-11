@@ -355,11 +355,13 @@ export default function Home() {
     '/Boosters/Booster_OP-01.webp', '/Boosters/Booster_OP-02.webp',
     '/Boosters/Booster_OP-03.webp', '/Boosters/Booster_OP-04.webp', '/Boosters/Booster_OP-05.webp',
   ]
-  const toppsBoosters = [
+  const toppsNbaBoosters = [
     '/Boosters/Booster_Topps_NBA_01.webp', '/Boosters/Booster_Topps_NBA_02.webp',
+  ]
+  const toppsSoccerBoosters = [
     '/Boosters/Booster_Topps_Soccer_01.webp', '/Boosters/Booster_Topps_Soccer_02.webp',
   ]
-  const boosters = [...pokemonBoosters, ...opBoosters, ...toppsBoosters]
+  const boosters = [...pokemonBoosters, ...opBoosters, ...toppsNbaBoosters, ...toppsSoccerBoosters]
 
   const pokemonCards = [
     '/Cards/Card_pokemon-01.webp', '/Cards/Card_pokemon-02.webp', '/Cards/Card_pokemon-03.webp',
@@ -374,17 +376,18 @@ export default function Home() {
     '/Cards/OP_card-07.webp', '/Cards/OP_card-08.webp', '/Cards/OP_card-09.webp',
     '/Cards/OP_card-10.webp',
   ]
-  const toppsCards = [
-    '/Cards/Card_naruto-01.webp', '/Cards/Card_naruto-02.webp', '/Cards/Card_naruto-03.webp',
-    '/Cards/Card_naruto-04.webp', '/Cards/Card_naruto-05.webp', '/Cards/Card_naruto-06.webp',
-    '/Cards/Card_naruto-07.webp', '/Cards/Card_naruto-08.webp', '/Cards/Card_naruto-09.webp',
-    '/Cards/Card_naruto-10.webp',
+  const toppsNbaCards = [
+    '/Cards/Card_Topps_Nba_01.webp', '/Cards/Card_Topps_Nba_02.webp', '/Cards/Card_Topps_Nba_03.webp',
+  ]
+  const toppsSoccerCards = [
+    '/Cards/Card_Topps_Soccer_01.webp', '/Cards/Card_Topps_Soccer_02.webp', '/Cards/Card_Topps_Soccer_03.webp',
   ]
 
   const getCardsForBooster = (boosterIndex: number) => {
     if (boosterIndex < pokemonBoosters.length) return pokemonCards
     if (boosterIndex < pokemonBoosters.length + opBoosters.length) return opCards
-    return toppsCards
+    if (boosterIndex < pokemonBoosters.length + opBoosters.length + toppsNbaBoosters.length) return toppsNbaCards
+    return toppsSoccerCards
   }
 
   return (
