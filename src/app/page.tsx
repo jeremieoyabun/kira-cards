@@ -463,8 +463,8 @@ export default function Home() {
             <div className="boosters-fan" id="boostersFan">
               <div className="floor-glow"></div>
               <div className="booster booster-1" data-base-rotate="-22"><img src="/Boosters/Booster_Topps_NBA_01.webp" alt="Topps NBA Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-2" data-base-rotate="-10"><img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
-              <div className="booster booster-3" data-base-rotate="0"><img src="/images/booster-pokemon-en.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-2" data-base-rotate="-10"><img src="/images/booster-pokemon-scarlet.webp" alt="Pokemon Scarlet & Violet Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
+              <div className="booster booster-3" data-base-rotate="0"><img src="/Boosters/Booster_Pokemon-01.webp" alt="Pokemon Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-4" data-base-rotate="10"><img src="/images/booster-onepiece.webp" alt="One Piece Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="booster booster-5" data-base-rotate="22"><img src="/Boosters/Booster_Topps_Soccer_01.webp" alt="Topps Soccer Booster" /><div className="booster-holo"></div><div className="booster-light"></div></div>
               <div className="sparkles">
