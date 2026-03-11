@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useLang } from '../useLang'
 
 const LAUNCH_DATE = new Date('2026-03-25T00:00:00').getTime()
 
@@ -34,6 +35,7 @@ export default function Home() {
   const [notifyLoading, setNotifyLoading] = useState(false)
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' })
   const [contactStatus, setContactStatus] = useState<'idle'|'loading'|'success'|'error'>('idle')
+  const { lang, toggle, t } = useLang()
 
   const handleSubscribe = async () => {
     if (!notifyEmail || notifyLoading) return
@@ -42,7 +44,7 @@ export default function Home() {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: notifyEmail }),
+        body: JSON.stringify({ email: notifyEmail, lang }),
       })
       if (res.ok) {
         setNotifySuccess(true)
@@ -421,18 +423,19 @@ export default function Home() {
           </div>
           <span className="nav-wordmark">KIRA CARDS</span>
         </a>
-        <div className="nav-links"><a href="#features">Features</a><a href="#location">Location</a><a href="#about">About</a><a href="#contact">Contact</a><button className="nav-cta" onClick={() => setShowNotify(true)}>Get Notified</button></div>
+        <div className="nav-links"><a href="#features">{t('navFeatures')}</a><a href="#location">{t('navLocation')}</a><a href="#about">{t('navAbout')}</a><a href="#contact">{t('navContact')}</a><button className="nav-cta" onClick={() => setShowNotify(true)}>{t('navGetNotified')}</button><button className="lang-toggle" onClick={toggle} aria-label="Switch language">{lang === 'en' ? '🇹🇭 TH' : '🇬🇧 EN'}</button></div>
         <button className={`nav-burger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
       </nav>
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
         <div className="mobile-menu-inner">
-          <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
-          <a href="#location" onClick={() => setMenuOpen(false)}>Location</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-          <button className="mobile-menu-cta" onClick={() => { setMenuOpen(false); setShowNotify(true) }}>Get Notified</button>
+          <a href="#features" onClick={() => setMenuOpen(false)}>{t('navFeatures')}</a>
+          <a href="#location" onClick={() => setMenuOpen(false)}>{t('navLocation')}</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>{t('navAbout')}</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>{t('navContact')}</a>
+          <button className="mobile-menu-cta" onClick={() => { setMenuOpen(false); setShowNotify(true) }}>{t('navGetNotified')}</button>
+          <button className="lang-toggle-mobile" onClick={toggle}>{lang === 'en' ? '🇹🇭 ภาษาไทย' : '🇬🇧 English'}</button>
         </div>
       </div>
       
@@ -442,18 +445,18 @@ export default function Home() {
         <div className="hero-grid"></div><div className="grain"></div><div className="vignette"></div><canvas id="particles" ref={canvasRef} />
         <div className="hero-content">
           <div className="hero-left">
-            <div className="hero-badge"><span className="pulse-dot"></span>Launching Soon</div>
+            <div className="hero-badge"><span className="pulse-dot"></span>{t('heroLaunching')}</div>
             <h1 className={`hero-title${titleReady ? ' decoded' : ' decoding'}`}><span className="white">{titleText.slice(0, 4)}</span><br /><span className="holo">{titleText.slice(5)}</span></h1>
-            <div className="hero-sub">TCG Retail Point in Phuket</div>
-            <p className="hero-desc">Official Pokémon & One Piece TCG alongside Topps sports cards.</p>
+            <div className="hero-sub">{t('heroSub')}</div>
+            <p className="hero-desc">{t('heroDesc')}</p>
             <div className="hero-actions">
               <button className="btn-slide" onClick={() => setShowNotify(true)}>
                 <div className="btn-slide-track"></div>
                 <div className="btn-slide-orb"><span className="btn-slide-dot"></span><svg className="btn-slide-arrow" viewBox="0 0 22 22" fill="none"><path d="M5 11h12M12 6l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-                <div className="btn-slide-texts"><span className="btn-slide-text btn-text-default">Get Notified</span><span className="btn-slide-text btn-text-hover">{"Let's Go!"}</span></div>
+                <div className="btn-slide-texts"><span className="btn-slide-text btn-text-default">{t('heroBtn')}</span><span className="btn-slide-text btn-text-hover">{t('heroBtnHover')}</span></div>
                 <div className="btn-slide-underglow"></div>
               </button>
-              <a href="#contact" className="btn-ghost">Contact Us</a>
+              <a href="#contact" className="btn-ghost">{t('heroContact')}</a>
             </div>
             <div className="hero-brands">
               <div className="hero-brands-logos">
@@ -487,7 +490,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="scroll-indicator"><span>Scroll</span><div className="scroll-line"></div></div>
+        <div className="scroll-indicator"><span>{t('heroScroll')}</span><div className="scroll-line"></div></div>
       </section>
       
       <div className="prismatic-divider"></div>
@@ -495,16 +498,16 @@ export default function Home() {
       <section className="section-white" id="features">
         <div className="section-inner">
           <div className="section-header">
-            <span className="section-overline">Why Kira Cards</span>
-            <h2>The TCG & Sports Cards Experience<br />Thailand Deserves</h2>
-            <p>Sealed products, fair pricing, and a collector-grade experience built around community and compliance.</p>
+            <span className="section-overline">{t('featOverline')}</span>
+            <h2>{t('featTitle1')}<br />{t('featTitle2')}</h2>
+            <p>{t('featDesc')}</p>
           </div>
           <div className="bento">
             {/* Row 1: wide + single */}
             <div className="bento-card bc-wide">
               <div className="bc-icon bc-icon-dark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-              <h3 style={{"color":"#fff"}}>Authenticity-First</h3>
-              <p>We are finalizing an official distribution partnership to ensure sealed, compliant products with transparent sourcing, controlled storage, and protective packaging. No grey-market positioning.</p>
+              <h3 style={{"color":"#fff"}}>{t('featAuth')}</h3>
+              <p>{t('featAuthDesc')}</p>
               <div className="brands-bento" style={{"marginTop":"28px"}}>
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" loading="lazy" width={84} height={28} style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" loading="lazy" width={84} height={28} style={{"height":"28px","opacity":".4"}} />
@@ -513,25 +516,25 @@ export default function Home() {
             </div>
             <div className="bento-card bc-accent">
               <div className="bc-icon bc-icon-white"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-              <h3>Fast Delivery</h3>
-              <p>Nationwide shipping across Thailand (tracked) with protective packaging to ensure every card arrives safely.</p>
+              <h3>{t('featDelivery')}</h3>
+              <p>{t('featDeliveryDesc')}</p>
             </div>
       
             {/* Row 2: single + single + single */}
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-light"><svg viewBox="0 0 24 24" fill="none" stroke="#c850ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-              <h3>English & Japanese</h3>
-              <p>Offering English and Japanese TCG and sports card products tailored to Thailand&apos;s growing collector community.</p>
+              <h3>{t('featLang')}</h3>
+              <p>{t('featLangDesc')}</p>
             </div>
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-pink"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6b8a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/></svg></div>
-              <h3>Collector Focused</h3>
-              <p>Booster boxes, elite trainer boxes, and premium collections curated for serious collectors.</p>
+              <h3>{t('featCollector')}</h3>
+              <p>{t('featCollectorDesc')}</p>
             </div>
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-green"><svg viewBox="0 0 24 24" fill="none" stroke="#50ddb6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-              <h3>Retail + E-Commerce</h3>
-              <p>On-site retail in Phuket paired with a modern e-commerce platform. Fast checkout, secure payments, and nationwide delivery across Thailand.</p>
+              <h3>{t('featRetail')}</h3>
+              <p>{t('featRetailDesc')}</p>
             </div>
           </div>
         </div>
@@ -542,9 +545,9 @@ export default function Home() {
       <section className="section-dark" id="location">
         <div className="section-inner">
           <div className="section-header" style={{marginBottom:'48px'}}>
-            <span className="section-overline" style={{color:'#fff'}}>Location & Business</span>
-            <h2 style={{color:'#fff'}}>Retail point + e-commerce</h2>
-            <p style={{color:'rgba(255,255,255,.4)'}}>Physical retail in Patong, Phuket, paired with a modern online store built for collectors. On-site vending, fast shipping, and a seamless digital experience.</p>
+            <span className="section-overline" style={{color:'#fff'}}>{t('locOverline')}</span>
+            <h2 style={{color:'#fff'}}>{t('locTitle')}</h2>
+            <p style={{color:'rgba(255,255,255,.4)'}}>{t('locDesc')}</p>
           </div>
 
           <div className="location-grid-3">
@@ -568,24 +571,24 @@ export default function Home() {
               </div>
             </div>
             <div className="location-col location-info">
-              <h3 style={{fontFamily:'Unbounded',fontSize:'clamp(18px,2vw,24px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'14px'}}>Patong, Phuket</h3>
-              <p style={{fontSize:'14px',color:'rgba(255,255,255,.45)',lineHeight:1.7,marginBottom:'16px'}}>Next to Took Took Prime, Thai Kitchen. On-site vending + online ordering nationwide.</p>
+              <h3 style={{fontFamily:'Unbounded',fontSize:'clamp(18px,2vw,24px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'14px'}}>{t('locPatong')}</h3>
+              <p style={{fontSize:'14px',color:'rgba(255,255,255,.45)',lineHeight:1.7,marginBottom:'16px'}}>{t('locNearby')}</p>
 
               <div className="biz-list" style={{padding:'16px 20px',marginBottom:'16px'}}>
                 <ul>
-                  <li><strong>Address:</strong> 179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</li>
-                  <li><strong>Coords:</strong> <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" style={{color:'var(--h2)',textDecoration:'underline',textUnderlineOffset:'3px'}}>7.8934, 98.3015</a></li>
-                  <li><strong>Platform:</strong> On-site retail + online store</li>
-                  <li><strong>Contact:</strong> contact@kira-cards.com</li>
+                  <li><strong>{t('locAddress')}</strong> 179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</li>
+                  <li><strong>{t('locCoords')}</strong> <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" style={{color:'var(--h2)',textDecoration:'underline',textUnderlineOffset:'3px'}}>7.8934, 98.3015</a></li>
+                  <li><strong>{t('locPlatform')}</strong> {t('locPlatformVal')}</li>
+                  <li><strong>{t('locContact')}</strong> contact@kira-cards.com</li>
                 </ul>
               </div>
 
               <div className="location-actions">
                 <a href="https://www.google.com/maps?q=7.8933886660783825,98.3014693288359" target="_blank" rel="noopener noreferrer" className="location-btn-primary">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Google Maps
+                  {t('locGoogleMaps')}
                 </a>
-                <a href="#contact" className="location-btn-secondary">Contact Us</a>
+                <a href="#contact" className="location-btn-secondary">{t('locContactUs')}</a>
               </div>
             </div>
           </div>
@@ -625,14 +628,14 @@ export default function Home() {
               </div>
             </div>
             <div className="about-text">
-              <span className="section-overline">About Us</span>
-              <h2>Built for collectors,<br />by collectors</h2>
-              <p>Kira Cards is an upcoming TCG and sports cards retailer based in Phuket, serving collectors across Thailand through an online store and a physical retail point.</p>
-              <p>We are building a compliance-first retail setup and are finalizing an official distribution partnership to ensure sealed, properly sourced products.</p>
+              <span className="section-overline">{t('aboutOverline')}</span>
+              <h2>{t('aboutTitle1')}<br />{t('aboutTitle2')}</h2>
+              <p>{t('aboutDesc1')}</p>
+              <p>{t('aboutDesc2')}</p>
               <div className="about-badges">
-                <div className="about-badge">🇹🇭 Based in Phuket</div>
-                <div className="about-badge">📦 Nationwide Shipping</div>
-                <div className="about-badge">✨ Seeking official distribution partnership</div>
+                <div className="about-badge">{t('aboutBadge1')}</div>
+                <div className="about-badge">{t('aboutBadge2')}</div>
+                <div className="about-badge">{t('aboutBadge3')}</div>
               </div>
             </div>
           </div>
@@ -645,9 +648,9 @@ export default function Home() {
         <div className="notify-aurora notify-au1"></div>
         <div className="notify-aurora notify-au2"></div>
         <div className="notify-inner">
-          <span className="section-overline" style={{"textAlign":"center","marginBottom":"20px"}}>Early Access</span>
-          <h2>Be the first to know</h2>
-          <p>Get notified when we launch and receive exclusive early access to our first product drops.</p>
+          <span className="section-overline" style={{"textAlign":"center","marginBottom":"20px"}}>{t('earlyOverline')}</span>
+          <h2>{t('earlyTitle')}</h2>
+          <p>{t('earlyDesc')}</p>
           {/* Countdown hidden until Maxsoft validation
           <div className="countdown countdown-inline" suppressHydrationWarning>
             <div className="countdown-block"><span className="countdown-num" suppressHydrationWarning>{String(time.days).padStart(2,'0')}</span><span className="countdown-label">Days</span></div>
@@ -660,10 +663,10 @@ export default function Home() {
           </div>
           */}
           <div className="notify-form">
-            <input className="notify-input" type="email" placeholder="Enter your email" value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
-            <button className="notify-btn" onClick={handleSubscribe} disabled={notifyLoading}>{notifyLoading ? 'Sending...' : 'Notify Me'}</button>
+            <input className="notify-input" type="email" placeholder={t('earlyPlaceholder')} value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
+            <button className="notify-btn" onClick={handleSubscribe} disabled={notifyLoading}>{notifyLoading ? t('earlySending') : t('earlyBtn')}</button>
           </div>
-          {notifySuccess && <p style={{color:'#50ddb6',marginTop:'16px',fontSize:'14px'}}>You&apos;re in! We&apos;ll notify you at launch.</p>}
+          {notifySuccess && <p style={{color:'#50ddb6',marginTop:'16px',fontSize:'14px'}}>{t('earlySuccess')}</p>}
         </div>
       </section>
 
@@ -675,9 +678,9 @@ export default function Home() {
         <div className="pack-aurora pack-au-1" />
         <div className="pack-aurora pack-au-2" />
         <div className="section-inner" style={{textAlign:'center'}}>
-          <span className="section-overline" style={{textAlign:'center',marginBottom:'20px',color:'#fff'}}>Brand Experience</span>
-          <h2 style={{fontFamily:'Unbounded',fontSize:'clamp(28px,4vw,42px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>Open a Pack</h2>
-          <p style={{fontSize:'16px',color:'rgba(255,255,255,.4)',lineHeight:1.7,marginBottom:'50px',maxWidth:'480px',marginLeft:'auto',marginRight:'auto'}}>Feel the thrill. Click the booster to reveal your card.</p>
+          <span className="section-overline" style={{textAlign:'center',marginBottom:'20px',color:'#fff'}}>{t('packOverline')}</span>
+          <h2 style={{fontFamily:'Unbounded',fontSize:'clamp(28px,4vw,42px)',fontWeight:700,color:'#fff',lineHeight:1.2,marginBottom:'16px'}}>{t('packTitle')}</h2>
+          <p style={{fontSize:'16px',color:'rgba(255,255,255,.4)',lineHeight:1.7,marginBottom:'50px',maxWidth:'480px',marginLeft:'auto',marginRight:'auto'}}>{t('packDesc')}</p>
 
           <div className={`pack-stage ${packState}`}>
             <div className={`pack-flash ${packState === 'opening' ? 'active' : ''}`} />
@@ -705,7 +708,7 @@ export default function Home() {
                 <img src={boosters[currentBooster]} alt="Booster Pack" />
                 <div className="pack-shine"></div>
               </div>
-              {packState === 'idle' && <div className="pack-hint">Tap to open</div>}
+              {packState === 'idle' && <div className="pack-hint">{t('packTap')}</div>}
             </div>
             <div className={`pack-card-container ${packState === 'revealed' ? 'show' : ''}`}>
               <div className="pack-card" ref={packCardRef}>
@@ -715,7 +718,7 @@ export default function Home() {
                   <div className="pack-card-light"></div>
                 </div>
               </div>
-              {packState === 'revealed' && <button className="pack-reset" onClick={resetPack}>Open Another</button>}
+              {packState === 'revealed' && <button className="pack-reset" onClick={resetPack}>{t('packAnother')}</button>}
             </div>
             <div className={`pack-burst ${packState === 'opening' || packState === 'revealed' ? 'active' : ''}`}>
               {[...Array(24)].map((_, i) => <div key={i} className={`burst-particle bp-ring1`} style={{'--bi':i} as React.CSSProperties} />)}
@@ -738,21 +741,21 @@ export default function Home() {
         <div className="section-inner">
           <div className="contact-grid">
             <div className="contact-left">
-              <span className="section-overline">Get in Touch</span>
-              <h2>Let's talk cards</h2>
-              <p>Have questions about our products, distribution, or wholesale inquiries? We'd love to hear from you.</p>
+              <span className="section-overline">{t('contactOverline')}</span>
+              <h2>{t('contactTitle')}</h2>
+              <p>{t('contactDesc')}</p>
               <div className="contact-info">
                 <div className="contact-item">
                   <div className="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                  <div className="contact-item-text"><strong>Location</strong>179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</div>
+                  <div className="contact-item-text"><strong>{t('contactLocation')}</strong>179 ภก.4055 Pa Tong, Kathu District, Phuket 83150</div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                  <div className="contact-item-text"><strong>Email</strong>contact@kira-cards.com</div>
+                  <div className="contact-item-text"><strong>{t('contactEmail')}</strong>contact@kira-cards.com</div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-                  <div className="contact-item-text"><strong>Phone</strong>+66 62 096 0153</div>
+                  <div className="contact-item-text"><strong>{t('contactPhone')}</strong>+66 62 096 0153</div>
                 </div>
                 <div className="contact-item">
                   <div className="contact-item-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></div>
@@ -761,11 +764,11 @@ export default function Home() {
               </div>
             </div>
             <form className="contact-form" onSubmit={handleContact}>
-              <input type="text" placeholder="Your name" value={contactForm.name} onChange={(e) => setContactForm(f => ({...f, name: e.target.value}))} required />
-              <input type="email" placeholder="Your email" value={contactForm.email} onChange={(e) => setContactForm(f => ({...f, email: e.target.value}))} required />
-              <textarea placeholder="Your message" value={contactForm.message} onChange={(e) => setContactForm(f => ({...f, message: e.target.value}))} required />
+              <input type="text" placeholder={t('contactName')} value={contactForm.name} onChange={(e) => setContactForm(f => ({...f, name: e.target.value}))} required />
+              <input type="email" placeholder={t('contactEmailPh')} value={contactForm.email} onChange={(e) => setContactForm(f => ({...f, email: e.target.value}))} required />
+              <textarea placeholder={t('contactMessage')} value={contactForm.message} onChange={(e) => setContactForm(f => ({...f, message: e.target.value}))} required />
               <button type="submit" disabled={contactStatus === 'loading'}>
-                {contactStatus === 'loading' ? 'Sending...' : contactStatus === 'success' ? 'Message Sent!' : 'Send Message'}
+                {contactStatus === 'loading' ? t('contactSending') : contactStatus === 'success' ? t('contactSent') : t('contactSend')}
               </button>
             </form>
           </div>
@@ -780,7 +783,7 @@ export default function Home() {
               <img src="/KIRA_sigle.svg" alt="Kira Cards" style={{width:'28px',height:'auto'}} />
               <span>KIRA CARDS</span>
             </a>
-            <p className="footer-tagline">Upcoming TCG and sports cards retailer based in Phuket, Thailand.</p>
+            <p className="footer-tagline">{t('footerTagline')}</p>
             <div className="footer-socials">
               <a href="#" aria-label="LINE" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
               <a href="#" aria-label="Instagram" className="footer-social"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -789,22 +792,22 @@ export default function Home() {
           </div>
           <div className="footer-cols">
             <div className="footer-col">
-              <h4>Navigate</h4>
-              <a href="#features">Features</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
-              <button onClick={() => setShowNotify(true)} style={{background:'none',border:'none',padding:0,cursor:'pointer',color:'inherit',font:'inherit',textAlign:'left'}}>Get Notified</button>
+              <h4>{t('footerNavigate')}</h4>
+              <a href="#features">{t('navFeatures')}</a>
+              <a href="#about">{t('navAbout')}</a>
+              <a href="#contact">{t('navContact')}</a>
+              <button onClick={() => setShowNotify(true)} style={{background:'none',border:'none',padding:0,cursor:'pointer',color:'inherit',font:'inherit',textAlign:'left'}}>{t('navGetNotified')}</button>
             </div>
             <div className="footer-col">
-              <h4>Products</h4>
+              <h4>{t('footerProducts')}</h4>
               <a href="#">Pokemon TCG</a>
               <a href="#">One Piece TCG</a>
               <a href="#">Topps TCG</a>
-              <a href="#">Booster Boxes</a>
-              <a href="#">Premium Collections</a>
+              <a href="#">{t('footerBoosterBoxes')}</a>
+              <a href="#">{t('footerPremium')}</a>
             </div>
             <div className="footer-col">
-              <h4>Contact</h4>
+              <h4>{t('navContact')}</h4>
               <a href="mailto:contact@kira-cards.com">contact@kira-cards.com</a>
               <a href="tel:+66620960153">+66 62 096 0153</a>
               <a href="#">LINE: @kiracards</a>
@@ -813,14 +816,14 @@ export default function Home() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-copy">&copy; 2026 Kira Cards. All rights reserved. &middot; <a href="/privacy" style={{color:'rgba(255,255,255,.4)',textDecoration:'none'}}>Privacy Policy</a></div>
+          <div className="footer-copy">{t('footerCopy')} &middot; <a href="/privacy" style={{color:'rgba(255,255,255,.4)',textDecoration:'none'}}>{t('footerPrivacy')}</a></div>
           <div className="footer-brands-footer">
             <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={28} loading="lazy" />
             <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={120} height={28} loading="lazy" />
             <img src="/images/Topps_Logo.svg" alt="Topps" width={100} height={26} loading="lazy" />
           </div>
         </div>
-        <div className="footer-disclaimer">Pokemon, One Piece, and Topps are trademarks of their respective owners. Kira Cards is an upcoming independent TCG and sports cards retailer.</div>
+        <div className="footer-disclaimer">{t('footerDisclaimer')}</div>
       </footer>
 
       {/* Notify popup */}
@@ -834,24 +837,24 @@ export default function Home() {
                 <div className="notify-success-icon">
                   <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="25" fill="none" stroke="url(#sG)" strokeWidth="2"/><path fill="none" stroke="#50ddb6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" d="M14 27l8 8 16-16"/><defs><linearGradient id="sG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#c850ff"/><stop offset="100%" stopColor="#50ddb6"/></linearGradient></defs></svg>
                 </div>
-                <h3>You&apos;re In!</h3>
-                <p>We&apos;ll notify you as soon as Kira Cards launches. Stay tuned!</p>
+                <h3>{t('popupSuccess')}</h3>
+                <p>{t('popupSuccessDesc')}</p>
               </>
             ) : (
               <>
-                <h3>Get Early Access</h3>
-                <p>Be the first to know when Kira Cards launches. Enter your email below.</p>
+                <h3>{t('popupTitle')}</h3>
+                <p>{t('popupDesc')}</p>
                 <div className="notify-counter">
                   <div className="notify-counter-faces">
                     <img src="/01.webp" alt="" width={32} height={32} loading="lazy" />
                     <img src="/02.webp" alt="" width={32} height={32} loading="lazy" />
                     <img src="/03.webp" alt="" width={32} height={32} loading="lazy" />
                   </div>
-                  Join 549 collectors already signed up
+                  {t('popupCounter')}
                 </div>
                 <div className="notify-popup-form">
-                  <input className="notify-input" type="email" placeholder="Enter your email" value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
-                  <button className="notify-btn" onClick={handleSubscribe} disabled={notifyLoading}>{notifyLoading ? 'Sending...' : 'Notify Me'}</button>
+                  <input className="notify-input" type="email" placeholder={t('earlyPlaceholder')} value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && handleSubscribe()} />
+                  <button className="notify-btn" onClick={handleSubscribe} disabled={notifyLoading}>{notifyLoading ? t('earlySending') : t('earlyBtn')}</button>
                 </div>
               </>
             )}

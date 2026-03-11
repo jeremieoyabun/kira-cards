@@ -46,6 +46,14 @@
   nav.scrolled .nav-cta{background:#111!important;color:#fff!important;border-color:#111;}
   nav.scrolled .nav-cta:hover{border-color:transparent;background:linear-gradient(135deg,#7c5cff,#5535ff)!important;box-shadow:0 4px 24px rgba(90,60,255,.35);}
 
+  /* Language toggle */
+  .lang-toggle{padding:8px 16px;border-radius:100px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-weight:600;font-size:13px;cursor:pointer;transition:all .3s;font-family:inherit;letter-spacing:0.5px;}
+  .lang-toggle:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.2);transform:translateY(-1px);}
+  nav.scrolled .lang-toggle{background:rgba(0,0,0,0.05);border-color:rgba(0,0,0,0.1);color:#111;}
+  nav.scrolled .lang-toggle:hover{background:rgba(0,0,0,0.1);}
+  .lang-toggle-mobile{width:100%;padding:14px;border-radius:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:background .3s;margin-top:8px;}
+  .lang-toggle-mobile:hover{background:rgba(255,255,255,0.1);}
+
   /* Burger */
   .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:110;position:absolute;right:16px;}
   .nav-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s cubic-bezier(.23,1,.32,1);}

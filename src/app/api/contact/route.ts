@@ -17,7 +17,7 @@ export async function POST(req: Request) {
         'api-key': process.env.BREVO_API_KEY || '',
       },
       body: JSON.stringify({
-        sender: { name: 'Kira Cards Website', email: 'contact@kira-cards.com' },
+        sender: { name: 'Kira Cards Co., Ltd.', email: 'contact@kira-cards.com' },
         to: [{ email: 'contact@kira-cards.com' }],
         replyTo: { email, name },
         subject: `[Kira Cards] New message from ${name}`,
