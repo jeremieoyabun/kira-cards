@@ -212,7 +212,7 @@ export default function Home() {
 
       // Scroll animations
       const fadeEls = document.querySelectorAll(
-        '.bento-card,.about-text,.about-visual,.contact-left,.contact-form,.notify-inner,.biz-list,.location-grid'
+        '.bento-card,.about-text,.about-visual,.contact-left,.contact-form,.notify-inner,.biz-list,.location-grid,.graded-left,.graded-right'
       )
       fadeEls.forEach(el => {
         const e = el as HTMLElement
@@ -423,7 +423,7 @@ export default function Home() {
           </div>
           <span className="nav-wordmark">KIRA CARDS</span>
         </a>
-        <div className="nav-links"><a href="#features">{t('navFeatures')}</a><a href="#location">{t('navLocation')}</a><a href="#about">{t('navAbout')}</a><a href="#contact">{t('navContact')}</a><button className="nav-cta" onClick={() => setShowNotify(true)}>{t('navGetNotified')}</button><button className="lang-toggle" onClick={toggle} aria-label="Switch language">{lang === 'en' ? '🇹🇭 TH' : '🇬🇧 EN'}</button></div>
+        <div className="nav-links"><a href="#features">{t('navFeatures')}</a><a href="#location">{t('navLocation')}</a><a href="#about">{t('navAbout')}</a><a href="#graded">{t('gradedOverline')}</a><a href="#contact">{t('navContact')}</a><button className="nav-cta" onClick={() => setShowNotify(true)}>{t('navGetNotified')}</button><button className="lang-toggle" onClick={toggle} aria-label="Switch language">{lang === 'en' ? '🇹🇭 TH' : '🇬🇧 EN'}</button></div>
         <button className={`nav-burger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
@@ -433,6 +433,7 @@ export default function Home() {
           <a href="#features" onClick={() => setMenuOpen(false)}>{t('navFeatures')}</a>
           <a href="#location" onClick={() => setMenuOpen(false)}>{t('navLocation')}</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>{t('navAbout')}</a>
+          <a href="#graded" onClick={() => setMenuOpen(false)}>{t('gradedOverline')}</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>{t('navContact')}</a>
           <button className="mobile-menu-cta" onClick={() => { setMenuOpen(false); setShowNotify(true) }}>{t('navGetNotified')}</button>
           <button className="lang-toggle-mobile" onClick={toggle}>{lang === 'en' ? '🇹🇭 ภาษาไทย' : '🇬🇧 English'}</button>
@@ -730,6 +731,73 @@ export default function Home() {
             </div>
             <div className={`pack-ambient ${packState === 'revealed' ? 'active' : ''}`}>
               {[...Array(60)].map((_, i) => <div key={`amb-${i}`} className="ambient-dot" style={{'--ai':i} as React.CSSProperties} />)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="prismatic-divider"></div>
+      {/* ===== GRADED CARDS ===== */}
+      <section className="section-dark graded-section" id="graded">
+        <div className="graded-bg-glow" />
+        <div className="section-inner">
+          <div className="graded-grid">
+            <div className="graded-left">
+              <span className="section-overline graded-overline">{t('gradedOverline')}</span>
+              <h2 className="graded-title"><span>{t('gradedTitle1')}</span> <span className="graded-title-accent">{t('gradedTitle2')}</span></h2>
+              <p className="graded-desc">{t('gradedDesc')}</p>
+
+              <div className="graded-steps">
+                <div className="graded-step">
+                  <div className="graded-step-num">01</div>
+                  <div className="graded-step-content">
+                    <h3>{t('gradedStep1Title')}</h3>
+                    <p>{t('gradedStep1Desc')}</p>
+                  </div>
+                </div>
+                <div className="graded-step">
+                  <div className="graded-step-num">02</div>
+                  <div className="graded-step-content">
+                    <h3>{t('gradedStep2Title')}</h3>
+                    <p>{t('gradedStep2Desc')}</p>
+                  </div>
+                </div>
+                <div className="graded-step">
+                  <div className="graded-step-num">03</div>
+                  <div className="graded-step-content">
+                    <h3>{t('gradedStep3Title')}</h3>
+                    <p>{t('gradedStep3Desc')}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="graded-buy-box">
+                <h3>{t('gradedBuy')}</h3>
+                <p>{t('gradedBuyDesc')}</p>
+              </div>
+
+              <a href="#contact" className="graded-cta">{t('gradedCta')}</a>
+            </div>
+
+            <div className="graded-right">
+              <div className="graded-card-showcase">
+                <div className="graded-card-rays">
+                  {[...Array(12)].map((_, i) => <div key={`gr-${i}`} className="graded-ray" style={{'--ri': i} as React.CSSProperties} />)}
+                </div>
+                <div className="graded-card-glow" />
+                <div className="graded-card-slab">
+                  <img src="/Cards/Kira-cards_graded-card.webp" alt="Graded Card" />
+                  <div className="graded-card-holo" />
+                  <div className="graded-card-shine" />
+                </div>
+                <div className="graded-card-particles">
+                  {[...Array(20)].map((_, i) => <div key={`gp-${i}`} className="graded-particle" style={{'--gpi': i} as React.CSSProperties} />)}
+                </div>
+                <div className="graded-price-tag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                  <span>{lang === 'en' ? 'We Buy & Sell' : 'รับซื้อ & ขาย'}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -73,6 +73,7 @@
   .mobile-menu.open .mobile-menu-inner a:nth-child(2){transition-delay:.15s;}
   .mobile-menu.open .mobile-menu-inner a:nth-child(3){transition-delay:.2s;}
   .mobile-menu.open .mobile-menu-inner a:nth-child(4){transition-delay:.25s;}
+  .mobile-menu.open .mobile-menu-inner a:nth-child(5){transition-delay:.3s;}
   .mobile-menu-inner a:hover{color:#fff;}
   .mobile-menu-cta{padding:14px 36px!important;border-radius:100px;background:linear-gradient(135deg,#7c5cff,#5535ff);color:#fff!important;font-size:16px!important;font-weight:600!important;margin-top:8px;box-shadow:0 4px 20px rgba(90,60,255,.3);}
 
@@ -968,6 +969,76 @@
     .hero-anniversary{left:0;right:0;display:flex;justify-content:center;transform:none;bottom:-5px;}
     .hero-anniversary img{height:80px;}
     .section-white,.section-dark,.notify-section{padding:48px 16px;}
+  }
+
+  /* ===== GRADED CARDS SECTION ===== */
+  .graded-section{overflow:hidden;}
+  .graded-bg-glow{position:absolute;top:50%;left:60%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(255,180,50,.08),rgba(255,140,0,.04) 40%,transparent 70%);pointer-events:none;z-index:0;}
+  .graded-overline{color:#f0a030!important;border-color:rgba(240,160,48,.3)!important;background:rgba(240,160,48,.06)!important;}
+  .graded-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+  .graded-title{font-family:'Unbounded';font-size:clamp(28px,3.5vw,48px);font-weight:700;line-height:1.15;margin-bottom:20px;}
+  .graded-title span{color:#fff;}
+  .graded-title-accent{background:linear-gradient(135deg,#ffc040,#f0a030,#e08820);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .graded-desc{font-size:15px;line-height:1.8;color:rgba(255,255,255,.45);margin-bottom:40px;}
+
+  /* Steps */
+  .graded-steps{display:flex;flex-direction:column;gap:24px;margin-bottom:32px;}
+  .graded-step{display:flex;gap:20px;align-items:flex-start;padding:20px 24px;border-radius:16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);transition:all .3s;}
+  .graded-step:hover{background:rgba(255,180,50,.04);border-color:rgba(255,180,50,.15);}
+  .graded-step-num{font-family:'Unbounded';font-size:28px;font-weight:700;background:linear-gradient(135deg,#ffc040,#e08820);-webkit-background-clip:text;-webkit-text-fill-color:transparent;min-width:48px;line-height:1;}
+  .graded-step-content h3{font-family:'Sora';font-size:15px;font-weight:600;color:#fff;margin-bottom:6px;}
+  .graded-step-content p{font-size:13px;line-height:1.6;color:rgba(255,255,255,.4);}
+
+  /* Buy box */
+  .graded-buy-box{padding:20px 24px;border-radius:16px;background:linear-gradient(135deg,rgba(255,180,50,.06),rgba(255,140,0,.02));border:1px solid rgba(255,180,50,.15);margin-bottom:32px;}
+  .graded-buy-box h3{font-family:'Sora';font-size:15px;font-weight:600;color:#ffc040;margin-bottom:6px;}
+  .graded-buy-box p{font-size:13px;line-height:1.6;color:rgba(255,255,255,.4);}
+
+  /* CTA */
+  .graded-cta{display:inline-flex;align-items:center;padding:14px 36px;border-radius:100px;background:linear-gradient(135deg,#ffc040,#e08820);color:#111;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:.5px;transition:all .4s cubic-bezier(.23,1,.32,1);box-shadow:0 4px 20px rgba(255,180,50,.25);}
+  .graded-cta:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 8px 40px rgba(255,180,50,.35);}
+
+  /* Card showcase */
+  .graded-right{display:flex;align-items:center;justify-content:center;}
+  .graded-card-showcase{position:relative;width:320px;height:440px;display:flex;align-items:center;justify-content:center;}
+
+  /* Rays behind card */
+  .graded-card-rays{position:absolute;inset:-60px;z-index:0;animation:graded-rays-rotate 20s linear infinite;}
+  .graded-ray{position:absolute;top:50%;left:50%;width:3px;height:200px;transform-origin:center top;opacity:.15;border-radius:2px;background:linear-gradient(to bottom,rgba(255,200,60,.8),rgba(255,140,0,.3) 50%,transparent);transform:rotate(calc(var(--ri) * 30deg));}
+  @keyframes graded-rays-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+  /* Glow behind card */
+  .graded-card-glow{position:absolute;width:280px;height:380px;border-radius:20px;background:radial-gradient(ellipse,rgba(255,180,50,.3),rgba(255,140,0,.1) 50%,transparent 70%);filter:blur(40px);z-index:1;animation:graded-glow-pulse 3s ease-in-out infinite alternate;}
+  @keyframes graded-glow-pulse{0%{opacity:.6;transform:scale(.95)}100%{opacity:1;transform:scale(1.05)}}
+
+  /* Card slab */
+  .graded-card-slab{position:relative;z-index:2;width:260px;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(255,180,50,.15),0 0 80px rgba(255,140,0,.08);transition:transform .5s cubic-bezier(.23,1,.32,1);animation:graded-float 6s ease-in-out infinite;}
+  .graded-card-slab:hover{transform:scale(1.03);}
+  @keyframes graded-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .graded-card-slab img{width:100%;height:auto;display:block;}
+  .graded-card-holo{position:absolute;inset:0;pointer-events:none;opacity:.3;mix-blend-mode:color-dodge;background:conic-gradient(from 0deg at 50% 50%,rgba(255,0,0,.15),rgba(255,127,0,.15),rgba(255,255,0,.15),rgba(0,255,0,.15),rgba(0,0,255,.15),rgba(139,0,255,.15),rgba(255,0,0,.15));animation:graded-holo-spin 6s linear infinite;}
+  @keyframes graded-holo-spin{from{background:conic-gradient(from 0deg at 50% 50%,rgba(255,0,0,.15),rgba(255,127,0,.15),rgba(255,255,0,.15),rgba(0,255,0,.15),rgba(0,0,255,.15),rgba(139,0,255,.15),rgba(255,0,0,.15))}to{background:conic-gradient(from 360deg at 50% 50%,rgba(255,0,0,.15),rgba(255,127,0,.15),rgba(255,255,0,.15),rgba(0,255,0,.15),rgba(0,0,255,.15),rgba(139,0,255,.15),rgba(255,0,0,.15))}}
+  .graded-card-shine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.12) 45%,rgba(255,255,255,.2) 50%,rgba(255,255,255,.12) 55%,transparent 70%);background-size:250% 100%;animation:shineSweep 4s ease-in-out infinite;}
+
+  /* Floating particles */
+  .graded-card-particles{position:absolute;inset:-40px;z-index:3;pointer-events:none;}
+  .graded-particle{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(255,200,60,.8);box-shadow:0 0 6px rgba(255,180,50,.5);animation:graded-particle-float calc(3s + var(--gpi) * .2s) ease-in-out infinite;animation-delay:calc(var(--gpi) * -.3s);left:calc(10% + var(--gpi) * 4.2%);top:calc(20% + (var(--gpi) * 17 % 60) * 1%);}
+  @keyframes graded-particle-float{0%,100%{opacity:0;transform:translateY(0) scale(.5)}25%{opacity:1;transform:translateY(-20px) scale(1)}75%{opacity:.6;transform:translateY(-40px) scale(.8)}100%{opacity:0;transform:translateY(-60px) scale(.3)}}
+
+  /* Price tag badge */
+  .graded-price-tag{position:absolute;bottom:-20px;right:-10px;z-index:4;display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:100px;background:linear-gradient(135deg,#ffc040,#e08820);color:#111;font-weight:700;font-size:13px;box-shadow:0 4px 20px rgba(255,180,50,.35);animation:graded-tag-bounce 2s ease-in-out infinite;}
+  .graded-price-tag svg{width:18px;height:18px;}
+  @keyframes graded-tag-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+  /* Mobile */
+  @media(max-width:768px){
+    .graded-grid{grid-template-columns:1fr;gap:48px;}
+    .graded-right{order:-1;}
+    .graded-card-showcase{width:240px;height:360px;}
+    .graded-card-slab{width:200px;}
+    .graded-card-glow{width:200px;height:300px;}
+    .graded-ray{height:140px;}
+    .graded-price-tag{bottom:-10px;right:0;}
   }
 
   /* ===== PRIVACY PAGE ===== */

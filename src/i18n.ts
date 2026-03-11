@@ -74,6 +74,21 @@ export const translations = {
     packTap: 'Tap to open',
     packAnother: 'Open Another',
 
+    // Graded Cards
+    gradedOverline: 'Graded Cards',
+    gradedTitle1: 'Buy & Sell',
+    gradedTitle2: 'Graded Cards',
+    gradedDesc: 'We buy and sell professionally graded cards (PSA, BGS, CGC) — online or in-store in Phuket. Whether you want to add a gem mint to your collection or sell your graded slabs, we make it simple.',
+    gradedStep1Title: 'Submit Your Cards',
+    gradedStep1Desc: 'Send us photos of your graded cards via LINE or email. We accept PSA, BGS, and CGC slabs.',
+    gradedStep2Title: 'Get a Price Offer',
+    gradedStep2Desc: 'Our team evaluates your cards and sends you a fair market price proposal within 24–48h.',
+    gradedStep3Title: 'Ship & Get Paid',
+    gradedStep3Desc: 'Ship your cards to us (or drop them off in Phuket). Payment is issued once we verify and authenticate the slabs.',
+    gradedBuy: 'Looking to Buy?',
+    gradedBuyDesc: 'Browse our graded card inventory online or visit our Phuket store to find certified gem mint cards for your collection.',
+    gradedCta: 'Contact Us to Start',
+
     // Contact
     contactOverline: 'Get in Touch',
     contactTitle: "Let\u2019s talk cards",
@@ -184,6 +199,21 @@ export const translations = {
     packDesc: 'สัมผัสความตื่นเต้น คลิกที่ซองเพื่อเปิดการ์ดของคุณ',
     packTap: 'แตะเพื่อเปิด',
     packAnother: 'เปิดอีกซอง',
+
+    // Graded Cards
+    gradedOverline: 'การ์ดเกรด',
+    gradedTitle1: 'ซื้อ & ขาย',
+    gradedTitle2: 'การ์ดเกรด',
+    gradedDesc: 'เราซื้อและขายการ์ดเกรดมืออาชีพ (PSA, BGS, CGC) — ออนไลน์หรือหน้าร้านที่ภูเก็ต ไม่ว่าคุณจะต้องการเพิ่มการ์ด Gem Mint ในคอลเลกชันหรือขายการ์ดเกรดของคุณ เราทำให้ง่าย',
+    gradedStep1Title: 'ส่งภาพการ์ดของคุณ',
+    gradedStep1Desc: 'ส่งภาพการ์ดเกรดของคุณผ่าน LINE หรืออีเมล เรารับการ์ดเกรด PSA, BGS และ CGC',
+    gradedStep2Title: 'รับข้อเสนอราคา',
+    gradedStep2Desc: 'ทีมของเราประเมินการ์ดและส่งข้อเสนอราคาที่ยุติธรรมภายใน 24–48 ชั่วโมง',
+    gradedStep3Title: 'ส่งของ & รับเงิน',
+    gradedStep3Desc: 'ส่งการ์ดมาหาเรา (หรือมาส่งที่ภูเก็ต) จ่ายเงินทันทีหลังจากเราตรวจสอบและรับรองการ์ด',
+    gradedBuy: 'อยากซื้อการ์ดเกรด?',
+    gradedBuyDesc: 'เลือกดูการ์ดเกรดออนไลน์หรือมาเยี่ยมชมร้านที่ภูเก็ต เพื่อค้นหาการ์ด Gem Mint สำหรับคอลเลกชันของคุณ',
+    gradedCta: 'ติดต่อเราเพื่อเริ่มต้น',
 
     // Contact
     contactOverline: 'ติดต่อเรา',
