@@ -541,7 +541,67 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
+      <div className="prismatic-divider"></div>
+      {/* ===== GRADED CARDS ===== */}
+      <section className="section-dark graded-section" id="graded">
+        <div className="graded-bg-glow" />
+        <div className="section-inner">
+          <div className="graded-grid">
+            <div className="graded-left">
+              <h2 className="graded-title"><span>{t('gradedTitle1')}</span> <span className="graded-title-accent">{t('gradedTitle2')}</span></h2>
+              <p className="graded-desc">{t('gradedDesc')}</p>
+
+              <div className="graded-steps">
+                <div className="graded-step">
+                  <div className="graded-step-num">01</div>
+                  <div className="graded-step-content">
+                    <h3>{t('gradedStep1Title')}</h3>
+                    <p>{t('gradedStep1Desc')}</p>
+                  </div>
+                </div>
+                <div className="graded-step">
+                  <div className="graded-step-num">02</div>
+                  <div className="graded-step-content">
+                    <h3>{t('gradedStep2Title')}</h3>
+                    <p>{t('gradedStep2Desc')}</p>
+                  </div>
+                </div>
+                <div className="graded-step">
+                  <div className="graded-step-num">03</div>
+                  <div className="graded-step-content">
+                    <h3>{t('gradedStep3Title')}</h3>
+                    <p>{t('gradedStep3Desc')}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="graded-buy-box">
+                <h3>{t('gradedBuy')}</h3>
+                <p>{t('gradedBuyDesc')}</p>
+              </div>
+
+              <a href="#contact" className="graded-cta">{t('gradedCta')}</a>
+            </div>
+
+            <div className="graded-right">
+              <div className="graded-card-showcase">
+                <div className="graded-card-slab">
+                  <video src="/Cards/rare-card.webm" autoPlay loop muted playsInline />
+                  <div className="graded-price-tag">
+                    <span style={{fontSize:18,fontWeight:800,lineHeight:1}}>฿</span>
+                    <span>{lang === 'en' ? 'We Buy & Sell' : 'รับซื้อ & ขาย'}</span>
+                  </div>
+                </div>
+                <div className="graded-card-particles">
+                  {[...Array(35)].map((_, i) => <div key={`gp-${i}`} className="graded-particle" style={{'--gpi': i} as React.CSSProperties} />)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="prismatic-divider"></div>
       {/* ===== RETAIL LOCATION & BUSINESS ===== */}
       <section className="section-dark" id="location">
@@ -733,66 +793,6 @@ export default function Home() {
             </div>
             <div className={`pack-ambient ${packState === 'revealed' ? 'active' : ''}`}>
               {[...Array(60)].map((_, i) => <div key={`amb-${i}`} className="ambient-dot" style={{'--ai':i} as React.CSSProperties} />)}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="prismatic-divider"></div>
-      {/* ===== GRADED CARDS ===== */}
-      <section className="section-dark graded-section" id="graded">
-        <div className="graded-bg-glow" />
-        <div className="section-inner">
-          <div className="graded-grid">
-            <div className="graded-left">
-              <h2 className="graded-title"><span>{t('gradedTitle1')}</span> <span className="graded-title-accent">{t('gradedTitle2')}</span></h2>
-              <p className="graded-desc">{t('gradedDesc')}</p>
-
-              <div className="graded-steps">
-                <div className="graded-step">
-                  <div className="graded-step-num">01</div>
-                  <div className="graded-step-content">
-                    <h3>{t('gradedStep1Title')}</h3>
-                    <p>{t('gradedStep1Desc')}</p>
-                  </div>
-                </div>
-                <div className="graded-step">
-                  <div className="graded-step-num">02</div>
-                  <div className="graded-step-content">
-                    <h3>{t('gradedStep2Title')}</h3>
-                    <p>{t('gradedStep2Desc')}</p>
-                  </div>
-                </div>
-                <div className="graded-step">
-                  <div className="graded-step-num">03</div>
-                  <div className="graded-step-content">
-                    <h3>{t('gradedStep3Title')}</h3>
-                    <p>{t('gradedStep3Desc')}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="graded-buy-box">
-                <h3>{t('gradedBuy')}</h3>
-                <p>{t('gradedBuyDesc')}</p>
-              </div>
-
-              <a href="#contact" className="graded-cta">{t('gradedCta')}</a>
-            </div>
-
-            <div className="graded-right">
-              <div className="graded-card-showcase">
-                <div className="graded-card-slab">
-                  <video src="/Cards/rare-card.webm" autoPlay loop muted playsInline />
-                  <div className="graded-price-tag">
-                    <span style={{fontSize:18,fontWeight:800,lineHeight:1}}>฿</span>
-                    <span>{lang === 'en' ? 'We Buy & Sell' : 'รับซื้อ & ขาย'}</span>
-                  </div>
-                </div>
-                <div className="graded-card-particles">
-                  {[...Array(35)].map((_, i) => <div key={`gp-${i}`} className="graded-particle" style={{'--gpi': i} as React.CSSProperties} />)}
-                </div>
-              </div>
             </div>
           </div>
         </div>
