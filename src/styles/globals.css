@@ -181,13 +181,13 @@
   @keyframes spk{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
   .floor-glow{position:absolute;bottom:30px;left:50%;width:70%;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(77,159,255,.12) 0%,rgba(200,80,255,.06) 40%,transparent 70%);filter:blur(20px);z-index:0;animation:floorP 4s ease-in-out infinite;}
   @keyframes floorP{0%,100%{opacity:.6}50%{opacity:1}}
-  .hero-anniversary{position:absolute;bottom:10px;left:50%;transform:translateX(calc(-110% - 20px));z-index:6;animation:fadeUp .8s ease-out 1s both;}
+  .hero-anniversary{position:absolute;bottom:10px;left:50%;transform:translateX(calc(-110% - 55px));z-index:6;animation:fadeUp .8s ease-out 1s both;}
   .hero-anniversary img{height:90px;width:auto;filter:grayscale(100%) brightness(0.7) drop-shadow(0 4px 16px rgba(0,0,0,.3));transition:transform .3s,filter .3s;}
   .hero-anniversary img:hover{transform:scale(1.08);filter:grayscale(0%) brightness(1) drop-shadow(0 4px 30px rgba(255,225,80,.3));}
   .scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp 1s ease-out 1.5s both;}
   .scroll-indicator span{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.25);}
-  .scroll-line{width:2px;height:48px;background:rgba(255,255,255,.08);position:relative;overflow:hidden;border-radius:1px;}
-  .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:50%;background:linear-gradient(to bottom,transparent,var(--h3));animation:sDown 2.5s ease-in-out infinite;}
+  .scroll-line{width:2px;height:48px;background:rgba(255,255,255,.12);position:relative;overflow:hidden;border-radius:1px;box-shadow:0 0 8px rgba(80,221,182,.15);}
+  .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:50%;background:linear-gradient(to bottom,transparent,var(--h3),#fff);filter:blur(1px);animation:sDown 2.5s ease-in-out infinite;}
   @keyframes sDown{0%{top:-50%}100%{top:150%}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
@@ -663,7 +663,7 @@
   .ac-1:hover{transform:rotate(-6deg) translateY(-10px) scale(1.05);box-shadow:-4px 16px 40px rgba(200,80,255,.25);}
   .ac-2{left:75px;top:0;transform:rotate(0deg);z-index:3;box-shadow:0 12px 30px rgba(77,159,255,.15);}
   .ac-2:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 18px 40px rgba(77,159,255,.25);}
-  .ac-3{right:0;top:25px;transform:rotate(10deg);z-index:2;box-shadow:4px 10px 30px rgba(80,221,182,.15);width:100px;}
+  .ac-3{right:0;top:25px;transform:rotate(10deg);z-index:2;box-shadow:4px 10px 30px rgba(80,221,182,.15);width:135px;}
   .ac-3:hover{transform:rotate(5deg) translateY(-10px) scale(1.05);box-shadow:4px 16px 40px rgba(80,221,182,.25);}
 
   .about-logos-row{position:relative;z-index:2;display:flex;align-items:center;gap:16px;}
@@ -905,7 +905,7 @@
     .about-card{width:115px;}
     .ac-1{left:0;top:25px;}
     .ac-2{left:58px;top:0;}
-    .ac-3{right:0;top:20px;width:80px;}
+    .ac-3{right:0;top:20px;width:100px;}
     .about-logos-row img{height:22px;}
     .about-text{text-align:center;max-width:100%;width:100%;overflow-wrap:break-word;word-wrap:break-word;}
     .about-text h2{font-size:clamp(22px,6vw,30px);}
