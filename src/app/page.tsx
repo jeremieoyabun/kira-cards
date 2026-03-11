@@ -521,7 +521,7 @@ export default function Home() {
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-light"><svg viewBox="0 0 24 24" fill="none" stroke="#c850ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
               <h3>English & Japanese</h3>
-              <p>Offering both English and Japanese TCG products for Thailand's growing collector community.</p>
+              <p>Offering English and Japanese TCG and sports card products tailored to Thailand&apos;s growing collector community.</p>
             </div>
             <div className="bento-card bc-feature">
               <div className="bc-icon bc-icon-pink"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6b8a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/></svg></div>
@@ -813,7 +813,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-copy">&copy; 2026 Kira Cards. All rights reserved.</div>
+          <div className="footer-copy">&copy; 2026 Kira Cards. All rights reserved. &middot; <a href="/privacy" style={{color:'rgba(255,255,255,.4)',textDecoration:'none'}}>Privacy Policy</a></div>
           <div className="footer-brands-footer">
             <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={28} loading="lazy" />
             <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={120} height={28} loading="lazy" />
