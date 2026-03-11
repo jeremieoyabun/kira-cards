@@ -11,7 +11,7 @@ const welcomeHtmlEn = `
 
         <!-- Logo -->
         <tr><td align="center" style="padding-bottom:32px;">
-          <span style="font-size:24px;font-weight:800;letter-spacing:3px;color:#fff;">KIRA CARDS</span>
+          <img src="https://www.kira-cards.com/images/KIRA-CARDS_logo_white.png" alt="Kira Cards" width="220" style="width:220px;height:auto;display:block;margin:0 auto;" />
         </td></tr>
 
         <!-- Card -->
@@ -78,7 +78,7 @@ const welcomeHtmlTh = `
 
         <!-- Logo -->
         <tr><td align="center" style="padding-bottom:32px;">
-          <span style="font-size:24px;font-weight:800;letter-spacing:3px;color:#fff;">KIRA CARDS</span>
+          <img src="https://www.kira-cards.com/images/KIRA-CARDS_logo_white.png" alt="Kira Cards" width="220" style="width:220px;height:auto;display:block;margin:0 auto;" />
         </td></tr>
 
         <!-- Card -->
