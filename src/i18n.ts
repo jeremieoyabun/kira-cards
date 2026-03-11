@@ -11,8 +11,8 @@ export const translations = {
 
     // Hero
     heroLaunching: 'Launching Soon',
-    heroSub1: 'Online Store & Flagship Retail',
-    heroSub2: 'Shop in Phuket',
+    heroSub1: 'Online Store & Flagship',
+    heroSub2: 'Retail Shop in Phuket',
     heroDesc: 'Official Pokémon & One Piece TCG alongside Topps sports cards. Nationwide delivery across Thailand. Opening May 2026.',
     heroBtn: 'Get Notified',
     heroBtnHover: "Let's Go!",
