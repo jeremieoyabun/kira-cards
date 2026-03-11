@@ -455,7 +455,7 @@ export default function Home() {
               <div className="hero-brands-logos">
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={40} style={{height:'40px'}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={96} height={32} />
-                <img src="/topps-logo.webp" alt="Topps" width={114} height={38} style={{height:'38px'}} />
+                <img src="/images/Topps_Logo.svg" alt="Topps" width={114} height={38} style={{height:'38px'}} />
               </div>
             </div>
           </div>
@@ -504,7 +504,7 @@ export default function Home() {
               <div className="brands-bento" style={{"marginTop":"28px"}}>
                 <img src="/images/logo-pokemon.png" alt="Pokemon TCG" loading="lazy" width={84} height={28} style={{"height":"28px","filter":"brightness(1.2)","opacity":".6"}} />
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" loading="lazy" width={84} height={28} style={{"height":"28px","opacity":".4"}} />
-                <img src="/topps-logo.webp" alt="Topps" loading="lazy" width={78} height={26} style={{"height":"26px","opacity":".4"}} />
+                <img src="/images/Topps_Logo.svg" alt="Topps" loading="lazy" width={78} height={26} style={{"height":"26px","opacity":".4"}} />
               </div>
             </div>
             <div className="bento-card bc-accent">
@@ -617,7 +617,7 @@ export default function Home() {
                 <span className="about-logo-sep">&</span>
                 <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" style={{"height":"28px"}} width={120} height={28} loading="lazy" />
                 <span className="about-logo-sep">&</span>
-                <img src="/topps-logo.webp" alt="Topps" style={{"height":"26px"}} width={100} height={26} loading="lazy" />
+                <img src="/images/Topps_Logo.svg" alt="Topps" style={{"height":"26px"}} width={100} height={26} loading="lazy" />
               </div>
             </div>
             <div className="about-text">
@@ -813,7 +813,7 @@ export default function Home() {
           <div className="footer-brands-footer">
             <img src="/images/logo-pokemon.png" alt="Pokemon TCG" width={120} height={28} loading="lazy" />
             <img src="/images/logo-onepiece.webp" alt="One Piece Card Game" width={120} height={28} loading="lazy" />
-            <img src="/topps-logo.webp" alt="Topps" width={100} height={26} loading="lazy" />
+            <img src="/images/Topps_Logo.svg" alt="Topps" width={100} height={26} loading="lazy" />
           </div>
         </div>
         <div className="footer-disclaimer">Pokemon, One Piece, and Topps are trademarks of their respective owners. Kira Cards is an independent retailer.</div>
