@@ -423,7 +423,7 @@ export default function Home() {
           </div>
           <span className="nav-wordmark">KIRA CARDS</span>
         </a>
-        <div className="nav-links"><a href="#features">{t('navFeatures')}</a><a href="#location">{t('navLocation')}</a><a href="#about">{t('navAbout')}</a><a href="#graded">{t('gradedOverline')}</a><a href="#contact">{t('navContact')}</a><button className="nav-cta" onClick={() => setShowNotify(true)}>{t('navGetNotified')}</button><button className="lang-toggle" onClick={toggle} aria-label="Switch language">{lang === 'en' ? '🇹🇭 TH' : '🇬🇧 EN'}</button></div>
+        <div className="nav-links"><a href="#features">{t('navFeatures')}</a><a href="#location">{t('navLocation')}</a><a href="#about">{t('navAbout')}</a><a href="#graded">{t('gradedOverline')}</a><a href="#contact">{t('navContact')}</a><a href="/blog">Blog</a><button className="nav-cta" onClick={() => setShowNotify(true)}>{t('navGetNotified')}</button><button className="lang-toggle" onClick={toggle} aria-label="Switch language">{lang === 'en' ? '🇹🇭 TH' : '🇬🇧 EN'}</button></div>
         <button className={`nav-burger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
@@ -435,6 +435,7 @@ export default function Home() {
           <a href="#about" onClick={() => setMenuOpen(false)}>{t('navAbout')}</a>
           <a href="#graded" onClick={() => setMenuOpen(false)}>{t('gradedOverline')}</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>{t('navContact')}</a>
+          <a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a>
           <button className="mobile-menu-cta" onClick={() => { setMenuOpen(false); setShowNotify(true) }}>{t('navGetNotified')}</button>
           <button className="lang-toggle-mobile" onClick={toggle}>{lang === 'en' ? '🇹🇭 ภาษาไทย' : '🇬🇧 English'}</button>
         </div>
@@ -857,6 +858,7 @@ export default function Home() {
               <a href="#features">{t('navFeatures')}</a>
               <a href="#about">{t('navAbout')}</a>
               <a href="#contact">{t('navContact')}</a>
+              <a href="/blog">Blog</a>
               <button onClick={() => setShowNotify(true)} style={{background:'none',border:'none',padding:0,cursor:'pointer',color:'inherit',font:'inherit',textAlign:'left'}}>{t('navGetNotified')}</button>
             </div>
             <div className="footer-col">
