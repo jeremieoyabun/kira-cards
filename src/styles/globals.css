@@ -694,6 +694,7 @@
   .location-image{position:relative;border-radius:16px;overflow:hidden;height:100%;}
   .location-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,7,.5) 0%,transparent 40%,rgba(5,5,7,.1) 100%);pointer-events:none;border-radius:16px;}
   .location-image img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9;border-radius:16px;}
+  .shop-date-badge{position:absolute;bottom:16px;left:16px;z-index:3;padding:8px 20px;border-radius:100px;background:rgba(0,0,0,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:'Unbounded';font-size:13px;font-weight:600;letter-spacing:1px;}
   .biz-map{height:100%;min-height:280px;}
   .biz-map iframe{border-radius:16px;}
   .location-address{display:flex;align-items:flex-start;gap:12px;padding:16px 20px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);margin-bottom:24px;}

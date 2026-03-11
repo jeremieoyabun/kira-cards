@@ -556,6 +556,7 @@ export default function Home() {
             <div className="location-col">
               <div className="location-image">
                 <img src="/Kira-shop.webp" alt="Kira Cards retail point in Phuket" width={600} height={400} loading="lazy" />
+                <div className="shop-date-badge">May 2026</div>
               </div>
             </div>
             <div className="location-col">
