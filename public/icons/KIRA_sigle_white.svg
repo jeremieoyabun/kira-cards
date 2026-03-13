@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 408">
-  <rect x="4" y="4" width="256" height="400" rx="18" ry="18" fill="#fff" opacity=".25"/>
-  <rect x="4" y="4" width="256" height="400" rx="18" ry="18" fill="none" stroke="#fff" stroke-width="8"/>
-  <g opacity=".9">
-    <polygon fill="#fff" points="167.58 190.45 226 287.42 167.57 287.84 134.76 231.03 89.19 287.76 42.05 287.7 42 120.34 93.71 120.17 94.17 217.8 169.7 120.16 223.26 120.82 167.58 190.45"/>
-  </g>
-</svg>
