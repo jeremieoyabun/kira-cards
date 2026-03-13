@@ -176,11 +176,11 @@
   .booster.active.booster-3{box-shadow:0 25px 60px rgba(77,159,255,.3),0 0 80px rgba(77,159,255,.12)!important;}
   .booster.active.booster-4{box-shadow:4px 20px 50px rgba(255,107,138,.25),0 0 60px rgba(255,107,138,.1)!important;}
   .booster.active.booster-5{box-shadow:6px 20px 50px rgba(0,180,220,.25),0 0 60px rgba(0,180,220,.1)!important;}
-  .booster-1{width:180px;height:310px;bottom:140px;left:5px;z-index:1;transform:rotate(-22deg);animation:bf1 6s ease-in-out infinite;box-shadow:-6px 12px 30px rgba(0,0,0,.4);}
-  .booster-2{width:190px;height:325px;bottom:120px;left:110px;z-index:2;transform:rotate(-10deg);animation:bf2 7s ease-in-out infinite;box-shadow:-3px 12px 30px rgba(0,0,0,.4);}
-  .booster-3{width:220px;height:375px;bottom:80px;left:50%;margin-left:-110px;z-index:5;transform:rotate(0deg);animation:bf3 8s ease-in-out infinite;box-shadow:0 20px 50px rgba(0,0,0,.5);}
-  .booster-4{width:190px;height:325px;bottom:120px;right:110px;z-index:3;transform:rotate(10deg);animation:bf4 9s ease-in-out infinite;box-shadow:3px 15px 35px rgba(0,0,0,.45);}
-  .booster-5{width:180px;height:310px;bottom:140px;right:5px;z-index:1;transform:rotate(22deg);animation:bf5 6.5s ease-in-out infinite;box-shadow:6px 12px 30px rgba(0,0,0,.4);}
+  .booster-1{width:180px;height:310px;bottom:80px;left:5px;z-index:1;transform:rotate(-22deg);animation:bf1 6s ease-in-out infinite;box-shadow:-6px 12px 30px rgba(0,0,0,.4);}
+  .booster-2{width:190px;height:325px;bottom:110px;left:110px;z-index:2;transform:rotate(-10deg);animation:bf2 7s ease-in-out infinite;box-shadow:-3px 12px 30px rgba(0,0,0,.4);}
+  .booster-3{width:220px;height:375px;bottom:140px;left:50%;margin-left:-110px;z-index:5;transform:rotate(0deg);animation:bf3 8s ease-in-out infinite;box-shadow:0 20px 50px rgba(0,0,0,.5);}
+  .booster-4{width:190px;height:325px;bottom:110px;right:110px;z-index:3;transform:rotate(10deg);animation:bf4 9s ease-in-out infinite;box-shadow:3px 15px 35px rgba(0,0,0,.45);}
+  .booster-5{width:180px;height:310px;bottom:80px;right:5px;z-index:1;transform:rotate(22deg);animation:bf5 6.5s ease-in-out infinite;box-shadow:6px 12px 30px rgba(0,0,0,.4);}
   @keyframes bf1{0%,100%{transform:rotate(-22deg) translateY(0)}50%{transform:rotate(-20deg) translateY(-18px)}}
   @keyframes bf2{0%,100%{transform:rotate(-10deg) translateY(0)}50%{transform:rotate(-8deg) translateY(-14px)}}
   @keyframes bf3{0%,100%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(1deg) translateY(-22px)}}
@@ -820,11 +820,11 @@
     .hero-right{min-height:auto;}
 
     .boosters-fan{width:460px;height:400px;}
-    .booster-1{width:115px;height:198px;left:5px;bottom:110px;}
-    .booster-2{width:124px;height:213px;left:70px;bottom:95px;}
-    .booster-3{width:145px;height:248px;margin-left:-72px;bottom:70px;}
-    .booster-4{width:124px;height:213px;right:70px;bottom:95px;}
-    .booster-5{width:115px;height:198px;right:5px;bottom:110px;}
+    .booster-1{width:115px;height:198px;left:5px;bottom:60px;}
+    .booster-2{width:124px;height:213px;left:70px;bottom:80px;}
+    .booster-3{width:145px;height:248px;margin-left:-72px;bottom:100px;}
+    .booster-4{width:124px;height:213px;right:70px;bottom:80px;}
+    .booster-5{width:115px;height:198px;right:5px;bottom:60px;}
     .hero-anniversary{left:50%;transform:translateX(calc(-50% - 40px));bottom:6px;}
     .hero-anniversary img{height:55px;}
 
@@ -867,11 +867,11 @@
     .hero-right{min-height:auto;}
 
     .boosters-fan{width:320px;height:320px;}
-    .booster-1{width:82px;height:141px;left:0;bottom:98px;}
-    .booster-2{width:88px;height:151px;left:42px;bottom:84px;}
-    .booster-3{width:110px;height:188px;margin-left:-55px;bottom:55px;}
-    .booster-4{width:88px;height:151px;right:42px;bottom:84px;}
-    .booster-5{width:82px;height:141px;right:0;bottom:98px;}
+    .booster-1{width:82px;height:141px;left:0;bottom:50px;}
+    .booster-2{width:88px;height:151px;left:42px;bottom:65px;}
+    .booster-3{width:110px;height:188px;margin-left:-55px;bottom:80px;}
+    .booster-4{width:88px;height:151px;right:42px;bottom:65px;}
+    .booster-5{width:82px;height:141px;right:0;bottom:50px;}
     .floor-glow{bottom:20px;}
     .hero-anniversary{left:0;right:0;display:flex;justify-content:center;transform:none;bottom:-5px;}
     .hero-anniversary img{height:100px;}
@@ -963,11 +963,11 @@
     .hero-sub{letter-spacing:5px;font-size:10px;}
     .hero-desc{font-size:13px;}
     .boosters-fan{width:260px;height:280px;}
-    .booster-1{width:70px;height:120px;left:0;bottom:85px;}
-    .booster-2{width:76px;height:130px;left:32px;bottom:72px;}
-    .booster-3{width:100px;height:172px;margin-left:-50px;bottom:48px;}
-    .booster-4{width:76px;height:130px;right:32px;bottom:72px;}
-    .booster-5{width:70px;height:120px;right:0;bottom:85px;}
+    .booster-1{width:70px;height:120px;left:0;bottom:38px;}
+    .booster-2{width:76px;height:130px;left:32px;bottom:52px;}
+    .booster-3{width:100px;height:172px;margin-left:-50px;bottom:68px;}
+    .booster-4{width:76px;height:130px;right:32px;bottom:52px;}
+    .booster-5{width:70px;height:120px;right:0;bottom:38px;}
     .hero-anniversary{left:0;right:0;display:flex;justify-content:center;transform:none;bottom:-5px;}
     .hero-anniversary img{height:80px;}
     .section-white,.section-dark,.notify-section{padding:48px 16px;}
