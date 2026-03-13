@@ -285,19 +285,32 @@ export default function Home() {
   }
 
   // Text scramble effect on hero title — loops every 7s
+  // During scramble, letters hint at brand names (POKEMON, NARUTO, ONE PIECE, etc.)
   useEffect(() => {
     const target = 'KIRA CARDS'
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*0123456789'
+    const brandWords = ['POKEMON', 'NARUTO', 'ONEPIECE', 'TOPPS', 'CHARIZARD', 'LUFFY', 'PIKACHU']
+    const brandPool = brandWords.join('')
+    const noise = '!@#$%&*0123456789'
     const maxFrames = 20
+    let brandIdx = 0
     const runScramble = () => {
       let frame = 0
+      const currentBrand = brandWords[brandIdx % brandWords.length]
+      brandIdx++
       const interval = setInterval(() => {
         frame++
         setTitleText(target.split('').map((ch, i) => {
           if (ch === ' ') return ' '
           const revealAt = Math.floor((i / target.length) * maxFrames) + 3
           if (frame >= revealAt) return ch
-          return chars[Math.floor(Math.random() * chars.length)]
+          // Mix brand letters (70%) with noise (30%) for recognizable hints
+          if (Math.random() < 0.7) {
+            const brandChar = frame < 8
+              ? currentBrand[(i + frame) % currentBrand.length]
+              : brandPool[Math.floor(Math.random() * brandPool.length)]
+            return brandChar
+          }
+          return noise[Math.floor(Math.random() * noise.length)]
         }).join(''))
         if (frame >= maxFrames + 3) {
           clearInterval(interval)
