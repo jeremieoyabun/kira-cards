@@ -160,7 +160,7 @@
   .btn-ghost:hover{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.02);}
 
   /* ===== BOOSTERS ===== */
-  .boosters-fan{width:680px;height:620px;position:relative;animation:fanEntry 1.2s cubic-bezier(.23,1,.32,1) .5s both;perspective:800px;}
+  .boosters-fan{width:680px;height:620px;position:relative;animation:fanEntry 1.2s cubic-bezier(.23,1,.32,1) .5s both;perspective:800px;margin-top:-40px;}
   @keyframes fanEntry{from{opacity:0;transform:translateX(60px) scale(.85)}to{opacity:1;transform:translateX(0) scale(1)}}
   .booster{position:absolute;cursor:pointer;will-change:transform;transform-style:preserve-3d;transition:box-shadow .5s;background:transparent;}
   .booster img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;background:transparent;}
@@ -181,11 +181,11 @@
   .booster.active.booster-3{box-shadow:0 25px 60px rgba(77,159,255,.3),0 0 80px rgba(77,159,255,.12)!important;}
   .booster.active.booster-4{box-shadow:4px 20px 50px rgba(255,107,138,.25),0 0 60px rgba(255,107,138,.1)!important;}
   .booster.active.booster-5{box-shadow:6px 20px 50px rgba(0,180,220,.25),0 0 60px rgba(0,180,220,.1)!important;}
-  .booster-1{width:180px;height:310px;bottom:80px;left:5px;z-index:1;transform:rotate(-22deg);animation:bf1 6s ease-in-out infinite;box-shadow:-6px 12px 30px rgba(0,0,0,.4);}
-  .booster-2{width:190px;height:325px;bottom:110px;left:110px;z-index:2;transform:rotate(-10deg);animation:bf2 7s ease-in-out infinite;box-shadow:-3px 12px 30px rgba(0,0,0,.4);}
+  .booster-1{width:180px;height:310px;bottom:50px;left:5px;z-index:1;transform:rotate(-22deg);animation:bf1 6s ease-in-out infinite;box-shadow:-6px 12px 30px rgba(0,0,0,.4);}
+  .booster-2{width:190px;height:325px;bottom:100px;left:110px;z-index:2;transform:rotate(-10deg);animation:bf2 7s ease-in-out infinite;box-shadow:-3px 12px 30px rgba(0,0,0,.4);}
   .booster-3{width:220px;height:375px;bottom:140px;left:50%;margin-left:-110px;z-index:5;transform:rotate(0deg);animation:bf3 8s ease-in-out infinite;box-shadow:0 20px 50px rgba(0,0,0,.5);}
-  .booster-4{width:190px;height:325px;bottom:110px;right:110px;z-index:3;transform:rotate(10deg);animation:bf4 9s ease-in-out infinite;box-shadow:3px 15px 35px rgba(0,0,0,.45);}
-  .booster-5{width:180px;height:310px;bottom:80px;right:5px;z-index:1;transform:rotate(22deg);animation:bf5 6.5s ease-in-out infinite;box-shadow:6px 12px 30px rgba(0,0,0,.4);}
+  .booster-4{width:190px;height:325px;bottom:100px;right:110px;z-index:3;transform:rotate(10deg);animation:bf4 9s ease-in-out infinite;box-shadow:3px 15px 35px rgba(0,0,0,.45);}
+  .booster-5{width:180px;height:310px;bottom:50px;right:5px;z-index:1;transform:rotate(22deg);animation:bf5 6.5s ease-in-out infinite;box-shadow:6px 12px 30px rgba(0,0,0,.4);}
   @keyframes bf1{0%,100%{transform:rotate(-22deg) translateY(0)}50%{transform:rotate(-20deg) translateY(-18px)}}
   @keyframes bf2{0%,100%{transform:rotate(-10deg) translateY(0)}50%{transform:rotate(-8deg) translateY(-14px)}}
   @keyframes bf3{0%,100%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(1deg) translateY(-22px)}}
@@ -824,12 +824,12 @@
     .hero-brands{align-items:center;}
     .hero-right{min-height:auto;}
 
-    .boosters-fan{width:460px;height:420px;}
-    .booster-1{width:115px;height:198px;left:5px;bottom:60px;}
-    .booster-2{width:124px;height:213px;left:70px;bottom:80px;}
+    .boosters-fan{width:460px;height:420px;margin-top:-20px;}
+    .booster-1{width:115px;height:198px;left:5px;bottom:40px;}
+    .booster-2{width:124px;height:213px;left:70px;bottom:70px;}
     .booster-3{width:145px;height:248px;margin-left:-72px;bottom:100px;}
-    .booster-4{width:124px;height:213px;right:70px;bottom:80px;}
-    .booster-5{width:115px;height:198px;right:5px;bottom:60px;}
+    .booster-4{width:124px;height:213px;right:70px;bottom:70px;}
+    .booster-5{width:115px;height:198px;right:5px;bottom:40px;}
     .hero-anniversary{left:50%;transform:translateX(calc(-50% - 40px));bottom:4px;}
     .hero-anniversary img{height:50px;}
 
@@ -871,12 +871,12 @@
     .hero-brands-label{font-size:9px;}
     .hero-right{min-height:auto;}
 
-    .boosters-fan{width:320px;height:340px;}
-    .booster-1{width:82px;height:141px;left:0;bottom:50px;}
-    .booster-2{width:88px;height:151px;left:42px;bottom:65px;}
+    .boosters-fan{width:320px;height:340px;margin-top:-10px;}
+    .booster-1{width:82px;height:141px;left:0;bottom:30px;}
+    .booster-2{width:88px;height:151px;left:42px;bottom:55px;}
     .booster-3{width:110px;height:188px;margin-left:-55px;bottom:80px;}
-    .booster-4{width:88px;height:151px;right:42px;bottom:65px;}
-    .booster-5{width:82px;height:141px;right:0;bottom:50px;}
+    .booster-4{width:88px;height:151px;right:42px;bottom:55px;}
+    .booster-5{width:82px;height:141px;right:0;bottom:30px;}
     .floor-glow{bottom:15px;}
     .hero-anniversary{left:0;right:0;display:flex;justify-content:center;transform:none;bottom:-2px;}
     .hero-anniversary img{height:70px;}
@@ -971,12 +971,12 @@
     .hero-title{font-size:36px;}
     .hero-sub{letter-spacing:5px;font-size:10px;}
     .hero-desc{font-size:13px;}
-    .boosters-fan{width:260px;height:300px;}
-    .booster-1{width:70px;height:120px;left:0;bottom:38px;}
-    .booster-2{width:76px;height:130px;left:32px;bottom:52px;}
+    .boosters-fan{width:260px;height:300px;margin-top:-5px;}
+    .booster-1{width:70px;height:120px;left:0;bottom:22px;}
+    .booster-2{width:76px;height:130px;left:32px;bottom:44px;}
     .booster-3{width:100px;height:172px;margin-left:-50px;bottom:68px;}
-    .booster-4{width:76px;height:130px;right:32px;bottom:52px;}
-    .booster-5{width:70px;height:120px;right:0;bottom:38px;}
+    .booster-4{width:76px;height:130px;right:32px;bottom:44px;}
+    .booster-5{width:70px;height:120px;right:0;bottom:22px;}
     .hero-anniversary{left:0;right:0;display:flex;justify-content:center;transform:none;bottom:-2px;}
     .hero-anniversary img{height:60px;}
     .section-white,.section-dark,.notify-section{padding:48px 16px;}
