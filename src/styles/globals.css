@@ -837,7 +837,7 @@
     .bento{grid-template-columns:1fr;gap:16px;}
     .bc-wide{grid-column:span 1;}
     .location-grid-3{grid-template-columns:1fr;gap:20px;}
-    .location-image{height:auto;max-height:400px;}
+    .location-image{height:auto;max-height:none;}
     .biz-map{min-height:220px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
     .about-visual{height:340px;}
@@ -897,8 +897,8 @@
     .section-header p{font-size:14px;}
     .section-overline{font-size:10px;letter-spacing:3px;}
 
-    .location-image{border-radius:12px;max-height:300px;}
-    .location-image img{height:auto;aspect-ratio:16/10;}
+    .location-image{border-radius:12px;max-height:none;}
+    .location-image img{height:auto;aspect-ratio:auto;object-fit:contain;}
     .location-info{text-align:center;}
     .location-info h3{text-align:center;font-size:clamp(18px,5vw,22px)!important;}
     .location-info p{text-align:center;font-size:13px!important;}
@@ -1023,7 +1023,7 @@
 
   /* Card slab — video */
   .graded-card-slab{position:relative;z-index:2;width:530px;}
-  .graded-card-slab video{width:100%;height:auto;display:block;}
+  .graded-card-slab video{width:100%;height:auto;display:block;mix-blend-mode:screen;}
 
   /* Price tag badge — positioned inside slab, offset for video margins (182px right, 123px bottom at 0.7 scale) */
   .graded-price-tag{position:absolute;bottom:123px;right:182px;z-index:4;display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:100px;background:linear-gradient(135deg,#ffc040,#e08820);color:#111;font-weight:700;font-size:13px;box-shadow:0 4px 20px rgba(255,180,50,.35);animation:graded-tag-bounce 2s ease-in-out infinite;transform:translate(50%,50%);}
